@@ -1,0 +1,13 @@
+
+
+.MidBar {
+    background-color: white;
+    color: #0F3460;
+    height: 25px;
+    border: 1px solid black ;
+}
+
+.searchbox {
+    height: 30px;
+    background-color: orangered;
+}

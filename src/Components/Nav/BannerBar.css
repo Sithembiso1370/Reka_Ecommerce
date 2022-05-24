@@ -1,0 +1,33 @@
+
+
+.bannerbar{
+    background-color: #003A75;
+    height: 30px;
+    color: white;
+}
+
+/* #FFBB2B */
+/* #ff6a14 */
+/*neon orange for texts #C70039  */
+/* #003A75 */
+
+.bannerbar>ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.bannerbar>ul>li {
+    padding: 2px;
+    color: whitesmoke;
+    /* flex: 1; */
+}
+.bannerbar>ul>.bb_li_4 {
+    flex: 4;
+}
+/* bb_li_4 */
+
+
+/* bb_li_1 */
