@@ -1,0 +1,9 @@
+
+
+.landingpage {
+    position: relative;
+    height: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+}
