@@ -1,0 +1,13 @@
+
+
+.Footer {
+    background-color: black;
+    flex: 3;
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.Footer>div {
+    border: 1px solid whitesmoke;
+}

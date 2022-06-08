@@ -94,7 +94,7 @@ const CarouselSlideItem = ({pos, idx, activeIdx}) => {
 
 const keys = Array.from(Array(_items.length).keys());
 
-const Carousel = () => {
+const SinglerRowCarousel = () => {
     const [items, setItems] = React.useState(keys);
     const [isTicking, setIsTicking] = React.useState(false);
     const [activeIdx, setActiveIdx] = React.useState(0);
@@ -169,4 +169,4 @@ const Carousel = () => {
 };
 
 
-export default Carousel
+export default SinglerRowCarousel

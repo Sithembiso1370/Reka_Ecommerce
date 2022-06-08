@@ -1,7 +1,9 @@
 
 
-.landing {
+.landingpage {
     position: relative;
-    height: 100%;
-    height: 100%;
+    height: 3200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import BannerSliding from './BannerSliding'
 import './DailyDeals.css'
 
 function DailyDeals() {
@@ -23,7 +24,7 @@ function DailyDeals() {
             </div>
         </div>
         <div className='DailyDealPSlider'>
-                slider
+                <BannerSliding/>
         </div>
     </div>
   )

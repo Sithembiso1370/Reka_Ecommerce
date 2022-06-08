@@ -1,19 +1,18 @@
-*, *:before, *:after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+
   
-  body {
+  /* body {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     background: #000;
   }
-  
+   */
   .slider {
     overflow: hidden;
     position: relative;
     height: 100%;
     color: #fff;
+    background: url("https://img.freepik.com/free-vector/pattern-about-shopping_1061-495.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .slider__top-heading {
     z-index: 12;

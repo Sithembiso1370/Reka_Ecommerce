@@ -10,7 +10,7 @@ function AddBanner() {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 500px;
     height: 100%;
     font-family: Signika;
     font-weight: bold;
@@ -28,6 +28,10 @@ function AddBanner() {
   return (
     <Rerousel itemRef={ref}>
       <Item ref={ref}>1</Item>
+      <Item>2</Item>
+      <Item>3</Item>
+      <Item>4</Item>
+      <Item>5</Item>
       <Item>2</Item>
       <Item>3</Item>
       <Item>4</Item>
