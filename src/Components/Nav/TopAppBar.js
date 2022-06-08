@@ -29,24 +29,35 @@ export default function TopButtonAppBar() {
           </div>
           <div className='right_holder'>
               <ul>
-                <li className='li_r_1'>
-                  <span className="material-symbols-outlined color_orange">
-                  receipt_long
+                <li className='li_r_1' key={1}>
+                  <span className="material-symbols-outlined">
+                  comment
                   </span>
                 </li>
                 <li className='li_r_2'>
                   <span className="material-symbols-outlined color_orange">
+                  receipt_long
+                  </span>
+                </li>
+                <li className='li_r_3'>
+                  <span className="material-symbols-outlined color_orange">
                     account_circle
                   </span>
                 </li>
-                <li className='li_r_3' value={5} >
+                <li className='li_r_4' value={5} >
                   <span className="material-symbols-outlined color_orange">
                   shopping_cart_checkout
                   </span>
                   <span className='cart_count color_orange'>
-                    5
+                    {/* 5 */}
                   </span>
                 </li>
+                <li className='li_r_5'>
+                  <span className="material-symbols-outlined color_orange">
+                  campaign
+                  </span>
+                </li>
+
               </ul>
           </div>
         </div>
@@ -54,9 +65,9 @@ export default function TopButtonAppBar() {
         <div className='my_div1_lower'>
 
           <div className='categories_sect'>
-            <span class="material-symbols-outlined text_color">
+            {/* <span class="material-symbols-outlined text_color">
             storefront
-            </span>
+            </span> */}
             <TemporaryDrawer/>
             {/* <span class="material-symbols-outlined text_color">
               apps
@@ -68,9 +79,10 @@ export default function TopButtonAppBar() {
             <ul>
               <li>Home</li>
               <li>Services</li>
-              <li>Sell</li>
+              <li>Earn</li>
+              <li>Learn</li>
               <li>Contact Us</li>
-              <li>Home</li>
+              <li>Blog</li>
             </ul>
           </div>
 

@@ -278,5 +278,6 @@ li,i,span {
     color:  #FF5F1F;
     /* background-color: #003A75; */
     border: 1px solid #ff6a1497;
+    box-shadow: 2px 2px 1px #FF5F1F, -2px -2px 1px #ffffff;
     transition: all 0.25s ease-in ;
 }

@@ -14,6 +14,7 @@ function LandingPage() {
     <div className='landingpage'>
         <Navbar/>
         <Main/>
+        <Footer/>
     </div>
   )
 }
