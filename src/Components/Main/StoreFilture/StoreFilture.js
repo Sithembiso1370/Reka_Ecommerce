@@ -94,7 +94,7 @@ function StoreFilture() {
             </div>
             </div>
             <div className='filture_filture_f1'>
-              FILTURE FOOTER
+              FILTURE FOOTER edit
             </div>
           </div>
           <div className='filture_main'>
