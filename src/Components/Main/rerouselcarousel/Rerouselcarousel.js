@@ -1,5 +1,5 @@
 import React,{useRef} from 'react'
-import { Rerousel } from 'rerousel';
+import { Rerousel } from '../rerouselcarousel/rerousel';
 import styled from 'styled-components'
 import ThreeDcard from '../3dcard/threeDcard';
 

@@ -1,26 +1,27 @@
 import * as React from 'react';
 import './opButtonAppBar.css'
 import CustomControl from './ReactSelect';
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBar/SearchBar';
 import SelectCustStyles from './SelectCustStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import TemporaryDrawer from '../TemporaryDrawer';
 
 
-
+const logo = require("./Logos/sqsqsqqsqq.JPG")
 export default function TopButtonAppBar() {
   return (
     <div className='my_div1'>
 
         <div className='my_div1_upper'>
           <div className='image_holder'>
-              <ul>
+            <img src={logo} alt=""/>
+              {/* <ul>
                 <li className='li_1'>R</li>
                 <li className='li_2'>E</li>
                 <li className='li_3'>K</li>
                 <li className='li_4'>A</li>
                 <li className='li_5'>.Com</li>
-              </ul>
+              </ul> */}
           </div>
           <div className='search_holder'>
             <div className='search_main'>
@@ -77,10 +78,27 @@ export default function TopButtonAppBar() {
 
           <div className='link_sect'>
             <ul>
-              <li>Home</li>
-              <li>Services</li>
+              {/* select::-ms-expand {
+                  display: none;
+              } */}
+              <li>Shop</li>
+              <li>Print on demand</li>
+              <li>
+                {/* <select
+                style={{
+                  
+                }}
+                >
+                  <option>Services</option>
+                  <option>Print on demand</option>
+                </select> */}
+                Services
+              </li>
+              <li>Dropshipping</li>
               <li>Earn</li>
               <li>Learn</li>
+              <li>Invest</li>
+              <li>Play</li>
               <li>Contact Us</li>
               <li>Blog</li>
             </ul>

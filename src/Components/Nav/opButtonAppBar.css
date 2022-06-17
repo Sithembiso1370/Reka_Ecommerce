@@ -25,10 +25,20 @@
 }
 
 .image_holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 2;
 }
-
-.image_holder>ul {
+.image_holder>img {
+    position: relative;
+    height: 100% ;
+    width: 50%;
+}
+/* .image_holder>ul {
     list-style: none;
     display: flex;
     align-items: center;
@@ -82,7 +92,7 @@
     font-family: 'Pacifico', cursive;
     text-shadow: 0px 1px 0px #c0c0c0, 0px 2px 0px #FF6A14, 0px 3px 0px #a0a0a0, 0px 4px 0px #FF6A14, 0px 5px 10px rgba(0, 0, 0, 0.6);
     font-size: small;  
-}
+} */
 
 
 
@@ -230,21 +240,21 @@ li,i,span {
     align-items: center;
     justify-content: center;
     padding: 2px;
-    flex: 2;
+    flex: 1;
     width: 100%;
     height: 100%;
     color: white;
     border-radius: 15px;
 }
 .my_div1_lower>.categories_sect:hover {
-    border: 1px solid #FF5F1F;
+    border: 1px solid  #003A75;
     transition: all 0.25s ease-in-out;
     color: #FF5F1F;
     
 }
 
 .my_div1_lower>.link_sect {
-    flex: 10;
+    flex: 12;
     height: 100%;
     width: 100%;
     list-style: none;
@@ -256,15 +266,19 @@ li,i,span {
 
 
 .my_div1_lower>.link_sect>ul {
+    /* background-color: #003A75; */
+    background-color: whitesmoke;
     width: 100%;
+    height: 100%;
     /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 15px;
 }
  
 .my_div1_lower>.link_sect>ul>li {
-    color: #003A75;
+    color: #FF5F1F;
     border-radius: 15px;
     width: 100%;
     height: 100%;
@@ -276,8 +290,43 @@ li,i,span {
 
 .my_div1_lower>.link_sect>ul>li:hover {
     color:  #FF5F1F;
-    /* background-color: #003A75; */
+    background-color: #003A75;
     border: 1px solid #ff6a1497;
     box-shadow: 2px 2px 1px #FF5F1F, -2px -2px 1px #ffffff;
     transition: all 0.25s ease-in ;
 }
+
+.my_div1_lower>.link_sect>ul>li>select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #003A75;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+
+.my_div1_lower>.link_sect>ul>li>select:hover {
+    color:  #FF5F1F;
+    background-color: #003A75;
+    border: 1px solid #ff6a1497;
+    box-shadow: 2px 2px 1px #FF5F1F, -2px -2px 1px #ffffff;
+    transition: all 0.25s ease-in ;
+}
+
+
+.my_div1_lower>.link_sect>ul>li>select>option {
+    color:  #FF5F1F;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+
+

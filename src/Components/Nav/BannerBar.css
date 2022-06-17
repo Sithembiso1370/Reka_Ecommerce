@@ -1,9 +1,9 @@
 
 
 .bannerbar{
-    background-color: #003b750f;
+    background-color: #003A75;
     height: 30px;
-    color: white;
+    color: orangered;
 }
 
 /* #FFBB2B */
@@ -21,7 +21,7 @@
 
 .bannerbar>ul>li {
     padding: 2px;
-    color: whitesmoke;
+    color: orangered;
     /* flex: 1; */
 }
 .bannerbar>ul>.bb_li_4 {

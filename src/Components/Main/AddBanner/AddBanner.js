@@ -7,6 +7,7 @@ function AddBanner() {
   const ref = useRef(null);
 
   const Item = styled.div`
+    position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +29,7 @@ function AddBanner() {
   return (
     <Rerousel itemRef={ref}>
       <Item ref={ref}>1</Item>
-      <Item>2</Item>
+      <Item></Item>
       <Item>3</Item>
       <Item>4</Item>
       <Item>5</Item>

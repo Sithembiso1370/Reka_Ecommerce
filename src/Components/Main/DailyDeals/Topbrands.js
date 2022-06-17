@@ -2,6 +2,7 @@ import React,{useRef} from 'react'
 import './Topbrands.css'
 import { Rerousel } from 'rerousel';
 import styled from 'styled-components'
+import brands from './brands'
 
 function Topbrands() {
   const ref = useRef(null);
@@ -10,7 +11,7 @@ function Topbrands() {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 25%;
   height: 100%;
   font-family: Signika;
   font-weight: bold;
@@ -35,34 +36,42 @@ function Topbrands() {
         </h2>
         <div className='TopBrandsPSlider'>
         <Rerousel itemRef={ref}>
-          <Item ref={ref}>1</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-          <Item>4</Item>
-          <Item>5</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-          <Item>4</Item>
-          <Item>5</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-          <Item>4</Item>
-          <Item>5</Item>
+          {
+            brands.map((slide)=>(
+              <Item ref={ref}
+              style={{ 
+                background: `url(${slide.img})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                margin: '1%',
+                boxShadow: '5px 5px 11px #737373, -5px -5px 11px #ffffff',
+                border: 'none',
+                borderRadius: '5px'
+
+              }}
+              >{slide.country}</Item>
+            ))
+          }
+
         </Rerousel>
         <Rerousel itemRef={ref}>
-          <Item ref={ref}>1</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-          <Item>4</Item>
-          <Item>5</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-          <Item>4</Item>
-          <Item>5</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-          <Item>4</Item>
-          <Item>5</Item>
+          {/* <Item ref={ref}>1</Item> */}
+          {
+            brands.map((slide)=>(
+              <Item ref={ref}
+              style={{ 
+                background: `url(${slide.img})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                margin: '2%',
+                boxShadow: '5px 5px 11px #737373, -5px -5px 11px #ffffff',
+                border: 'none',
+                borderRadius: '5px'
+
+              }}
+              >{slide.country}</Item>
+            ))
+          }
         </Rerousel>
         </div>
     </div>

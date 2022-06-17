@@ -16,7 +16,11 @@ function BannerBar() {
         mail
         </span>
         </li>
-        <li className='bb_li_4'></li>
+        <li className='bb_li_4'>
+              <span class="material-symbols-outlined">
+      local_shipping
+      </span>
+        </li>
         <li className='bb_li_5'>FAQ's</li>
         <li className='bb_li_6'>Help?</li>
         <li className='bb_li_7'>ZAR</li>

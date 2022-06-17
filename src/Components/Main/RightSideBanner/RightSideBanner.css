@@ -1,0 +1,11 @@
+
+
+.right_side_banner {
+    background-color: orangered;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    height: 1000px;
+    width: 50px;
+    z-index: 3;
+}
