@@ -30,3 +30,12 @@ function SearchBar() {
 export default SearchBar
 
 
+
+
+// <div className='search_bar'>
+// <Button variant="outlined" color="error"  className="search_btn" size='large'>
+//   <i className='fa fa-search '></i>
+// </Button>
+// <TextField id="filled-basic" label="Filled" variant="filled" className="search_textfeald" size='small'/>
+// <SelectAutoWidth    className="search_select" size='small'/>
+// </div>

@@ -32,13 +32,13 @@
   }
   
   .carousel__wrap {
-    margin-top: 10%;
+    margin-top: 1%;
     align-items: center;
     display: flex;
     flex: 1;
     justify-content: center;
     position: relative;
-    width: 80%;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -138,10 +138,10 @@
     transform: translateY(-50%);
   }
   .carousel__btn--prev {
-    left: -10rem;
+    left: -5rem;
   }
   .carousel__btn--next {
-    right: -10rem;
+    right: -3.5rem;
   }
   
   .carousel__btn-arrow {

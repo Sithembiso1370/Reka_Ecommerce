@@ -1,6 +1,6 @@
 import React from 'react'
 import './StoreFilture.css'
-// import './AnotherFilture.css'
+import './AnotherFilture.css'
 import slides from './slides'
 
 
@@ -71,48 +71,31 @@ function StoreFilture() {
             <button>Stores</button>
           </div>
           <div className='filture_filtures'>
-              <div className='filture_filture_f1'>
-                All
-              </div>
-              <div className='filture_filture_f1'>
-                Clothing
-              </div>
-              <div className='filture_filture_f1'>
-                Computers and Office Supplies
-              </div>
-              <div className='filture_filture_f1'>
-                Filture 4
-              </div>
-              <div className='filture_filture_f1'>
-                Filture 5
-              </div>
-              <div className='filture_filture_f1'>
-                Filture 6
-              </div>
-              <div className='filture_filture_f1'>
-                Filture 7
-              </div>
-              <div className='filture_filture_f8'
-              style={{
-                backgroundColor: 'yellow'
-              }}
-              >
-                <div className="filturefooter_add1"
-                  style={{
-                    background: 'url(https://www.businesstravellerafrica.co.za/wp-content/uploads/2016/07/Avis-Van-Rental-logo.jpg)'
-                    ,backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat'
-                  }}
-                >
-                  FILTURE FOOTER add 1
-                </div>
-                <div className="filturefooter_add1"
-                >
-                  FILTURE FOOTER add 1
-                </div>
+            <div className='filture_filture_f1'>
+              Filture 1
+            </div>
+            <div className='filture_filture_f1'>
+              Filture 2
+            </div>
+            <div className='filture_filture_f1'>
+              Filture 3
+            </div>
+            <div className='filture_filture_f1'>
+              Filture 4
+            </div>
+            <div className='filture_filture_f1'>
+              Filture 5
+            </div>
+            <div className='filture_filture_f1'>
+              Filture 6
+            </div>
+            <div className='filture_filture_f1'>
+              Filture 7
             </div>
             </div>
-
+            <div className='filture_filture_f1'>
+              FILTURE FOOTER
+            </div>
           </div>
           <div className='filture_main'>
             {

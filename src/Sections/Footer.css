@@ -5,7 +5,9 @@
     background-color: black;
     display: flex;
     color: white;
-    height: 400px;
+    grid-template-columns: repeat(3,1fr);
+    position: relative;
+    height: 300px;
     width: 100%;
 }
 

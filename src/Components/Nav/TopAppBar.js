@@ -81,7 +81,7 @@ export default function TopButtonAppBar() {
               {/* select::-ms-expand {
                   display: none;
               } */}
-              <li>Shop</li>
+              <li>Home</li>
               <li>Print on demand</li>
               <li>
                 {/* <select
