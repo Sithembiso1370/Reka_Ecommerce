@@ -16,8 +16,25 @@
 
 .newsletter>label {
     border-radius:  25px 0 0 25px;
+    background-color: #003A75;
+    color: orangered;
+    border: none;
+    cursor: pointer;
 }
 
 .newsletter>button {
     border-radius:  0 25px 25px 0;
+    background-color: #003A75;
+    color: orangered;
+    border: none;
+    cursor: pointer;
+}
+
+.newsletter>input {
+    border: none;
+    background-color: whitesmoke;
+}
+
+.newsletter>input:hover {
+    background-color: white;
 }

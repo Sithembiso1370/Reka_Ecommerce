@@ -1,15 +1,15 @@
-const brands = [
+const brands2 = [
     {
       city: 'Home & Deco.',
-      country: 'Nike',
+      country: 'LEVIS',
       p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
-      img: 'https://miro.medium.com/max/900/0*9hcinRdaHicrNpNE.jpg',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTikV73-_9P2UUWj3rKg-TmgjrxGPmUO-BdOw&usqp=CAU',
     },
     {
       city: 'Shop - Gadgets',
-      country: 'ADIDAS',
+      country: 'REEBOK',
       p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
-      img: 'https://assets.website-files.com/5ee732bebd9839b494ff27cd/5ee732bebd9839d388ff2800_adidas-logo-e1468257076328.jpg',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Reebok_logo19.png',
     },
     {
       city: 'Chanel',
@@ -252,4 +252,4 @@ const brands = [
           },
   ];
 
-  export default brands
+  export default brands2

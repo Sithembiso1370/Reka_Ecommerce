@@ -6,10 +6,6 @@ import slides from './slides'
 export default function BannerSliding() {
   return (
     <div className='BannerSliding'>
-      <div className="arrowleftHolder">
-        left
-      </div>
-      <div className="SlideHolder">
           {            
             slides.map((slide)=>(
               <div className='slide'>
@@ -17,10 +13,6 @@ export default function BannerSliding() {
               </div>
             )) 
           }
-      </div>
-      <div className="arrowRighttHolder">
-          right
-      </div>
     </div>
   )
 }

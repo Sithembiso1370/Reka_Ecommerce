@@ -3,6 +3,7 @@ import './Topbrands.css'
 import { Rerousel } from 'rerousel';
 import styled from 'styled-components'
 import brands from './brands'
+import brands2 from './brands2';
 
 function Topbrands() {
   const ref = useRef(null);
@@ -18,12 +19,19 @@ function Topbrands() {
   font-size: 1.5em;
   border: solid 1px black;
   background-color: #61DAFB;
+  overflow: active;
   
   @media(max-width: 1150px) {
-      width: 100%;
-      heigh:100%;
+      width: 50%;
+      heigh:98%;
 
   }
+
+  @media(max-width: 600px) {
+    width: 100%;
+    heigh:100%;
+
+}
 `;
 
 
@@ -49,15 +57,17 @@ function Topbrands() {
                 borderRadius: '5px'
 
               }}
-              >{slide.country}</Item>
+              >
+                {/* {slide.country} */}
+              </Item>
             ))
           }
 
         </Rerousel>
-        <Rerousel itemRef={ref}>
+        <Rerousel itemRef={ref} className="RerouselCont">
           {/* <Item ref={ref}>1</Item> */}
           {
-            brands.map((slide)=>(
+            brands2.map((slide)=>(
               <Item ref={ref}
               style={{ 
                 background: `url(${slide.img})`,
@@ -69,7 +79,9 @@ function Topbrands() {
                 borderRadius: '5px'
 
               }}
-              >{slide.country}</Item>
+              >
+                {/* {slide.country} */}
+              </Item>
             ))
           }
         </Rerousel>

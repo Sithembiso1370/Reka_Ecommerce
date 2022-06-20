@@ -89,6 +89,37 @@ const slides = [
 function Main() {
   return (
     <div className='Main'>
+      <div className='socials_tab'>
+          <div className="localInbox"
+          style={{ 
+            background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png)',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
+          >
+            {/* whats app */}
+          </div>
+          <div className="localInbox"
+          style={{ 
+            background: 'url(https://img.favpng.com/12/1/21/computer-icons-email-internet-icon-design-clip-art-png-favpng-sFFj7y8r7hD4PkXtawFnerUwG.jpg)',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          
+          }}
+          >
+            {/* localInbox */}
+          </div>
+          <div className="localInbox"
+          style={{ 
+            background: 'url(https://www.citypng.com/public/uploads/preview/-41601338027vkwdrvgf6d.png)',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
+          >
+            {/* whats app */}
+          </div>
+          
+      </div>
       {/* <RightSideBanner/> */}
       <div className='mainSub_1'>
       <CitiesSlider slides={slides} />
@@ -111,7 +142,37 @@ function Main() {
       </div>
       <div className='mainSub_8'>
         {/* shipping info */}
-          <SinglerRowCarousel/>
+          {/* <SinglerRowCarousel/> */}
+          <div className="bottomMain">
+            <div className="bottomMainTop">
+                <div className="nationwideShipping">
+                nationwideShipping
+                </div>
+                <div className="returnpolicy">
+                returns policy
+                </div>
+                <div className="returnpolicy">
+                warranty
+                </div>
+                <div className="returnpolicy">
+                secure checkout
+                </div>
+            </div>
+            <div className="bottomMainBottom">
+            <div className="nationwideShipping">
+                nationwideShipping
+                </div>
+                <div className="returnpolicy">
+                returns policy
+                </div>
+                <div className="returnpolicy">
+                warranty
+                </div>
+                <div className="returnpolicy">
+                secure checkout
+                </div>
+            </div>
+          </div>
       </div>
     </div>
   )

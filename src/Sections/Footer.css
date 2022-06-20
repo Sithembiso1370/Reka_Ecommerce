@@ -2,7 +2,7 @@
 
 .Footer {
     position: relative;
-    background-color: black;
+    background-color: #003A75;
     display: flex;
     color: white;
     grid-template-columns: repeat(3,1fr);
@@ -12,8 +12,8 @@
 }
 
 .Footer>div {
-    border: 1px solid whitesmoke;
     position: relative;
     height: 100%;
     width: 100%;
+    padding: 5%;
 }
