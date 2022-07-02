@@ -11,7 +11,7 @@ class CitiesSlider extends React.Component {
       this.IMAGE_PARTS = 4;
       
       this.changeTO = null;
-      this.AUTOCHANGE_TIME = 4000;
+      this.AUTOCHANGE_TIME = 10000;
       
       this.state = { activeSlide: -1, prevSlide: -1, sliderReady: false };
     }

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import LandingPage from './Pages/LandingPage/LandingPage';
-import ContactUs from './Pages/ContactUs';
-import About from './Pages/About';
+import ContactUs from './Pages/ContactUs/ContactUs';
+import About from './Pages/AboutPage/About';
 import {
   BrowserRouter,
   Routes,

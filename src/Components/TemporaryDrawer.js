@@ -58,8 +58,7 @@ export default function TemporaryDrawer() {
         'Jewelery',
         'Watches and Accesories', 
         'Health & Beauty',
-        'Bags',
-        'Shoes',
+        'Shoes & Bags',
         'Home and Deco',
         'Garden and Deco',
         'Furniture(Office/Home)',
@@ -73,7 +72,7 @@ export default function TemporaryDrawer() {
         'Media Art and Entertainment',
         'Games and Puzzles',
         'Pets Supplies',
-        'Food and Bevs'
+        'Food and Bev'
 
         ].map((text, index) => (
           <ListItem key={text} disablePadding>

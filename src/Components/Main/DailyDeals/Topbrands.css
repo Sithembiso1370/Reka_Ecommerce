@@ -58,3 +58,7 @@
     grid-template-rows: 50% 50%;
 }
 
+.brandsItem:hover {
+    box-shadow: 5px 5px 11px #737373, -5px -5px 11px #ffffff;
+}
+

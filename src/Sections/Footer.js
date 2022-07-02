@@ -7,10 +7,10 @@ function Footer() {
       <div className='footer_left'>
         footer left
       </div>
-      <div className='footer_left'>
+      <div className='footer_center'>
         footer mid
       </div>
-      <div className='footer_left'>
+      <div className='footer_right'>
         footer right
       </div>
     </div>

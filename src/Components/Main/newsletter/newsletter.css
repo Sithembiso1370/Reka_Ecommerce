@@ -35,6 +35,14 @@
     background-color: whitesmoke;
 }
 
+
+.newsletter>input::placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orangered;
+}
+
 .newsletter>input:hover {
     background-color: white;
 }

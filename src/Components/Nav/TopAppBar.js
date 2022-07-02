@@ -36,25 +36,25 @@ export default function TopButtonAppBar() {
                   </span>
                 </li>
                 <li className='li_r_2'>
-                  <span className="material-symbols-outlined color_orange">
+                  <span className="material-symbols-outlined">
                   receipt_long
                   </span>
                 </li>
                 <li className='li_r_3'>
-                  <span className="material-symbols-outlined color_orange">
+                  <span className="material-symbols-outlined">
                     account_circle
                   </span>
                 </li>
                 <li className='li_r_4' value={5} >
-                  <span className="material-symbols-outlined color_orange">
+                  <span className="material-symbols-outlined ">
                   shopping_cart_checkout
                   </span>
-                  <span className='cart_count color_orange'>
+                  <span className='cart_count '>
                     {/* 5 */}
                   </span>
                 </li>
                 <li className='li_r_5'>
-                  <span className="material-symbols-outlined color_orange">
+                  <span className="material-symbols-outlined ">
                   campaign
                   </span>
                 </li>
@@ -99,7 +99,7 @@ export default function TopButtonAppBar() {
               <li>Learn</li>
               <li>Invest</li>
               <li>Play</li>
-              <li>Contact Us</li>
+              <li><a href='/Contactus'>Contact Us</a></li>
               <li>Blog</li>
             </ul>
           </div>

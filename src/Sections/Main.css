@@ -144,7 +144,16 @@
     box-shadow: 5px 5px 11px #73737396, -5px -5px 11px #ffffff00;
     margin: 3px;
     z-index: 2;
+    color: orangered;
 }
+
+
+.bottomMainTop>div:hover{
+    box-shadow: 5px 5px 11px #1a7cdf, -5px -5px 11px  #003A75;
+    z-index: 50;
+    transition: all 0.1s ease-in;
+}
+
 
 .bottomMainBottom {
     background-color: #003A75;
@@ -153,6 +162,9 @@
     height: 100%;
     display: flex;
     justify-content: space-evenly;
+    box-shadow: 5px 5px 11px #1a7ddf9a, -5px -5px 11px  #003b75c2;
+    z-index: 50;
+    transition: all 0.1s ease-in;
 }
 
 .bottomMainBottom>div{
@@ -165,6 +177,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: 1px 1px 3px #737373, -1px -1px 3px #ffffff5e;
+    color: orangered;
     margin: 3px;
     z-index: 2;
 }

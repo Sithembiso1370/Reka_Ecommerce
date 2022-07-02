@@ -52,12 +52,11 @@ function Topbrands() {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 margin: '1%',
-                boxShadow: '5px 5px 11px #737373, -5px -5px 11px #ffffff',
                 border: 'none',
                 borderRadius: '5px'
 
               }}
-              >
+              className="brandsItem">
                 {/* {slide.country} */}
               </Item>
             ))
@@ -74,12 +73,11 @@ function Topbrands() {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 margin: '2%',
-                boxShadow: '5px 5px 11px #737373, -5px -5px 11px #ffffff',
                 border: 'none',
                 borderRadius: '5px'
 
-              }}
-              >
+              } }
+              className="brandsItem">
                 {/* {slide.country} */}
               </Item>
             ))

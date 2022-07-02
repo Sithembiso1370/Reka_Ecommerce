@@ -1,8 +1,7 @@
 
 
 .bannerbar{
-    background-color: #003A75;
-    height: 30px;
+    background-color: whitesmoke;
     color: orangered;
 }
 
@@ -24,6 +23,11 @@
     color: orangered;
     /* flex: 1; */
 }
+.bannerbar>ul>li:hover {
+    color: #003A75;
+    transition: all 1s ease-in;
+}
+
 .bannerbar>ul>.bb_li_4 {
     flex: 4;
 }

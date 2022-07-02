@@ -39,13 +39,14 @@
     cursor: pointer;
     width: 100%;
     height: 100%;
-    background-color: #003A75;
+    background-color: whitesmoke;
     color: #FF5F1F;
     border: none;
     
 }
 .FiltureSide>.filture_typeSelect>button:hover {
     border-bottom: 4px solid #FF5F1F;
+    color: #003b75;
     transition: all 0.25s ease-out;
 }
 
@@ -57,7 +58,7 @@
     height: 95%;
     flex: 20;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 8fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 8fr; */
     gap: 1%;
 }
 
@@ -66,16 +67,20 @@
     position: relative;
     width: 100%;
     height: 90%;
-    box-shadow: 3px 3px 2px #aeacac, -3px -3px 1px whitesmoke;
+    /* box-shadow: 3px 3px 2px #aeacac, -3px -3px 1px whitesmoke; */
     display: flex;
     align-items: center;
 
     border-radius: 5px;
     cursor: pointer;
+    transition: all 5s ease-in;
+    color: #003b75;
 }
 
 .FiltureSide>.filture_filtures>div:hover{
-    box-shadow: 5px 5px 5px #aeacac, -5px -5px 4px whitesmoke;
+    box-shadow: 5px 5px 11px #737373, -5px -5px 11px #ffffff;
+    transition: all 1s ease-in;
+    color: #FF5F1F;
 }
 
 
@@ -124,11 +129,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 5px 5px 11px #737373, -5px -5px 11px #ffffff;
+
     border-radius: 15px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: all 10s ease-in;
 
+}
+
+.filture_main>.Product:hover {
+    box-shadow: 5px 5px 11px #737373, -5px -5px 11px #ffffff;
+    /* color: #003b75; */
+    z-index: 50;
+    transition: all 2s ease-in;
 }
 
 .filture_main>.Product>.ProductDetails_top {
