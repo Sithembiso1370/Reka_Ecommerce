@@ -1,20 +1,13 @@
 import React from 'react'
-import './StoreFilture.css'
-
 import slides from './slides'
-import { yellow } from '@mui/material/colors'
+import './productTypesFilture.css'
 
 
 
-function StoreFilture() {
 
-    const showDetails = (e)=>{
-        e.target.after("<h1>after</h1>")
-    }
+function ProductTypesFilture() {
+
     
-
-    const after = <div className='after'>after</div>
-
 
     const myslides =  slides.map((slide) =>
         <div className='Product' 
@@ -24,15 +17,10 @@ function StoreFilture() {
         >
           <ul className="ProductDetails_top">
             <li className="productOwner"
-                    // style={{
-                    //   backgroundImage: `url(${slide.p_logo})`
-                    // }}
-                    
-            >
-              {/* <span class="material-symbols-outlined">
-              print
-              </span> */}
-            </li>
+                    style={{
+                      backgroundImage: `url(${slide.p_logo})`
+                    }}
+            ></li>
             <li>{slide.country}</li>
           </ul>
           <div
@@ -41,7 +29,7 @@ function StoreFilture() {
           // onMouseEnter={showDetails}
 
           >$ 34.87</div>
-          {/* <ul className="ProductDetails_bottom">
+          <ul className="ProductDetails_bottom">
             <li>
               <span class="material-symbols-outlined">
               thumb_up
@@ -62,12 +50,15 @@ function StoreFilture() {
               add_shopping_cart
               </span>
             </li>
-          </ul> */}
+
+          </ul>
         </div>
 
     );
+
+
+
   return (
-      
     <div className='AnotherFilture'>
         <div className='FiltureSide'>
           <div className='filture_typeSelect'>
@@ -119,10 +110,8 @@ function StoreFilture() {
             }
            </div>
       </div>
+
   )
 }
 
-
-  
-
-export default StoreFilture
+export default ProductTypesFilture

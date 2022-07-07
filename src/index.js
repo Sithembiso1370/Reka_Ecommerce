@@ -10,6 +10,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ProductPage from './Pages/ProductPage/ProductPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,6 +21,7 @@ root.render(
       <Route path="/" element={<LandingPage />} />
       <Route path="/about" element={<About />} />
       <Route path="/contactus" element={<ContactUs />} />
+      <Route path="/ProductPage" element={<ProductPage />} />
         {/* NEST THESE ROUTES */}
     </Routes>
   </BrowserRouter>

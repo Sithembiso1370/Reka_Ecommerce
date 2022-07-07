@@ -12,8 +12,8 @@ function Topbrands() {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25%;
-  height: 100%;
+  width: 10%;
+  height: 90%;
   font-family: Signika;
   font-weight: bold;
   font-size: 1.5em;
@@ -22,13 +22,13 @@ function Topbrands() {
   overflow: active;
   
   @media(max-width: 1150px) {
-      width: 50%;
+      width: 33%;
       heigh:98%;
 
   }
 
   @media(max-width: 600px) {
-    width: 100%;
+    width: 25%;
     heigh:100%;
 
 }
@@ -49,8 +49,9 @@ function Topbrands() {
               <Item ref={ref}
               style={{ 
                 background: `url(${slide.img})`,
-                backgroundSize: 'cover',
+                backgroundSize: '100%',
                 backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
                 margin: '1%',
                 border: 'none',
                 borderRadius: '5px'

@@ -1,9 +1,6 @@
 import * as React from 'react';
 import './opButtonAppBar.css'
-import CustomControl from './ReactSelect';
 import SearchBar from './SearchBar/SearchBar';
-import SelectCustStyles from './SelectCustStyles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import TemporaryDrawer from '../TemporaryDrawer';
 
 
@@ -100,7 +97,7 @@ export default function TopButtonAppBar() {
               <li>Invest</li>
               <li>Play</li>
               <li><a href='/Contactus'>Contact Us</a></li>
-              <li>Blog</li>
+              <li ><a href='/ProductPage'>Blog</a></li>
             </ul>
           </div>
 

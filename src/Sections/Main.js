@@ -93,8 +93,9 @@ function Main() {
           <div className="localInbox"
           style={{ 
             background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png)',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
+            backgroundSize: '100%',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
           }}
           >
             {/* whats app */}
@@ -103,7 +104,8 @@ function Main() {
           style={{ 
             background: 'url(https://img.favpng.com/12/1/21/computer-icons-email-internet-icon-design-clip-art-png-favpng-sFFj7y8r7hD4PkXtawFnerUwG.jpg)',
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
           
           }}
           >
@@ -112,8 +114,9 @@ function Main() {
           <div className="localInbox"
           style={{ 
             background: 'url(https://www.citypng.com/public/uploads/preview/-41601338027vkwdrvgf6d.png)',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
+            backgroundSize: '100%',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
           }}
           >
             {/* whats app */}
@@ -146,30 +149,57 @@ function Main() {
           <div className="bottomMain">
             <div className="bottomMainTop">
                 <div className="nationwideShipping">
-                nationwideShipping
+                <span class="material-symbols-outlined">
+                savings
+                </span>
+                {/* Great value items */}
                 </div>
                 <div className="returnpolicy">
-                returns policy
+                <span class="material-symbols-outlined">
+                sync
+                </span>
+                {/* returns policy */}
                 </div>
                 <div className="returnpolicy">
-                warranty
+                <span class="material-symbols-outlined">
+                payments
+                credit_card
+                </span>
+                {/* Pay with the world's top payment methods */}
                 </div>
                 <div className="returnpolicy">
-                secure checkout
+                {/* Worldwide delivery */}
+                <span class="material-symbols-outlined">
+                pin_drop
+                bring_your_own_ip
+                local_shipping
+                </span>
                 </div>
             </div>
             <div className="bottomMainBottom">
-            <div className="nationwideShipping">
-                nationwideShipping
+                <div className="nationwideShipping">
+                {/* nationwideShipping */}
+                <span class="material-symbols-outlined">
+                high_quality
+                </span>
                 </div>
                 <div className="returnpolicy">
-                returns policy
+                <span class="material-symbols-outlined">
+                group
+                </span>
+                {/* Easy 14 days returns */}
                 </div>
                 <div className="returnpolicy">
-                warranty
+                <span class="material-symbols-outlined">
+                public
+                </span>
+                {/* warranty */}
                 </div>
                 <div className="returnpolicy">
-                secure checkout
+                <span class="material-symbols-outlined">
+                sync_lock
+                </span>
+                {/* secure checkout */}
                 </div>
             </div>
           </div>

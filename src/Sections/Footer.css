@@ -2,21 +2,31 @@
 
 .Footer {
     position: relative;
-    background-color: whitesmoke;
-    display: flex;
+    background-color: white;
+    display: grid;
     color: orangered;
     grid-template-columns: repeat(3,1fr);
+    gap: 0.1%;
     position: relative;
-    height: 300px;
+    height: 100%;
     width: 100%;
-    padding: 1%;
+    /* margin-top: 2px; */
+    flex: 3;
 }
 
 .Footer>div {
     position: relative;
-    height: 99%;
+    background-color: #003A75;
+    height: 98%;
     width: 100%;
-    border: 1px solid black;
+    transition: all 10s ease-out;
+}
+
+.Footer>div:hover {
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 3px #dedede, -1px -1px 3px #ffffff5e; 
+    color: #003A75;
+    transition: all 1s ease-in;
 }
 
 .footer_left {
