@@ -1,12 +1,19 @@
 
 
 .landingpage {
+  background-color: whitesmoke;
     position: relative;
     height: 5500px;
     width: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    align-items: center;
+    transition: all 5s ease-out;
+}
+
+.landingpage:hover {
+  align-items: center;
 }
 
 /* width */

@@ -4,7 +4,7 @@ import SearchBar from './SearchBar/SearchBar';
 import TemporaryDrawer from '../TemporaryDrawer';
 
 
-const logo = require("./Logos/sqsqsqqsqq.JPG")
+const logo = require("./Logos/SQSQ.PNG")
 export default function TopButtonAppBar() {
   return (
     <div className='my_div1'>
@@ -12,13 +12,6 @@ export default function TopButtonAppBar() {
         <div className='my_div1_upper'>
           <div className='image_holder'>
             <img src={logo} alt=""/>
-              {/* <ul>
-                <li className='li_1'>R</li>
-                <li className='li_2'>E</li>
-                <li className='li_3'>K</li>
-                <li className='li_4'>A</li>
-                <li className='li_5'>.Com</li>
-              </ul> */}
           </div>
           <div className='search_holder'>
             <div className='search_main'>

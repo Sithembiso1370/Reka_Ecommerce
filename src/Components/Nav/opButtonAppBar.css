@@ -2,9 +2,11 @@
 
 
 .my_div1 {
-    padding: 5px;
+    position: relative;
     margin: 0;
     display: grid;
+    grid-template-rows: 70% 30%;
+    /* gap: 1%; */
     height: 100%;
     width: 100%;
 }
@@ -12,6 +14,7 @@
 
 
 .my_div1_upper {
+    background-color: white;
     position: relative;
     padding: 0;
     margin: 0;
@@ -19,9 +22,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 100%;
     width: 100%;
-    flex: 1;
+    border-radius: 0 0 15px 15px;
 }
 
 .image_holder {
@@ -32,11 +35,12 @@
     justify-content: center;
     align-items: center;
     flex: 2;
+    border-radius: 15px;
 }
 .image_holder>img {
     position: relative;
     height: 100% ;
-    width: 100%;
+    width: 90%;
 }
 /* .image_holder>ul {
     list-style: none;
@@ -103,7 +107,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 70%;
     width: 100%;
 }
 
@@ -221,18 +225,18 @@ li,i,span {
 .my_div1_lower {
     position: relative;
     padding: 0;
-    margin: 0;
+    margin-top: 0.1%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 100%;
     width: 100%;
-    flex: 1;
+    /* background-color: #F2D2BD; */
 }
 
 .my_div1_lower>.categories_sect {
-    background-color: whitesmoke;
+    background-color: #F2D2BD;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -259,14 +263,14 @@ li,i,span {
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
 }
 
 
 .my_div1_lower>.link_sect>ul {
     /* background-color: #003A75; */
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0);
     width: 100%;
     height: 100%;
     /* background-color: red; */
@@ -277,7 +281,8 @@ li,i,span {
 }
  
 .my_div1_lower>.link_sect>ul>li {
-    color: #FF5F1F;
+    background-color: #FF5733 ;
+    color: whitesmoke;
     border-radius: 15px;
     width: 100%;
     height: 100%;
@@ -290,6 +295,7 @@ li,i,span {
 
 .my_div1_lower>.link_sect>ul>li:hover {
     background-color: white;
+    color: #FF5F1F;
     box-shadow: 1px 1px 3px #737373, -1px -1px 3px #ffffff;
     transition: all 0.2s ease-in ;
 }

@@ -59,6 +59,7 @@
 }
 
 .brandsItem:hover {
+    cursor: pointer;
     box-shadow: 5px 5px 11px #737373, -5px -5px 11px #ffffff;
 }
 

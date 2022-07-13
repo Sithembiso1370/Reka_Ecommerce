@@ -8,7 +8,14 @@ export default function BannerSliding() {
     <div className='BannerSliding'>
           {            
             slides.map((slide)=>(
-              <div className='slide'>
+              <div className='slide'
+              style={{
+                background: `url(${slide.img})`,
+                backgroundSize: '100%',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+              }}
+              >
                   {slide.country}
               </div>
             )) 

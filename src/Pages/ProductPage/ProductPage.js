@@ -88,13 +88,19 @@ function ProductPage() {
   return (
     <div className="ProductPage">
         <Navbar/>
-        <div className="TopSlide">
-            <CitiesSlider slides={slides} />
+        <div className="ProductMain">
+          <div className="TopSlide">
+            {/* PASS DEPARTMENT SPECIFIC IMAGES HERE */}
+              <CitiesSlider slides={slides} />
+          </div>
+          <div className="MidPart">
+              <ProductTypesFilture/>
+          </div>
         </div>
-        <div className="MidPart">
-            <ProductTypesFilture/>
+        {/* <Footer/> */}
+        <div className='product_footer'>
+        product_footer
         </div>
-        <Footer/>
     </div>
   )
 }

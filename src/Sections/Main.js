@@ -126,6 +126,18 @@ function Main() {
       {/* <RightSideBanner/> */}
       <div className='mainSub_1'>
       <CitiesSlider slides={slides} />
+      <div className='mainSub_1_right logins'>
+        <div>
+          <h3 className='Login_header'>Welcome to Akilli Kraal</h3>
+          <div className='Login_options'>
+            <a href='/' className='SignIn'>Sign In</a>
+            <a href='/' className='JoinUs'>Join Us</a>
+          </div>
+        </div>
+        <div>
+          3D FLIP(ADD,SALE OR PROMO)
+        </div>
+      </div>
       </div>
       <div className='mainSub_2'>
         <DailyDeals/>

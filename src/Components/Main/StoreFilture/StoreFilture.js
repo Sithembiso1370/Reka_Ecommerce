@@ -19,7 +19,10 @@ function StoreFilture() {
     const myslides =  slides.map((slide) =>
         <div className='Product' 
         style={{
-          backgroundImage: `url(${slide.img})`
+          backgroundImage: `url(${slide.img})`,
+          backgroundSize: '100%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
         >
           <ul className="ProductDetails_top">

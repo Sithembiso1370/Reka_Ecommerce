@@ -1,8 +1,13 @@
 
 
 .bannerbar{
-    background-color: whitesmoke;
+    background-color: #F2D2BD;
     color: orangered;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* #FFBB2B */
@@ -16,10 +21,14 @@
     align-items: center;
     justify-content: center;
     list-style: none;
+    width: 100%;
+    height: 100%;
 }
 
 .bannerbar>ul>li {
-    padding: 2px;
+    width: 100%;
+    height: 100%;
+    padding: 0.1%;
     color: orangered;
     /* flex: 1; */
 }

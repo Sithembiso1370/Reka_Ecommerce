@@ -12,26 +12,29 @@ function Topbrands() {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10%;
+  width: 15%;
   height: 90%;
   font-family: Signika;
   font-weight: bold;
   font-size: 1.5em;
   border: solid 1px black;
-  background-color: #61DAFB;
   overflow: active;
   
   @media(max-width: 1150px) {
-      width: 33%;
+      width: 20%;
       heigh:98%;
 
   }
 
-  @media(max-width: 600px) {
-    width: 25%;
-    heigh:100%;
+  @media(max-width: 700px) {
+    width: 50%;
+    heigh:98%;
+  }
 
-}
+  @media(max-width: 400px) {
+    width: 100%;
+    heigh:98%;
+  }
 `;
 
 
@@ -71,9 +74,10 @@ function Topbrands() {
               <Item ref={ref}
               style={{ 
                 background: `url(${slide.img})`,
-                backgroundSize: 'cover',
+                backgroundSize: '100%',
                 backgroundRepeat: 'no-repeat',
-                margin: '2%',
+                backgroundPosition: 'center',
+                margin: '1%',
                 border: 'none',
                 borderRadius: '5px'
 

@@ -1,13 +1,27 @@
 
 
 .Navbar {
-    background-color: white;
-    margin-bottom: 1%;
+    background-color: rgba(255, 255, 255, 0);
+    /* margin-bottom: 1%; */
     position: fixed;
+    top: 0%;
+    /* border-top: 1px solid black; */
     z-index: 150;
-    width: 100%;
+    /* align-self: center; */
+    width: 90%;
     height: 150px;
-    box-shadow: 5px 5px 4px #aeacac, -5px -5px 4px #003A75;
+    /* box-shadow: 2px 2px 3px #aeacac, -2px -2px 3px #323435; */
+    display: grid;
+    grid-template-rows: 20% 80%;
+    /* top: 1%; */
+    border-radius: 15px;
+    transition: all 1s ease-out;
+}
+
+.Navbar:hover {
+  width: 100%;
+  top: 0%;
+  border-radius: 0px;
 }
 
 /* html:not([data-scroll='0']) .Navbar {
