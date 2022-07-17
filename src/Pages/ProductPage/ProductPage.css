@@ -31,7 +31,8 @@
 
 
 .product_footer {
-    background-color: orange;
+    background-color: #2D2D38;
+    color: white;
     position: absolute;
     bottom: 0;
     width: 100%;
