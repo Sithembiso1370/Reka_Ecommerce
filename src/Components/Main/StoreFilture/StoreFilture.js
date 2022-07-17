@@ -27,14 +27,14 @@ function StoreFilture() {
         >
           <ul className="ProductDetails_top">
             <li className="productOwner"
-                    // style={{
-                    //   backgroundImage: `url(${slide.p_logo})`
-                    // }}
+                    style={{
+                     backgroundImage: `url(${slide.p_logo})`
+                    }}
                     
             >
-              {/* <span class="material-symbols-outlined">
+              <span class="material-symbols-outlined">
               print
-              </span> */}
+              </span> 
             </li>
             <li>{slide.country}</li>
           </ul>
@@ -44,7 +44,7 @@ function StoreFilture() {
           // onMouseEnter={showDetails}
 
           >$ 34.87</div>
-          {/* <ul className="ProductDetails_bottom">
+          <ul className="ProductDetails_bottom">
             <li>
               <span class="material-symbols-outlined">
               thumb_up
@@ -65,7 +65,7 @@ function StoreFilture() {
               add_shopping_cart
               </span>
             </li>
-          </ul> */}
+          </ul>
         </div>
 
     );
