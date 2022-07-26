@@ -3,6 +3,7 @@ import './StoreFilture.css'
 
 import slides from './slides'
 import { yellow } from '@mui/material/colors'
+import sample from './720.mp4';
 
 
 
@@ -107,7 +108,11 @@ function StoreFilture() {
                   style={{ background: 'url(https://cdn.theorg.com/ee8a0d5c-9efa-4939-89e7-7a31340db532_thumb.jpg)'}}
                 >
                 filture_add1
+                
                 </div>
+                {/* <video className='filture_add1' autoPlay loop muted>
+                    <source src={sample} type='video/mp4' />
+                </video> */}
                 <div className="filture_add1"
                   style={{ background: 'url(https://www.heartfm.co.za/content/uploads/2018/11/zando-1.jpg)'}}
                 >

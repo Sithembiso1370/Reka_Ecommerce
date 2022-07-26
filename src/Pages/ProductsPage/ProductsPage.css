@@ -1,0 +1,42 @@
+
+
+.ProductPage {
+    position: relative;
+    width: 100%;
+    height: 4500px;
+}
+
+.ProductMain {
+    top: 3%;
+    position: relative;
+    width: 100%;
+    height: 4150px;
+    /* display: grid;
+    grid-template-rows: 30% 80%; */
+}
+
+.TopSlide{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    z-index:10;
+}
+
+.MidPart {
+    margin-top: 22%;
+    position: absolute;
+    width: 100%;
+    height: 4000px;
+}
+
+
+.product_footer {
+    background-color: #2D2D38;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+}
+
+

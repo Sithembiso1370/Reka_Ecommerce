@@ -88,9 +88,9 @@ export default function TopButtonAppBar() {
               <li>Earn</li>
               <li>Learn</li>
               <li>Invest</li>
-              <li>Play</li>
+              <li><a href='/ProductPage'>Play</a></li>
               <li><a href='/Contactus'>Contact Us</a></li>
-              <li ><a href='/ProductPage'>Blog</a></li>
+              <li ><a href='/ProductsPage'>Blog</a></li>
             </ul>
           </div>
 

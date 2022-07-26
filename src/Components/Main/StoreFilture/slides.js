@@ -251,6 +251,18 @@ const slides = [
             p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
             img: 'https://assets0.mirraw.com/images/9171656/DC0585-1_thumb.jpg?1624770680',
           },
+          {
+            city: 'Moscow',
+            country: 'Arts and Crafts',
+            p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+            img: 'https://media.takealot.com/covers_images/9fbe9585df4c494ab6483a7307a75e7b/s-list.file',
+          },
+          {
+            city: 'Moscow',
+            country: 'Arts and Crafts',
+            p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+            img: 'https://assets0.mirraw.com/images/9171656/DC0585-1_thumb.jpg?1624770680',
+          },
   ];
 
   export default slides
