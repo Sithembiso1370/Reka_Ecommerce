@@ -75,31 +75,31 @@ function StoreFilture() {
     <div className='AnotherFilture'>
         <div className='FiltureSide'>
           <div className='filture_typeSelect'>
-            <button>Categories</button>
-            <button>Brands</button>
-            <button>Stores</button>
+            <button>Top Categories</button>
+            <button>Top Brands</button>
+            <button>Top Stores</button>
           </div>
           <div className='filture_filtures'>
               <div className='filture_filture_f1'>
-                Filture 1
+                Clothing
               </div>
               <div className='filture_filture_f1'>
-                Filture 2
+               Jewelery
               </div>
               <div className='filture_filture_f1'>
-                Filture 3
+                Accessories and Watches
               </div>
               <div className='filture_filture_f1'>
-                Filture 4
+                Health and Beauty
               </div>
               <div className='filture_filture_f1'>
-                Filture 5
+                Consumer Electronics
               </div>
               <div className='filture_filture_f1'>
-                Filture 6
+                Industrial Supplies
               </div>
               <div className='filture_filture_f1'>
-                Filture 7
+               Phones,Telecoms & Accessories
               </div>
               <div className='filture_filture_f1 f8'
              

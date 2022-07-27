@@ -15,18 +15,21 @@ import ProductPage from './Pages/ProductPage/ProductPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+
 root.render(
   <React.StrictMode>
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contactus" element={<ContactUs />} />
-      <Route path="/ProductsPage" element={<ProductsPage />} />
-      <Route path="/ProductPage" element={<ProductPage />} />
-        {/* NEST THESE ROUTES */}
-    </Routes>
-  </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/ProductsPage" element={<ProductsPage />} />
+        <Route path="/ProductPage" element={<ProductPage />} />
+          {/* NEST THESE ROUTES */}
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

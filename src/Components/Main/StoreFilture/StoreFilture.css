@@ -72,12 +72,13 @@
     /* box-shadow: 3px 3px 2px #aeacac, -3px -3px 1px whitesmoke; */
     display: flex;
     align-items: center;
-    flex: 0.5;
+    flex: 1;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 5s ease-in;
+    text-align: center;
     color: #003b75;
-    margin: 1%;
+
+    transition: all 5s ease-in;
 }
 
 .FiltureSide>.filture_filtures>div:hover{
