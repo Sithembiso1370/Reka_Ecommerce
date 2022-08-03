@@ -71,7 +71,19 @@ export default function TopButtonAppBar() {
               {/* select::-ms-expand {
                   display: none;
               } */}
-              <li>Home</li>
+              <li style={{
+                display:'none'
+              }}>Home
+                
+              </li>
+              <li ><a 
+              // href='/ProductsPage'
+              >Shop
+              <select>
+                <option>Clothing</option>
+                <option>Accesories</option>
+              </select>
+              </a></li>
               <li>Print on demand</li>
               <li>
                 {/* <select
@@ -90,7 +102,7 @@ export default function TopButtonAppBar() {
               <li>Invest</li>
               <li><a href='/ProductPage'>Play</a></li>
               <li><a href='/Contactus'>Contact Us</a></li>
-              <li ><a href='/ProductsPage'>Blog</a></li>
+              {/* <li ><a href='/ProductsPage'>Shop</a></li> */}
             </ul>
           </div>
 

@@ -39,12 +39,12 @@ function StoreFilture() {
             </li>
             <li>{slide.country}</li>
           </ul>
-          <div
+          <a href='/ProductPage'
           // 'ProductContainer cont_image'
           className='ProductImage'
           // onMouseEnter={showDetails}
 
-          >$ 34.87</div>
+          >$ 34.87</a>
           <ul className="ProductDetails_bottom">
             <li>
               <span class="material-symbols-outlined">
@@ -101,22 +101,49 @@ function StoreFilture() {
               <div className='filture_filture_f1'>
                Phones,Telecoms & Accessories
               </div>
+              <div className='filture_filture_f1'>
+                Consumer Electronics
+              </div>
+              <div className='filture_filture_f1'>
+                Industrial Supplies
+              </div>
+              <div className='filture_filture_f1'>
+               Phones,Telecoms & Accessories
+              </div>
+              <div className='filture_filture_f1'>
+                Consumer Electronics
+              </div>
+              <div className='filture_filture_f1'>
+                Industrial Supplies
+              </div>
+              <div className='filture_filture_f1'>
+               Phones,Telecoms & Accessories
+              </div>
               <div className='filture_filture_f1 f8'
              
               >
                 <div className="filture_add1"
                   style={{ background: 'url(https://cdn.theorg.com/ee8a0d5c-9efa-4939-89e7-7a31340db532_thumb.jpg)'}}
                 >
-                filture_add1
-                
+                <div>
+                filture_add1_add1
+                </div>
+                <div>
+                filture_add1_add2
+                </div>
                 </div>
                 {/* <video className='filture_add1' autoPlay loop muted>
                     <source src={sample} type='video/mp4' />
                 </video> */}
                 <div className="filture_add1"
-                  style={{ background: 'url(https://www.heartfm.co.za/content/uploads/2018/11/zando-1.jpg)'}}
+                  // style={{ background: 'url(https://www.heartfm.co.za/content/uploads/2018/11/zando-1.jpg)'}}
                 >
-                filture_add2
+                               <div>
+                filture_add2_add1
+                </div>
+                <div>
+                filture_add2_add2
+                </div>
                 </div>
               </div>
             </div>

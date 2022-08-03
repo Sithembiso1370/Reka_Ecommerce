@@ -1,7 +1,7 @@
 
 
 .Footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     background-color: white;
     display: grid;
@@ -12,6 +12,7 @@
     width: 100%;
     margin-top: 4%;
     flex: 3;
+    z-index: 20001;
 }
 
 .Footer>div {

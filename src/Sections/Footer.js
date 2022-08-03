@@ -9,17 +9,17 @@ function Footer() {
         <div>
           <span>
             <a href="/">
-            About Banggood.com
-            </a>
-          </span>
-          <span>
-            <a href="/">
-            Guarantees & Return Policy
+            About AkilliKraal.com
             </a>
           </span>
           <span>
             <a href="/">
             Contact Us
+            </a>
+          </span>
+          <span>
+            <a href="/">
+            Help
             </a>
           </span>
           <span>
@@ -61,21 +61,21 @@ function Footer() {
         </div>
       </div>
       <div className='footer_right'>
-        <h3>Akilli Plartforms</h3>
+        <h3>Support</h3>
         <div>
           <span>
             <a href="/">
-            download app links
+            FAQ
             </a>
           </span>
           <span>
             <a href="/">
-            Follow us links
+            Orders and Shipping
             </a>
           </span>
           <span>
             <a href="/">
-            Email subscribed
+            Returns
             </a>
           </span>
         </div>
@@ -95,7 +95,7 @@ function Footer() {
           </span>
           <span>
             <a href="/">
-            Email subscribed
+            Secure Payments
             </a>
           </span>
         </div>

@@ -120,8 +120,7 @@ function Main() {
           }}
           >
             {/* whats app */}
-          </div>
-          
+          </div>     
       </div>
       {/* <RightSideBanner/> */}
       <div className='mainSub_1'>

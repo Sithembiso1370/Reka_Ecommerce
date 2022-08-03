@@ -86,9 +86,9 @@ const slides = [
 
 function ProductPage() {
   return (
-    <div className="ProductPage">
+    <div className="ProductsPage">
         <Navbar/>
-        <div className="ProductMain">
+        <div className="ProductsMain">
           <div className="TopSlide">
             {/* PASS DEPARTMENT SPECIFIC IMAGES HERE */}
               <CitiesSlider slides={slides} />
@@ -97,10 +97,10 @@ function ProductPage() {
               <ProductTypesFilture/>
           </div>
         </div>
-        {/* <Footer/> */}
-        <div className='product_footer'>
+        <Footer/>
+        {/* <div className='product_footer'>
         product_footer
-        </div>
+        </div> */}
     </div>
   )
 }
