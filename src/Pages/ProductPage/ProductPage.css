@@ -5,14 +5,17 @@
     position: relative;
     width: 100%;
     align-self: center;
-    height: 2000px;
-    display: grid;
+    height: 4000px;
+    display: flex;
+    flex-direction: column;
 }
 
-.ProductPageMain{
 
+
+.ProductPageMain{
+    flex: 30;
     display: grid;
-    grid-template-rows: 5fr 12fr 5fr;
+    grid-template-rows: 4fr 12fr 5fr;
 }
 
 .ProductPageMain>div {
@@ -21,7 +24,6 @@
 }
 
 .ProductPageMain > .ProductPageMain_Top {
-
     display: grid;
     grid-template-columns: 3fr 2fr;
 }

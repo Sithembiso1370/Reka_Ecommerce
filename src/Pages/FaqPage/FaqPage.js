@@ -1,17 +1,17 @@
 import React from 'react'
 import Footer from '../../Sections/Footer'
 import Navbar from '../../Sections/Navbar'
-import './About.css'
+import './FaqPage.css'
 
-function About() {
+function FaqPage() {
   return (
     <div className="About">
         <Navbar/>
-        <div className="CartPageMain">
+        <div className="FaqPageMain">
         </div>
         <Footer/>
     </div>
   )
 }
 
-export default About
+export default FaqPage

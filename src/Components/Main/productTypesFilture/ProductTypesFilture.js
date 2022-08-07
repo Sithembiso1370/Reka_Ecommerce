@@ -23,12 +23,12 @@ function ProductTypesFilture() {
             ></li>
             <li>{slide.country}</li>
           </ul>
-          <div
+          <a href='/ProductPage'
           // 'ProductContainer cont_image'
           className='ProductImage'
           // onMouseEnter={showDetails}
 
-          >$ 34.87</div>
+          >$ 34.87</a> 
           <ul className="ProductDetails_bottom">
             <li>
               <span class="material-symbols-outlined">
@@ -62,9 +62,9 @@ function ProductTypesFilture() {
     <div className="ProductTypesFilture">
       <div className="ProductFiltureTopSelect">
         <ul>
-          <li>1</li>
-          <li>Products Filture</li>
-          <li>1</li>
+          <li>Filtures left</li>
+          <li>Womens Clothing</li>
+          <li>Filtures Right</li>
         </ul>
       </div>
       <div className='AnotherFilture'>

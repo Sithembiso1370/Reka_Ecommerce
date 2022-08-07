@@ -8,7 +8,6 @@ function ProductPage() {
     <div className="ProductPage">
         <Navbar/>
         <div className="ProductPageMain">
-
             <div className="ProductPageMain_Top">
                 <div className="ProductPageMain_TopLeft">
                 INSERT SLIDER HERE

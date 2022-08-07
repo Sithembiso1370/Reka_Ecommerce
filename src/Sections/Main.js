@@ -6,6 +6,7 @@ import CitiesSlider from '../Components/Main/SmoothSlider/SmoothSlider'
 import SinglerRowCarousel from '../Components/Main/SinglerRowCarousel/SinglerRowCarousel'
 import StoreFilture from '../Components/Main/StoreFilture/StoreFilture'
 import Newsletter from '../Components/Main/newsletter/Newsletter'
+import ShippingDetails from '../Components/Main/ShippingDetails/ShippingDetails'
 
 
 const slides = [
@@ -157,63 +158,8 @@ function Main() {
       <div className='mainSub_8'>
         {/* shipping info */}
           {/* <SinglerRowCarousel/> */}
-          <div className="bottomMain">
-            <div className="bottomMainTop">
-                <div className="nationwideShipping">
-                <span class="material-symbols-outlined">
-                savings
-                </span>
-                {/* Great value items */}
-                </div>
-                <div className="returnpolicy">
-                <span class="material-symbols-outlined">
-                sync
-                </span>
-                {/* returns policy */}
-                </div>
-                <div className="returnpolicy">
-                <span class="material-symbols-outlined">
-                payments
-                credit_card
-                </span>
-                {/* Pay with the world's top payment methods */}
-                </div>
-                <div className="returnpolicy">
-                {/* Worldwide delivery */}
-                <span class="material-symbols-outlined">
-                pin_drop
-                bring_your_own_ip
-                local_shipping
-                </span>
-                </div>
-            </div>
-            <div className="bottomMainBottom">
-                <div className="nationwideShipping">
-                {/* nationwideShipping */}
-                <span class="material-symbols-outlined">
-                high_quality
-                </span>
-                </div>
-                <div className="returnpolicy">
-                <span class="material-symbols-outlined">
-                group
-                </span>
-                {/* Easy 14 days returns */}
-                </div>
-                <div className="returnpolicy">
-                <span class="material-symbols-outlined">
-                public
-                </span>
-                {/* warranty */}
-                </div>
-                <div className="returnpolicy">
-                <span class="material-symbols-outlined">
-                sync_lock
-                </span>
-                {/* secure checkout */}
-                </div>
-            </div>
-          </div>
+
+          <ShippingDetails/>
       </div>
     </div>
   )
