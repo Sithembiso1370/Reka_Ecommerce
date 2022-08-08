@@ -80,6 +80,15 @@ function StoreFilture() {
             <button>Top Stores</button>
           </div>
           <div className='filture_filtures'>
+             <div className='filture_filture_f1'>
+                All
+              </div>
+              <div className='filture_filture_f1'>
+                Clothing
+              </div>
+              <div className='filture_filture_f1'>
+               Jewelery
+              </div>
               <div className='filture_filture_f1'>
                 Clothing
               </div>

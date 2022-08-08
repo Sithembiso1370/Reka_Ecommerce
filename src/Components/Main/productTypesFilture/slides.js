@@ -1,19 +1,19 @@
 const slides = [
     {
       city: 'Home & Deco.',
-      country: 'summer dress',
-      p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+      country: 'Rabbit Print Cami PJ Set With Eye Cover',
+      p_logo: 'https://www.designhill.com/resize_img.php?atyp=page_file&pth=ft_ca_ct||259||contestfile_1&flp=1626068668-181804171260ebd6bcf116b5-27635942.jpg',
       img: 'https://www.picknpayclothing.co.za/pub/media/catalog/product/cache/703330dce2423b988bd647d4920a16c3/image/164857bee1/plain-strappy-tiered-dress.jpg',
     },
     {
       city: 'Shop - Gadgets',
       country: 'summer v dress',
-      p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+      p_logo: 'https://cdn2.vectorstock.com/i/1000x1000/88/51/business-consulting-logo-icon-design-template-vector-22318851.jpg',
       img: 'https://weareegg.co.za/media/catalog/product/cache/cd323204adbc90346956a7797c460c7b/t/l/tlt10461_1_1.jpg',
     },
     {
       city: 'Mens',
-      country: 'Milan ladies striped',
+      country: 'Floral Lace Harness Lingerie Set',
       p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
       img: 'https://www.eliteoccasions.co.za/content/images/thumbs/0022090_striped-button-through-shirt-dress-without-belt.jpeg',
     },

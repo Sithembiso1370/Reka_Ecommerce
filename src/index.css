@@ -2,8 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Modak&family=Pacifico&family=Poppins&family=Ultra&family=Viga&display=swap');
 
 
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Edu QLD Beginner', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Square Peg', cursive; */
+
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Courgette', cursive;
 }

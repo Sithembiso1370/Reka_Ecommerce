@@ -133,8 +133,15 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    font-family: 'Courgette', cursive;
 }
-
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Edu QLD Beginner', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Square Peg', cursive; */
 .right_holder>ul {
     list-style: none;
     display: flex;
@@ -291,9 +298,16 @@ li,i,span {
     align-items:center ;
     justify-content: center;
     margin: 2px;
+    font-family: 'Fredoka One', cursive;
     transition: all 2s ease-in ;
 }
-
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Edu QLD Beginner', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Square Peg', cursive; */
 .my_div1_lower>.link_sect>ul>li:hover {
     background-color: white;
     color: #FF5F1F;

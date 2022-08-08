@@ -18,7 +18,9 @@ function ProductTypesFilture() {
           <ul className="ProductDetails_top">
             <li className="productOwner"
                     style={{
-                      backgroundImage: `url(${slide.p_logo})`
+                      backgroundImage: `url(${slide.p_logo})`,
+                      backgroundRepeat: 'no-repeat'
+                      
                     }}
             ></li>
             <li>{slide.country}</li>
