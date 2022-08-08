@@ -2,6 +2,7 @@ import * as React from 'react';
 import './opButtonAppBar.css'
 import SearchBar from './SearchBar/SearchBar';
 import TemporaryDrawer from '../TemporaryDrawer';
+import { Outlet, Link } from "react-router-dom";
 
 
 const logo = require("./Logos/SQSQ.PNG")
@@ -100,10 +101,13 @@ export default function TopButtonAppBar() {
               <li>Earn</li>
               <li>Learn</li>
               <li>Invest</li>
-              <li><a href='/ProductPage'>Play</a></li>
-              <li><a href='/Contactus'>Contact Us</a></li>
+              <li><Link to="/Store/ProductsPage">Play</Link></li>
+              
+        
+              <li><Link to="/Store/ProductPage">Contact Us</Link></li>
               {/* <li ><a href='/ProductsPage'>Shop</a></li> */}
             </ul>
+            <Outlet />
           </div>
 
         </div>

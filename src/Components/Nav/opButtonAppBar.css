@@ -301,6 +301,10 @@ li,i,span {
     font-family: 'Fredoka One', cursive;
     transition: all 2s ease-in ;
 }
+
+.my_div1_lower>.link_sect>ul>li>a {
+    font-family: 'Fredoka One', cursive;
+}
 /* font-family: 'Abril Fatface', cursive;
 font-family: 'Bangers', cursive;
 font-family: 'Courgette', cursive;

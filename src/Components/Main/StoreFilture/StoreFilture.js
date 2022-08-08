@@ -4,6 +4,8 @@ import './StoreFilture.css'
 import slides from './slides'
 import { yellow } from '@mui/material/colors'
 import sample from './720.mp4';
+import { getProducts } from './ProductsData'
+import { Link } from "react-router-dom";
 
 
 
@@ -17,10 +19,13 @@ function StoreFilture() {
     const after = <div className='after'>after</div>
 
 
-    const myslides =  slides.map((slide) =>
+    let productsData = getProducts();
+    
+
+    const myproducts =  productsData.map((product) =>
         <div className='Product' 
         style={{
-          backgroundImage: `url(${slide.img})`,
+          backgroundImage: `url(${product.img})`,
           backgroundSize: '100%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -29,7 +34,7 @@ function StoreFilture() {
           <ul className="ProductDetails_top">
             <li className="productOwner"
                     style={{
-                     backgroundImage: `url(${slide.p_logo})`
+                     backgroundImage: `url(${product.p_logo})`
                     }}
                     
             >
@@ -37,14 +42,14 @@ function StoreFilture() {
               print
               </span> 
             </li>
-            <li>{slide.country}</li>
+            <li>{product.country}</li>
           </ul>
-          <a href='/ProductPage'
-          // 'ProductContainer cont_image'
-          className='ProductImage'
-          // onMouseEnter={showDetails}
-
-          >$ 34.87</a>
+          <Link
+            className='ProductImage'
+            style={{ display: "block", margin: " 0" }}
+            to={`/Store/ProductPage/${product.id}`}
+            key={product.country}
+          >$ 34.87</Link>
           <ul className="ProductDetails_bottom">
             <li>
               <span class="material-symbols-outlined">
@@ -159,7 +164,7 @@ function StoreFilture() {
           </div>
           <div className='filture_main'>
             {
-                myslides
+                myproducts
             }
            </div>
       </div>

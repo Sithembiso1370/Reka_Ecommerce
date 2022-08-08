@@ -3,7 +3,8 @@ import ProductTypesFilture from '../../Components/Main/productTypesFilture/Produ
 import CitiesSlider from '../../Components/Main/SmoothSlider/SmoothSlider'
 import Footer from '../../Sections/Footer'
 import Navbar from '../../Sections/Navbar'
-import './ProductsPage.css'
+import './MensClothing.css'
+import { getProducts } from './ProductsData'
 
 
 const slides = [
@@ -84,9 +85,11 @@ const slides = [
   
 
 
-function ProductPage() {
+function MensClothing() {
   console.log("params = ",window.location.pathname.split("/")[2]);
   let department = window.location.pathname.split("/")[2];
+
+  let myproductsData = getProducts();
   return (
     <div className="ProductsPage">
         <Navbar/>
@@ -96,7 +99,7 @@ function ProductPage() {
               <CitiesSlider slides={slides} />
           </div>
           <div className="MidPart">
-              <ProductTypesFilture department={department}/>
+              <ProductTypesFilture department={department} productsData={myproductsData}/>
           </div>
         </div>
         <Footer/>
@@ -107,4 +110,4 @@ function ProductPage() {
   )
 }
 
-export default ProductPage
+export default MensClothing

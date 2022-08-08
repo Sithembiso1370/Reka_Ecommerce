@@ -7,7 +7,7 @@ import SinglerRowCarousel from '../Components/Main/SinglerRowCarousel/SinglerRow
 import StoreFilture from '../Components/Main/StoreFilture/StoreFilture'
 import Newsletter from '../Components/Main/newsletter/Newsletter'
 import ShippingDetails from '../Components/Main/ShippingDetails/ShippingDetails'
-
+import { useParams } from "react-router-dom";
 
 const slides = [
   {
@@ -87,7 +87,10 @@ const slides = [
 
 
 
-function Main() {
+const Main = () => {
+  let params = useParams();
+  
+  console.log("params = ",window.location.pathname);
   return (
     <div className='Main'>
       <div className='socials_tab'>
@@ -166,3 +169,4 @@ function Main() {
 }
 
 export default Main
+

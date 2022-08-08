@@ -12,6 +12,12 @@ import {
 } from "react-router-dom";
 import ProductsPage from './Pages/ProductsPage/ProductsPage';
 import ProductPage from './Pages/ProductPage/ProductPage';
+import CartPage from './Pages/CartPage/CartPage';
+import MessagesPage from './Pages/MessagesPage/MessagesPage';
+import OrdersPage from './Pages/OrdersPage/OrdersPage';
+import AccountPage from './Pages/AccountPage/AccountPage';
+import StoreDepartmentPage from './Pages/StoreDepartmentPage/StoreDepartmentPage';
+import MensClothing from './Pages/Departments/MensClothing';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,9 +31,25 @@ root.render(
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/ProductsPage" element={<ProductsPage />} />
-        <Route path="/ProductPage" element={<ProductPage />} />
+        <Route path="/Store" element={<LandingPage />} />
+        {/* <Route path="/Store/ProductsPage" element={<ProductsPage />} /> */}
+        <Route path="/Store/ProductsPage" element={<ProductsPage />} />
+        <Route path="/Store/ProductPage/:productId" element={<ProductPage />} />
+        <Route path="/Store/CartPage" element={<CartPage />} />
+        <Route path="/Store/MessagesPage" element={<MessagesPage />} />
+        <Route path="/Store/OrdersPage" element={<OrdersPage />} />
+        <Route path="/Store/OrdersPage" element={<AccountPage />} />
+        <Route path="/Store/MensClothing" element={<MensClothing />} />
+        
           {/* NEST THESE ROUTES */}
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

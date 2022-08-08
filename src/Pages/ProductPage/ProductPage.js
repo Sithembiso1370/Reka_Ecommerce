@@ -2,8 +2,12 @@ import React from 'react'
 import Footer from '../../Sections/Footer'
 import Navbar from '../../Sections/Navbar'
 import './ProductPage.css'
+import {getProduct} from './ProductsData'
+import { useParams } from "react-router-dom";
 
 function ProductPage() {
+  let params = useParams();
+  let process = getProduct(parseInt(params.productId, 10));
   return (
     <div className="ProductPage">
         <Navbar/>

@@ -1,36 +1,38 @@
 import React from 'react'
 import slides from './slides'
 import './productTypesFilture.css'
+import { Link } from "react-router-dom";
+import { getProducts } from './ProductsData'
 
 
 
 
-function ProductTypesFilture() {
-
+function ProductTypesFilture(props) {
+  // let productsData = getProducts();
     
 
-    const myslides =  slides.map((slide) =>
+    const myproducts =  props.productsData.map((product) =>
         <div className='Product' 
         style={{
-          backgroundImage: `url(${slide.img})`
+          backgroundImage: `url(${product.img})`
         }}
         >
           <ul className="ProductDetails_top">
             <li className="productOwner"
                     style={{
-                      backgroundImage: `url(${slide.p_logo})`,
+                      backgroundImage: `url(${product.p_logo})`,
                       backgroundRepeat: 'no-repeat'
                       
                     }}
             ></li>
-            <li>{slide.country}</li>
+            <li>{product.country}</li>
           </ul>
-          <a href='/ProductPage'
-          // 'ProductContainer cont_image'
-          className='ProductImage'
-          // onMouseEnter={showDetails}
-
-          >$ 34.87</a> 
+          <Link
+            className='ProductImage'
+            style={{ display: "block", margin: " 0" }}
+            to={`/Store/ProductPage/${product.id}`}
+            key={product.country}
+          >$ 34.87</Link>
           <ul className="ProductDetails_bottom">
             <li>
               <span class="material-symbols-outlined">
@@ -65,7 +67,7 @@ function ProductTypesFilture() {
       <div className="ProductFiltureTopSelect">
         <ul>
           <li>Filtures left</li>
-          <li>Womens Clothing</li>
+          <li>{props.department}</li>
           <li>Filtures Right</li>
         </ul>
       </div>
@@ -117,7 +119,7 @@ function ProductTypesFilture() {
             <div className='filture_main'>
               
               {
-                  myslides
+                  myproducts
               }
             </div>
         </div>
