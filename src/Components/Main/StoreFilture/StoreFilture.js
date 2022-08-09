@@ -34,13 +34,16 @@ function StoreFilture(props) {
           <ul className="ProductDetails_top">
             <li className="productOwner"
                     style={{
-                     backgroundImage: `url(${product.p_logo})`
+                     backgroundImage: `url(${product.p_logo})`,
+                     backgroundRepeat: 'no-repeat',
+                     backgroundSize: 'cover',
+                     backgroundPosition: 'center'
                     }}
                     
             >
-              <span class="material-symbols-outlined">
+              {/* <span class="material-symbols-outlined">
               print
-              </span> 
+              </span>  */}
             </li>
             <li>{product.country}</li>
           </ul>

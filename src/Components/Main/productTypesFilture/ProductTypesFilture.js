@@ -20,8 +20,10 @@ function ProductTypesFilture(props) {
           <ul className="ProductDetails_top">
             <li className="productOwner"
                     style={{
-                      backgroundImage: `url(${product.p_logo})`,
-                      backgroundRepeat: 'no-repeat'
+                      background: `url(${product.p_logo})`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: '100%',
+                      backgroundPosition: 'center'
                       
                     }}
             ></li>
