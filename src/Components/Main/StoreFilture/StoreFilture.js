@@ -44,12 +44,15 @@ function StoreFilture() {
             </li>
             <li>{product.country}</li>
           </ul>
+          <a className='ProductImage'>
           <Link
-            className='ProductImage'
-            style={{ display: "block", margin: " 0" }}
+            
+            className='ProductImageLink'
             to={`/Store/ProductPage/${product.id}`}
             key={product.country}
           >$ 34.87</Link>
+          </a>
+
           <ul className="ProductDetails_bottom">
             <li>
               <span class="material-symbols-outlined">

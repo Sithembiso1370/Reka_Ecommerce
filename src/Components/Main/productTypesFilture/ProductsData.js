@@ -92,6 +92,55 @@ let products = [
         p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
         img: 'https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?cs=srgb&dl=pexels-william-mattey-3768005.jpg&fm=jpg',
       },
+      {
+        id: 14,
+        city: 'Mens',
+        country: 'Clothing',
+        p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+        img: 'https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?cs=srgb&dl=pexels-william-mattey-3768005.jpg&fm=jpg',
+      },
+      {
+        id: 15,
+        city: 'Mens',
+        country: 'Clothing',
+        p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+        img: 'https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?cs=srgb&dl=pexels-william-mattey-3768005.jpg&fm=jpg',
+      },
+      {
+        id: 16,
+        city: 'Mens',
+        country: 'Clothing',
+        p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+        img: 'https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?cs=srgb&dl=pexels-william-mattey-3768005.jpg&fm=jpg',
+      },
+      {
+        id: 17,
+        city: 'Mens',
+        country: 'Clothing',
+        p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+        img: 'https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?cs=srgb&dl=pexels-william-mattey-3768005.jpg&fm=jpg',
+      },
+      {
+        id: 18,
+        city: 'Mens',
+        country: 'Clothing',
+        p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+        img: 'https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?cs=srgb&dl=pexels-william-mattey-3768005.jpg&fm=jpg',
+      },
+      {
+        id: 19,
+        city: 'Mens',
+        country: 'Clothing',
+        p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+        img: 'https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?cs=srgb&dl=pexels-william-mattey-3768005.jpg&fm=jpg',
+      },
+      {
+        id: 20,
+        city: 'Mens',
+        country: 'Clothing',
+        p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
+        img: 'https://images.pexels.com/photos/3768005/pexels-photo-3768005.jpeg?cs=srgb&dl=pexels-william-mattey-3768005.jpg&fm=jpg',
+      },
 
   ];
 
