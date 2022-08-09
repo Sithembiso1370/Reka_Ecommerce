@@ -1,5 +1,4 @@
 
-
 let products = [
   {
       id: 1,

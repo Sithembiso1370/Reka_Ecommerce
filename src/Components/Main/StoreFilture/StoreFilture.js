@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 
 
-function StoreFilture() {
+function StoreFilture(props) {
 
     const showDetails = (e)=>{
         e.target.after("<h1>after</h1>")

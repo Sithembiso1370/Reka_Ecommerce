@@ -4,7 +4,7 @@
     height: 60px;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     border-radius: 25px;
 }
 
@@ -20,6 +20,12 @@
     color: orangered;
     border: none;
     cursor: pointer;
+    transition: all 5s ease;
+}
+
+.newsletter>label:hover {
+    background-color: whitesmoke;
+    transition: all 1s ease;
 }
 
 .newsletter>button {
@@ -28,6 +34,12 @@
     color: orangered;
     border: none;
     cursor: pointer;
+    transition: all 5s ease;
+}
+
+.newsletter>button:hover {
+    background-color: whitesmoke;
+    transition: all 1s ease;
 }
 
 .newsletter>input {

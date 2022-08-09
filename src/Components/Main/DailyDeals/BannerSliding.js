@@ -16,7 +16,7 @@ export default function BannerSliding() {
                 backgroundPosition: 'center',
               }}
               >
-                  {slide.country}
+                  <a href='/' className='slide_inner'>{slide.country}</a>
               </div>
             )) 
           }

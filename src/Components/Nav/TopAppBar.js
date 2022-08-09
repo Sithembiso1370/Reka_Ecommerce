@@ -79,9 +79,12 @@ export default function TopButtonAppBar() {
               </li>
               <li ><a 
               // href='/ProductsPage'
-              >Shop
+              >
+                {/* Shop */}
               <select>
-                <option>Clothing</option>
+                <option>Mens Clothing</option>
+                <option>Womens Clothing</option>
+                <option>Furniture</option>
                 <option>Accesories</option>
               </select>
               </a></li>
