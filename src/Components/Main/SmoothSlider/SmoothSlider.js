@@ -11,7 +11,7 @@ class CitiesSlider extends React.Component {
       this.IMAGE_PARTS = 4;
       
       this.changeTO = null;
-      this.AUTOCHANGE_TIME = 10000;
+      this.AUTOCHANGE_TIME = 5000;
       
       this.state = { activeSlide: -1, prevSlide: -1, sliderReady: false };
     }
@@ -48,7 +48,7 @@ class CitiesSlider extends React.Component {
       const { activeSlide, prevSlide, sliderReady } = this.state;
       return (
         <div className={classNames('slider', { 's--ready': sliderReady })}>
-          <p className="slider__top-heading">AkilliKraal</p>
+          {/* <p className="slider__top-heading">AkilliKraal</p> */}
           <div className="slider__slides">
             {this.props.slides.map((slide, index) => (
               <div
@@ -56,7 +56,10 @@ class CitiesSlider extends React.Component {
                 key={slide.city}
                 >
                 <div className="slider__slide-content">
-                  <h3 className="slider__slide-subheading">{slide.country || slide.city}</h3>
+                  <h3 className="slider__slide-subheading"
+                  style={{ 
+                  zIndex: '20'}}
+                  >{slide.country || slide.city}</h3>
                   <h2 className="slider__slide-heading">
                     {slide.city.split('').map(l => <span>{l}</span>)}
                   </h2>
@@ -65,7 +68,11 @@ class CitiesSlider extends React.Component {
                 <div className="slider__slide-parts">
                   {[...Array(this.IMAGE_PARTS).fill()].map((x, i) => (
                     <div className="slider__slide-part" key={i}>
-                      <div className="slider__slide-part-inner" style={{ backgroundImage: `url(${slide.img})` }} />
+                      <div className="slider__slide-part-inner" 
+                      style={{ backgroundImage: `url(${slide.img})` ,
+                      zIndex: '5'
+                    }} 
+                      />
                     </div>
                   ))}
                 </div>

@@ -36,6 +36,7 @@
 
 
 .AnotherFilture>.FiltureSide>.filture_typeSelect:hover {
+
     box-shadow: 5px 5px 11px #737373, -5px -5px 11px #ffffff;
 }
 .AnotherFilture>.FiltureSide>.filture_typeSelect>button {
@@ -57,7 +58,7 @@
 .AnotherFilture>.FiltureSide>.filture_filtures{
     background-color: white;
     position: relative;
-    margin: 1%;
+    margin: 0%;
     width: 100%;
     height: 100%;
     flex: 20;
@@ -66,38 +67,39 @@
 }
 
 .AnotherFilture>.FiltureSide>.filture_filtures>div{
-    background-color: white;
+    background-color: #2d2d38;
+    color: #FF5F1F;
     position: relative;
     width: 100%;
     height: 100%;
     /* box-shadow: 3px 3px 2px #aeacac, -3px -3px 1px whitesmoke; */
-    display: flex;
-    align-items: center;
     flex: 1;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
-    color: #003b75;
+    /* color: #003b75; */
 
     transition: all 5s ease-in;
 }
 
 .AnotherFilture>.FiltureSide>.filture_filtures>div:hover{
-    box-shadow: 5px 5px 11px #737373, -5px -5px 11px #ffffff;
+    box-shadow: 5px 5px 11px #737373, -5px -5px 11px #2d2d38b3;
     transition: all 1s ease-in;
     color: #FF5F1F;
 }
 
 
 
-.AnotherFilture>.FiltureSide>.filture_filtures> .f8{
+.AnotherFilture>.FiltureSide>.filture_filtures> div.f8{
     position: relative;
     width: 100%;
     height: 100%;
     flex: 10;
     display: grid;
     grid-template-rows: 50% 50%;
-    gap: 2%;
+    gap: 0%;
+    padding: 0;
+    margin: 0;
 }
 
 .AnotherFilture>.FiltureSide>.filture_filtures>div.f8>div{
@@ -106,11 +108,40 @@
     height: 100%;
     padding: 0;
     margin: 0;
-    box-shadow: 3px 3px 2px #aeacac, -3px -3px 1px whitesmoke;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    /* box-shadow: 3px 3px 2px #aeacac, -3px -3px 1px whitesmoke; */
     border-radius: 5px;
+    display: grid;
+}
+
+.AnotherFilture>.FiltureSide>.filture_filtures>div.f8>div>div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AnotherFilture>.FiltureSide>.filture_filtures>div.f8>div>div>div {
+    position: relative;
+    background-color: rgba(245, 245, 245, 0.69);
+    color: orangered;
+    width: 90%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transition: all 5s ease-out;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.AnotherFilture>.FiltureSide>.filture_filtures>div.f8>div>div>div:hover {
+    background-color: #2d2d38f2;
+    border-radius: 30px;
+    transition: all 2s ease-in;
 }
 
 
@@ -122,7 +153,12 @@
     grid-template-columns: repeat(4,25%);
     overflow-y: scroll;
     overflow-x: hidden;
-    gap: 0.1%;
+    transition: all 6s ease-in-out;
+    gap: 0.05%;
+}
+
+.AnotherFilture>.filture_main:hover {
+    transition: all 3s ease-in-out;
 }
 
 
@@ -131,7 +167,8 @@
     border: none;
     height: 300px;
     width: 100%;
-    /* margin: 2%; */
+    margin: 0%;
+    /* border-radius: 30px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,7 +194,7 @@
     width: 100%;
     height: 30%;
     top: 0;
-    background-color: #2d2d389d;
+    background-color: #2d2d3800;
     color: whitesmoke;
     flex: 1;
     display: flex;
@@ -178,7 +215,7 @@
 }
 
 .AnotherFilture>.filture_main>.Product>.ProductDetails_top>li:hover{
-    /* background-color: #003b75; */
+    background-color: #003b75;
 }
 
 .AnotherFilture>.filture_main>.Product>.ProductDetails_top>:nth-child(1){
@@ -197,7 +234,8 @@
     border: 1px solid #ff5f1f;
 }
 .AnotherFilture>.filture_main>.Product>.ProductDetails_top>:nth-child(2){
-    background-color: #2d2d38;
+    /* background-color: #2d2d38; */
+    background-color: #003b7593;
     color: orangered;
     display: flex;
     flex-direction: column;
@@ -206,11 +244,14 @@
     width: 90%;
     padding: 2%;
     flex: 9;
+    font-size: 1.2rem;
 }
 
 .AnotherFilture>.filture_main>.Product>.ProductDetails_top>:nth-child(2):hover{
-    background-color: #2d2d38;
-    color: white;
+    /* background-color: #2d2d38;
+     */
+     background-color: #003b75c8;
+    /* color: white; */
     /* border: 1px solid rgba(255, 68, 0, 0.141); */
 }
 
@@ -224,7 +265,7 @@
     margin: 0;
     position: relative;
     width: 80%;
-    height: 100%;
+    height: 50%;
     flex: 5;
     display: flex;
     align-items: center;
@@ -232,15 +273,31 @@
     border: none;
     font-weight: bold;
     font-size: 3rem;
-    color: rgba(245, 245, 245, 0.312);
-    opacity: 0.2;
+    color: rgba(245, 245, 245, 0.553);
     cursor: pointer;
 }
 
+.AnotherFilture>.filture_main>.Product>.ProductImage>.ProductImageLink{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: 'center';
+
+}
+
 .AnotherFilture>.filture_main>.Product>.ProductImage:hover {
-    background-color: #003b75;
+    background-color: #003b7572;
     color: rgba(245, 245, 245, 0.897);
-    opacity: 1;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: 'center';
     transition: all 0.1s ease-out;
 }
 
@@ -266,6 +323,7 @@
 }
 
 .AnotherFilture>.filture_main>.Product>.ProductDetails_bottom>li{
+    background-color: #003b7593;
     color: red;
     position: relative;
     height: 100%;
@@ -279,5 +337,5 @@
 
 
 .filture_main>.Product>.ProductDetails_bottom>li:hover{
-
+    background-color: #003b75c8;
 }
