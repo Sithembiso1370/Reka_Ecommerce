@@ -167,7 +167,7 @@ function StoreFilture(props) {
                   
                   >
                   <div>
-                    Share products and discuss with your family and friends.
+                    Share products and Chat with family and friends.
                   </div>
                   </div>
                 </div>

@@ -22,24 +22,35 @@ export default function TopButtonAppBar() {
           <div className='right_holder'>
               <ul>
                 <li className='li_r_1' key={1}>
-                  <span className="material-symbols-outlined">
-                  comment
-                  </span>
+                  <Link to="/Store/MessagesPage">
+                    <span className="material-symbols-outlined">
+                    comment
+                    </span>
+                  </Link>
                 </li>
                 <li className='li_r_2'>
-                  <span className="material-symbols-outlined">
-                  receipt_long
-                  </span>
+                  <Link to="/Store/OrdersPage">
+                    <span className="material-symbols-outlined">
+                    receipt_long
+                    </span>
+                  </Link>
                 </li>
                 <li className='li_r_3'>
-                  <span className="material-symbols-outlined">
+                  {/* <span className="material-symbols-outlined">
                     account_circle
-                  </span>
+                  </span> */}
+                  <Link to="/Store/AccountPage">
+                    <span className="material-symbols-outlined">
+                    account_circle
+                    </span>
+                  </Link>
                 </li>
                 <li className='li_r_4' value={5} >
-                  <span className="material-symbols-outlined ">
-                  shopping_cart_checkout
-                  </span>
+                  <Link to="/Store/CartPage">
+                    <span className="material-symbols-outlined">
+                      shopping_cart_checkout
+                    </span>
+                  </Link>
                   <span className='cart_count '>
                     {/* 5 */}
                   </span>

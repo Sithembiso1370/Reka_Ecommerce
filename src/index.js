@@ -38,7 +38,7 @@ root.render(
         <Route path="/Store/CartPage" element={<CartPage />} />
         <Route path="/Store/MessagesPage" element={<MessagesPage />} />
         <Route path="/Store/OrdersPage" element={<OrdersPage />} />
-        <Route path="/Store/OrdersPage" element={<AccountPage />} />
+        <Route path="/Store/AccountPage" element={<AccountPage />} />
         <Route path="/Store/MensClothing" element={<MensClothing />} />
         
           {/* NEST THESE ROUTES */}

@@ -29,9 +29,12 @@
 }
 
 .ProductPageMain > .ProductPageMain_Top>.ProductPageMain_TopLeft {
-    background: url('./Stocksy_txp9c97647dmQ8300_Medium_2248487-20849b24b9204064a89551515e717c2f.jpg');
     background-size: 100%;
+    padding: 5%;
     background-repeat: no-repeat;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .ProductPageMain_TopRight {

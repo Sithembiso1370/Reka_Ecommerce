@@ -8,13 +8,22 @@ import { useParams } from "react-router-dom";
 function ProductPage() {
   let params = useParams();
   let process = getProduct(parseInt(params.productId, 10));
+
+
+  console.log("paramz p_page ",process);
   return (
     <div className="ProductPage">
         <Navbar/>
         <div className="ProductPageMain">
             <div className="ProductPageMain_Top">
-                <div className="ProductPageMain_TopLeft">
-                INSERT SLIDER HERE
+                <div className="ProductPageMain_TopLeft"
+                style={{
+                  background: `url(${process.img})`
+                  ,backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center'
+                }}
+                >
+                {process.country}
                 </div>
                 <div className="ProductPageMain_TopRight">
                 ProductPageMain_TopRight
