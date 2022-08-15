@@ -148,20 +148,25 @@ const Main = () => {
       <div className='mainSub_3'>
         <Topbrands/>
       </div>
+      <div className='mainSub_3_3_1'>
+        Most loved sing row slider
+      </div>
+      <div className='mainSub_3_3_2'>
+        New Arrivals sing row slider
+      </div>
       <div className='mainSub_5'>
-        {/* Banner Sliding: Sales/makerting */}
         <CitiesSlider slides={slides} />
       </div>
       <div className='mainSub_6'>
         <StoreFilture/>
       </div>
+      <div className='mainSub_6_6'>
+        Top Categories like bazar welcome page
+      </div>
       <div className='mainSub_7'>
         <Newsletter/>
       </div>
       <div className='mainSub_8'>
-        {/* shipping info */}
-          {/* <SinglerRowCarousel/> */}
-
           <ShippingDetails/>
       </div>
     </div>
