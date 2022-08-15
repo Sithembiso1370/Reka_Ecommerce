@@ -4,13 +4,13 @@ const Product = (props) => {
 
   return (
     <div className='Product' 
-    style={{
-      backgroundImage: `url(${props.img})`,
-      backgroundSize: '100%',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-    }}
-    >
+      style={{
+        backgroundImage: `url(${props.img})`,
+        backgroundSize: '100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+      >
       <ul className="ProductDetails_top">
         <li className="productOwner"
                 style={{
