@@ -22,7 +22,7 @@ function ProductTypesFilture(props) {
                     style={{
                       background: `url(${product.p_logo})`,
                       backgroundRepeat: 'no-repeat',
-                      backgroundSize: '100%',
+                      backgroundSize: 'cover',
                       backgroundPosition: 'center'
                       
                     }}
@@ -31,7 +31,6 @@ function ProductTypesFilture(props) {
           </ul>
           <Link
             className='ProductImage'
-            style={{ display: "block", margin: " 0" }}
             to={`/Store/ProductPage/${product.id}`}
             key={product.country}
           >$ 34.87</Link>
