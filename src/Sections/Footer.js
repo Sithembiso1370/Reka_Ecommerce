@@ -9,17 +9,20 @@ function Footer() {
         <div>
           <span>
             <a href="/">
-            About AkilliKraal.com
+            About 
             </a>
           </span>
           <span>
             <a href="/">
-            Contact Us
+            Email: enquiries@akillikraal.com
             </a>
           </span>
           <span>
             <a href="/">
-            Help
+            WhatsApp: 060 070 2552
+            </a>
+            <a href="/">
+            Phone: 012 943 0123
             </a>
           </span>
           <span>
@@ -29,7 +32,7 @@ function Footer() {
           </span>
           <span>
             <a href="/">
-            Terms & Conditions
+            © 2022 AkilliKraal (Pty) Ltd, All Rights Reserved
             </a>
           </span>
         </div>
@@ -81,11 +84,11 @@ function Footer() {
         </div>
       </div>
       <div className='footer_right'>
-        <h3>Akilli Plartforms</h3>
+        <h3>Akilli Admin</h3>
         <div>
           <span>
             <a href="/">
-            download app links
+            Secure Payments
             </a>
           </span>
           <span>
@@ -95,7 +98,7 @@ function Footer() {
           </span>
           <span>
             <a href="/">
-            Secure Payments
+            download app links
             </a>
           </span>
         </div>
