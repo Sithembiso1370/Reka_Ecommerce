@@ -11,7 +11,7 @@ export default function BannerSliding() {
               <div className='slide'
               style={{
                 background: `url(${slide.img})`,
-                backgroundSize: '100%',
+                backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
               }}

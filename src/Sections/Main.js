@@ -8,6 +8,9 @@ import StoreFilture from '../Components/Main/StoreFilture/StoreFilture'
 import Newsletter from '../Components/Main/newsletter/Newsletter'
 import ShippingDetails from '../Components/Main/ShippingDetails/ShippingDetails'
 import { useParams } from "react-router-dom";
+import MostLovedCarousel from '../Components/Main/MostLovedCarousel/MostLovedCarousel'
+import NewArrivalsCarousel from '../Components/Main/NewArrivalsCarousel/NewArrivalsCarousel'
+import TopCategories from '../Components/Main/TopCategories/TopCategories'
 
 const slides = [
   {
@@ -149,19 +152,31 @@ const Main = () => {
         <Topbrands/>
       </div>
       <div className='mainSub_3_3_1'>
-        Most loved sing row slider
+        <div className="MostLovedCarouselTop">
+          MostLovedCarousel Top and more
+        </div>
+        <MostLovedCarousel/>
       </div>
       <div className='mainSub_3_3_2'>
-        New Arrivals sing row slider
+        <div className="NewArrivalsCarouselTop">
+        NewArrivalsCarousel Top and more
+        </div>
+        <NewArrivalsCarousel/>
       </div>
       <div className='mainSub_5'>
         <CitiesSlider slides={slides} />
       </div>
       <div className='mainSub_6'>
+        <div className="StoreFiltureTop">
+        StoreFilture Top and more
+        </div>
         <StoreFilture/>
       </div>
       <div className='mainSub_6_6'>
-        Top Categories like bazar welcome page
+        <div className="TopCategoriesTop">
+        Top Categories
+        </div>
+        <TopCategories/>
       </div>
       <div className='mainSub_7'>
         <Newsletter/>
