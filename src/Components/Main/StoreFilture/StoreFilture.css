@@ -161,6 +161,66 @@
     /* gap: 0.05%; */
 }
 
+@media screen and (max-width: 400px) {
+    .AnotherFilture>.filture_main {
+        display: grid;
+        grid-template-columns: 1fr;
+        flex: 15;
+    }
+
+    .AnotherFilture>.FiltureSide{
+        flex: 0.5;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .AnotherFilture>.filture_main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex: 15;
+    }
+
+    .AnotherFilture>.FiltureSide{
+        flex: 0.5;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .AnotherFilture>.filture_main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex: 20;
+    }
+
+    .AnotherFilture>.FiltureSide{
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .AnotherFilture>.filture_main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        flex: 25;
+    }
+
+    .AnotherFilture>.FiltureSide{
+        flex: 2;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .AnotherFilture>.filture_main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+        flex: 30;
+    }
+
+    .AnotherFilture>.FiltureSide{
+        flex: 3;
+    }
+}
+
 .AnotherFilture>.filture_main:hover {
     transition: all 3s ease-in-out;
 }

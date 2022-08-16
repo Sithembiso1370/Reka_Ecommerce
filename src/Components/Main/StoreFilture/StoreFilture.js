@@ -79,8 +79,8 @@ function StoreFilture(props) {
             </li>
           </ul>
         </div>
-
     );
+    
   return (
       
     <div className='AnotherFilture'>
