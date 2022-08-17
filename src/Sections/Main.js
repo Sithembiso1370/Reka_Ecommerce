@@ -131,7 +131,7 @@ const Main = () => {
       </div>
       {/* <RightSideBanner/> */}
       <div className='mainSub_1'>
-      <CitiesSlider slides={slides} />
+      <CitiesSlider slides={slides} department={params}/>
       <div className='mainSub_1_right logins'>
         <div>
           <h3 className='Login_header'>Welcome to Akilli Kraal</h3>
@@ -164,7 +164,7 @@ const Main = () => {
         <NewArrivalsCarousel/>
       </div>
       <div className='mainSub_5'>
-        <CitiesSlider slides={slides} />
+        <CitiesSlider slides={slides}  department={params}/>
       </div>
       <div className='mainSub_6'>
         <div className="StoreFiltureTop">

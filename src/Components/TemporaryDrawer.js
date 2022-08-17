@@ -11,6 +11,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import './Nav/drawer.css'
+import { Outlet, Link } from "react-router-dom";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -56,7 +57,7 @@ export default function TemporaryDrawer() {
       <List>
         {
         [
-        'Clothing', 
+        'Womens Clothing', 
         'Jewelery',
         'Watches and Accesories', 
         'Health & Beauty',
@@ -82,7 +83,10 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
+              <Link to={"/Store/Department/"+text}>
               <ListItemText primary={text} />
+              </Link>
+              
             </ListItemButton>
           </ListItem>
         ))}

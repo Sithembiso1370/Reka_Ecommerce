@@ -39,6 +39,7 @@ root.render(
         {/* STORE LINKS */}
         <Route path="/Store" element={<LandingPage />} />
         <Route path="/Store/:storeId" element={<Store />} />
+        <Route path="/Store/Department" element={<Department />} />
         <Route path="/Store/Department/:departmentId" element={<Department />} />
         <Route path="/Store/ProductPage/:productId" element={<ProductPage />} />
         <Route path="/Store/CartPage" element={<CartPage />} />

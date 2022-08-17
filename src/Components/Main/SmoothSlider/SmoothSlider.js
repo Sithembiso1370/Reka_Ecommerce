@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from 'classnames';
 import './SmoothSlider.css'
+import { useParams } from "react-router-dom";
 
 
 
@@ -15,6 +16,9 @@ class CitiesSlider extends React.Component {
       
       this.state = { activeSlide: -1, prevSlide: -1, sliderReady: false };
     }
+
+    // params = useParams();
+    studentId = window.location.href.split('/')[5] ? window.location.href.split('/')[5] : ''
     
     componentWillUnmount() {
       window.clearTimeout(this.changeTO);
@@ -61,7 +65,7 @@ class CitiesSlider extends React.Component {
                   zIndex: '20'}}
                   >{slide.country || slide.city}</h3>
                   <h2 className="slider__slide-heading">
-                    {slide.city.split('').map(l => <span>{l}</span>)}
+                    {this.studentId.split('').map(l => <span>{l}</span>)}
                   </h2>
                   <p className="slider__slide-readmore">read more</p>
                 </div>
