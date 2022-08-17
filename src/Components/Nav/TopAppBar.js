@@ -91,13 +91,14 @@ export default function TopButtonAppBar() {
               <li ><a 
               // href='/ProductsPage'
               >
-                {/* Shop */}
-              <select>
-                <option>Mens Clothing</option>
+                Shop
+                {/* Foldable megamenu */}
+              {/* <select>
+                <option><Link to="/Store/ProductsPage">Mens Clothing</Link></option>
                 <option>Womens Clothing</option>
                 <option>Furniture</option>
                 <option>Accesories</option>
-              </select>
+              </select> */}
               </a></li>
               <li>Print on demand</li>
               <li>

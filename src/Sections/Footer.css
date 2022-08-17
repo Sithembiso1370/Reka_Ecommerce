@@ -8,10 +8,10 @@
     color: orangered;
     grid-template-columns: repeat(4,1fr);
     gap: 0.1%;
-    height: 200px;
+    height: 500px;
     width: 100%;
-    margin-top: 0;
-    flex: 3;
+    margin: 0;
+    /* flex: 4; */
     z-index: 20001;
 }
 

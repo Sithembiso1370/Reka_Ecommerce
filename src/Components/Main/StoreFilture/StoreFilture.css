@@ -10,7 +10,7 @@
 }
 
 .AnotherFilture>.FiltureSide{
-    flex: 2;
+    /* flex: 2; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -148,7 +148,7 @@
 
 
 .AnotherFilture>.filture_main {
-    flex: 10;
+    /* flex: 10; */
     width: 100%;
     height: 100%;
     display: grid;
@@ -165,19 +165,19 @@
     .AnotherFilture>.filture_main {
         display: grid;
         grid-template-columns: 1fr;
-        flex: 15;
+        flex: 30;
     }
 
     .AnotherFilture>.FiltureSide{
-        flex: 0.5;
+        flex: 0.25;
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     .AnotherFilture>.filture_main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        flex: 15;
+        flex: 30;
     }
 
     .AnotherFilture>.FiltureSide{
@@ -185,11 +185,11 @@
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1200px) {
     .AnotherFilture>.filture_main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        flex: 20;
+        flex: 30;
     }
 
     .AnotherFilture>.FiltureSide{
@@ -201,11 +201,11 @@
     .AnotherFilture>.filture_main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr ;
-        flex: 25;
+        flex: 30;
     }
 
     .AnotherFilture>.FiltureSide{
-        flex: 2;
+        flex: 1.5;
     }
 }
 
@@ -217,7 +217,7 @@
     }
 
     .AnotherFilture>.FiltureSide{
-        flex: 3;
+        flex: 2;
     }
 }
 

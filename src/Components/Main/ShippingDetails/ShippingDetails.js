@@ -18,7 +18,6 @@ const ShippingDetails = () => {
                 </div>
                 <div className="returnpolicy">
                 <span class="material-symbols-outlined">
-                payments
                 credit_card
                 </span>
                 {/* Pay with the world's top payment methods */}
@@ -26,8 +25,6 @@ const ShippingDetails = () => {
                 <div className="returnpolicy">
                 {/* Worldwide delivery */}
                 <span class="material-symbols-outlined">
-                pin_drop
-                bring_your_own_ip
                 local_shipping
                 </span>
                 </div>
@@ -47,7 +44,7 @@ const ShippingDetails = () => {
                 </div>
                 <div className="returnpolicy">
                 <span class="material-symbols-outlined">
-                public
+                bring_your_own_ip
                 </span>
                 {/* warranty */}
                 </div>

@@ -17,14 +17,14 @@ const TopCategories = () => {
         chevronWidth={chevronWidth}
         infiniteLoop={true}
       >
-        <div style={{ height: 200, background: '#EEE' }}>First card</div>
-        <div style={{ height: 200, background: '#EEE' }}>Second card</div>
-        <div style={{ height: 200, background: '#EEE' }}>Third card</div>
-        <div style={{ height: 200, background: '#EEE' }}>Fourth card</div>
-        <div style={{ height: 200, background: '#EEE' }}>First card</div>
-        <div style={{ height: 200, background: '#EEE' }}>Second card</div>
-        <div style={{ height: 200, background: '#EEE' }}>Third card</div>
-        <div style={{ height: 200, background: '#EEE' }}>Fourth card</div>
+        <div style={{ height: 400, background: '#EEE' }}>First card</div>
+        <div style={{ height: 400, background: '#EEE' }}>Second card</div>
+        <div style={{ height: 400, background: '#EEE' }}>Third card</div>
+        <div style={{ height: 400, background: '#EEE' }}>Fourth card</div>
+        <div style={{ height: 400, background: '#EEE' }}>First card</div>
+        <div style={{ height: 400, background: '#EEE' }}>Second card</div>
+        <div style={{ height: 400, background: '#EEE' }}>Third card</div>
+        <div style={{ height: 400, background: '#EEE' }}>Fourth card</div>
       </ItemsCarousel>
     </div>
   );
