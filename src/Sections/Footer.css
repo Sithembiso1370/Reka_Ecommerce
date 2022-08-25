@@ -8,7 +8,7 @@
     color: orangered;
     grid-template-columns: repeat(4,1fr);
     gap: 0.1%;
-    height: 500px;
+    height: 100%;
     width: 100%;
     margin: 0;
     /* flex: 4; */

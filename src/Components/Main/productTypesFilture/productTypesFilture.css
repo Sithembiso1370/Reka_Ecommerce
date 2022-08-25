@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 2% 98%;
+    grid-template-rows: 3% 97%;
 }
 
 .ProductTypesFilture>.ProductFiltureTopSelect{
@@ -47,9 +47,9 @@
 
 .ProductTypesFilture>.AnotherFilture>.FiltureSide{
     flex: 2;
-    width: 90%;
+    width: 100%;
     height: 100%;
-    padding: 1;
+    /* padding: 1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,10 +100,10 @@
 .ProductTypesFilture>.AnotherFilture>.FiltureSide>.filture_filtures{
     background-color: white;
     position: relative;
-    margin: 1%;
+    /* margin: 1%; */
     width: 100%;
     height: 100%;
-    flex: 20;
+    flex: 30;
     display: flex;
     /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 8fr; */
 
@@ -118,37 +118,46 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    flex: 0.1;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     color: #003b75;
-    margin: 1%;
+    /* margin: 1%; */
     transition: all 5s ease-in;
 }
 
 
 
 .ProductTypesFilture>.AnotherFilture>.FiltureSide>.filture_filtures>div:hover{
-    box-shadow: 5px 5px 11px #737373, -5px -5px 11px #ffffff;
+    /* box-shadow: 5px 5px 11px #737373, -5px -5px 11px #ffffff; */
     transition: all 1s ease-in;
     color: #FF5F1F;
 }
 
 
 
-.ProductTypesFilture>.AnotherFilture>.FiltureSide>.filture_filtures> .f8{
+.ProductTypesFilture>.AnotherFilture>.FiltureSide>.filture_filtures> .filture_filture_f8{
     position: relative;
     width: 100%;
     height: 100%;
-    flex: 10;
+    flex: 1;
     display: grid;
     grid-template-rows: 50% 50%;
-    gap: 2%;
+}
+
+.ProductTypesFilture>.AnotherFilture>.FiltureSide>.filture_filtures> .filture_filture_f8>div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50% 50%;
 }
 
 .ProductTypesFilture>.AnotherFilture>.FiltureSide>.filture_filtures>.filture_filture_f1{
     position: relative;
+    padding: 0;
+    margin: 0;
     width: 100%;
     height: 100%;
     background-color: #2d2d38;

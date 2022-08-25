@@ -1,0 +1,49 @@
+
+
+.ProductsPage {
+    background-color: whitesmoke;
+    position: relative;
+    height: 5500px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    gap: 1%;
+  }
+
+
+.ProductsMain {
+    top: 2.5%;
+    position: relative;
+    width: 100%;
+    height: 5000px;
+    display: grid;
+    grid-template-rows: 10% 6% 75% 9%;
+}
+
+
+.TopSlide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.MostLovedCarouselTop {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.MidPart {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.bpart {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+

@@ -90,7 +90,7 @@ const slides = [
 function DepartmentMain(props) {
   return (
     <div className="Department">
-              <div className='socials_tab'>
+          <div className='socials_tab'>
           <div className="localInbox"
           style={{ 
             background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png)',
@@ -123,6 +123,7 @@ function DepartmentMain(props) {
             {/* whats app */}
           </div>     
       </div>
+      
       {/* <RightSideBanner/> */}
       <div className='DepartmentSub_1'>
       <CitiesSlider slides={props.slides} department={props.department}/>

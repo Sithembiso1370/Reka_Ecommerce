@@ -1,4 +1,5 @@
 import React from 'react'
+import './ShippingDetails.css'
 
 const ShippingDetails = () => {
   return (

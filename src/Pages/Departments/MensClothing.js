@@ -1,5 +1,7 @@
 import React from 'react'
+import MostLovedCarousel from '../../Components/Main/MostLovedCarousel/MostLovedCarousel'
 import ProductTypesFilture from '../../Components/Main/productTypesFilture/ProductTypesFilture'
+import ShippingDetails from '../../Components/Main/ShippingDetails/ShippingDetails'
 import CitiesSlider from '../../Components/Main/SmoothSlider/SmoothSlider'
 import Footer from '../../Sections/Footer'
 import Navbar from '../../Sections/Navbar'
@@ -98,10 +100,22 @@ function MensClothing() {
             {/* PASS DEPARTMENT SPECIFIC IMAGES HERE */}
               <CitiesSlider slides={slides} />
           </div>
+          <div className="MostLovedCarouselTop">
+              <div className="">
+              MostLovedCarousel Top and more
+              </div>
+              <div>
+              MostLovedCarousel
+              </div>
+          </div>
           <div className="MidPart">
               <ProductTypesFilture department={department} productsData={myproductsData}/>
           </div>
+          <div className="bpart">
+            <ShippingDetails/>
+          </div>
         </div>
+
         <Footer/>
         {/* <div className='product_footer'>
         product_footer
