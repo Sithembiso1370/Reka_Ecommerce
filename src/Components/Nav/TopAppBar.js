@@ -12,7 +12,10 @@ export default function TopButtonAppBar() {
 
         <div className='my_div1_upper'>
           <div className='image_holder'>
-            <img src={logo} alt=""/>
+              <Link to="/" className='image_holderLink'>
+                  <img src={logo} alt=""/>
+              </Link>
+
           </div>
           <div className='search_holder'>
             <div className='search_main'>
@@ -56,9 +59,14 @@ export default function TopButtonAppBar() {
                   </span>
                 </li>
                 <li className='li_r_5'>
-                  <span className="material-symbols-outlined ">
+                <Link to="/Store/CartPage">
+                    <span className="material-symbols-outlined">
+                    campaign
+                    </span>
+                  </Link>
+                  {/* <span className="material-symbols-outlined ">
                   campaign
-                  </span>
+                  </span> */}
                 </li>
 
               </ul>

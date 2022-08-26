@@ -8,6 +8,7 @@ function CartPage() {
     <div className="CartPage">
         <Navbar/>
         <div className="CartPageMain">
+        CartPageMain
         </div>
         <Footer/>
     </div>
