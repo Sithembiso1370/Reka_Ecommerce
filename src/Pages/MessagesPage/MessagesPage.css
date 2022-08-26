@@ -1,0 +1,143 @@
+
+
+.MessagesPage {
+    background-color: whitesmoke;
+      position: relative;
+      height: 5500px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      align-items: center;
+      transition: all 5s ease-out;
+  }
+
+
+.MessagesMain {
+    top: 3%;
+    position: relative;
+    width: 100%;
+    height: 5000px;
+    display: grid;
+    grid-template-rows: 1.5% 83.5%  15% ;
+}
+
+.MessagesMainTop {
+    background-color: whitesmoke;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 20% 80%;
+}
+
+.MessagesMainTop>div {
+    border: 1px solid black;
+}
+
+.MesagesMainMain {
+ background-color: white;
+ display: grid;
+ width: 100%;
+ height: 100%;
+ grid-template-columns: 20% 80%;
+}
+
+.MesagesMainMain>div {
+    border: 1px solid black;
+}
+
+.MesagesMainMain>.MesagesMainMainLeft{
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.MesagesMainMain>.MesagesMainMainLeft>.MesagesMainMainLeftUser {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 5%;
+}
+
+.MesagesMainMain>.MesagesMainMainLeft>.MesagesMainMainLeftUser>div{
+    width: 100%;
+    height: 100%;
+    border-radius: 65%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MesagesMainMain>.MesagesMainMainLeft>.MesagesMainMainLeftUser>h3 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.MesagesMainMainRight {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 98% 2%;
+}
+
+.MesagesMainMainRight>.MesagesMainMainRightBody {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+}
+
+.MesagesMainMainRight>.MesagesMainMainRightTextarea {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.MesagesMainMainRightTextareaLeft {
+    width: 100%;
+    height: 100%;
+}
+
+.MesagesMainMainRightTextareaRight {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MesagesMainMainRightTextareaRight>.MesagesMainMainRightTextareaRightInput {
+    width: 100%;
+    height: 70%;
+    border-radius: 30px;
+}
+
+
+
+.MesagesMainFooter {
+    display: grid;
+    grid-template-rows: 30% 70%;
+    width: 100%;
+    height: 100%;
+}
+
+.MesagesMainFooterTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MesagesMainFooterBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
