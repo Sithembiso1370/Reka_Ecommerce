@@ -7,7 +7,7 @@ function AccountPage() {
   return (
     <div className="AccountPage">
         <Navbar/>
-        <div className="CartPageMain">
+        <div className="AccountPageMain">
         </div>
         <Footer/>
     </div>
