@@ -94,7 +94,7 @@ function MensClothing() {
   let myproductsData = getProducts();
   return (
     <div className="ProductsPage">
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className="ProductsMain">
           <div className="TopSlide">
             {/* PASS DEPARTMENT SPECIFIC IMAGES HERE */}

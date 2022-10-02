@@ -155,7 +155,10 @@ const Main = () => {
         <div className="MostLovedCarouselTop">
           MostLovedCarousel Top and more
         </div>
+        <div className="carazelHolder">
         <MostLovedCarousel/>
+        </div>
+
       </div>
       <div className='mainSub_3_3_2'>
         <div className="NewArrivalsCarouselTop">

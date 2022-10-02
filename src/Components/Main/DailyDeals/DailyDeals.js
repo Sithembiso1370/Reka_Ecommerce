@@ -8,11 +8,11 @@ function DailyDeals() {
 
   return (
     <div className='DailyDeals'>
-        <h2 className="subtitle fancy">
+        <div className="subtitle fancy">
             <hr className='leftline'/>
             <span>Daily Deals</span>
             <hr className='rightline'/>
-        </h2>
+        </div>
         <div className='DailyDealsFilture'>
             <div className='DailyDealsFilture_buttons'>
                 {/* Each department must have a representing color that will be used Gloally */}

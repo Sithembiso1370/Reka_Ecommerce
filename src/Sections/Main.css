@@ -141,7 +141,22 @@
     width: 100%;
     height: 100%;
     flex: 1.5;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    padding: 2%;
+
 } 
+
+.Main>.mainSub_3_3_1>.MostLovedCarouselTop {
+    position: relative;
+    background-color: #F2D2BD;
+    width: 100%;
+    height: 100%;
+} 
+
+
+
+
 
 .Main>.mainSub_3_3_2 {
     position: relative;
@@ -150,6 +165,10 @@
     height: 100%;
     flex: 1.5;
 } 
+
+.Main>.mainSub_3_3_2>.NewArrivalsCarouselTop{
+    background-color: #F2D2BD;
+}
 
 
 .Main>.mainSub_4{
@@ -172,6 +191,9 @@
     height: 100%;
     flex: 5;
 }
+.Main>.mainSub_6>.StoreFiltureTop{
+    background-color: #F2D2BD;
+}
 
 .Main>.mainSub_6_6 {
     position: relative;
@@ -181,6 +203,10 @@
     flex: 1.5;
 } 
 
+
+.Main>.mainSub_6_6>.TopCategoriesTop{
+    background-color: #F2D2BD;
+}
 
 .Main>.mainSub_7{
     position: relative;

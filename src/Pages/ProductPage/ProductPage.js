@@ -14,14 +14,20 @@ function ProductPage() {
   return (
     <div className="ProductPage">
         <Navbar/>
-        <div className="ProductPageMain">
+        <div className="ProductPageMain"
+            style={{
+              background: `url(${process.img})`
+              ,backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center'
+            }}
+        >
             <div className="ProductPageMain_Top">
                 <div className="ProductPageMain_TopLeft"
-                style={{
-                  background: `url(${process.img})`
-                  ,backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center'
-                }}
+                // style={{
+                //   background: `url(${process.img})`
+                //   ,backgroundRepeat: 'no-repeat',
+                //   backgroundPosition: 'center'
+                // }}
                 >
                 {process.country}
                 </div>
@@ -32,6 +38,7 @@ function ProductPage() {
 
             <div className="ProductPageMain_Middle">
               <div className="ProductPageMain_MiddleTabs">
+                {/* get w3 schools tabs sections tut here */}
               <ul className="">
                 <li>Reviews Chat</li>
                 <li>Description & Specifications</li>
@@ -40,10 +47,11 @@ function ProductPage() {
               </div>
               <div className="ProductPageMain_MiddleTabsBody">
               ProductPageMain_BottomTabsBody
+              {/* create a structure of how I am going to display propduct information here */}
               </div>
             </div>
 
-
+            {/* Create an Infinite slow carousel of similar products */}
             <div className="ProductPageMain_BottomTabsBody">
                 Similar products
             </div>
