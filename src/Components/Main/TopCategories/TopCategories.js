@@ -1,40 +1,40 @@
-import React, { useState } from 'react';
-import ItemsCarousel from 'react-items-carousel';
+import React from 'react';
+import './TopCategories.css';
 import slides from './slides';
 
 const TopCategories = () => {
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const chevronWidth = 40;
 
-  const myslides = slides.map((slide)=>{
-    <div style={{ height: 400, background: `url(${slide.img})` }}>Card</div>
-  })
   return (
-    <div style={{ padding: `0 ${chevronWidth}px` }}>
-      <ItemsCarousel
-        requestToChangeActive={setActiveItemIndex}
-        activeItemIndex={activeItemIndex}
-        numberOfCards={3}
-        gutter={0}
-        leftChevron={<button>{'<'}</button>}
-        rightChevron={<button>{'>'}</button>}
-        outsideChevron
-        chevronWidth={chevronWidth}
-        infiniteLoop={true}
-      >
-        
-        {/* <div style={{ height: 400, background: '#EEE' }}>First card</div>
-        <div style={{ height: 400, background: '#EEE' }}>Second card</div>
-        <div style={{ height: 400, background: '#EEE' }}>Third card</div>
-        <div style={{ height: 400, background: '#EEE' }}>Fourth card</div>
-        <div style={{ height: 400, background: '#EEE' }}>First card</div>
-        <div style={{ height: 400, background: '#EEE' }}>Second card</div>
-        <div style={{ height: 400, background: '#EEE' }}>Third card</div>
-        <div style={{ height: 400, background: '#EEE' }}>Fourth card</div> */}
+    <div className="TopCategoriesMain">
+      <ul>
         {
-            myslides
+          slides.map((slide)=>(
+            <li
+            style={{
+              background: `url(${slide.img})`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }}
+          >{slide.title}</li>
+          ))
         }
-      </ItemsCarousel>
+
+        {/* <li>Gaming</li>
+        <li>Clothing for Women</li>
+        <li>Clothing for Men</li>
+        <li>Trending Gadgets</li>
+        <li>Most Bought Items</li>
+        <li>Least Bought Items</li>
+        <li>Jewelery</li>
+        <li>Computers and Ellectronics</li>
+        <li>Industrial Ellectronics</li>
+        <li>Automation Supplies</li>
+        <li>Garden and Outdoor Deco</li>
+        <li>Baby and Todler</li>
+        <li>Sports and Training</li>
+        <li>Baby and Todler</li> */}
+      </ul>
     </div>
   );
 };

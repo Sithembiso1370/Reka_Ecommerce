@@ -17,7 +17,8 @@
 
 .Footer>div {
     position: relative;
-    background-color: #F2D2BD;
+
+    background-color: whitesmoke;
     height: 100%;
     width: 100%;
     display: grid;
@@ -30,7 +31,7 @@ Footer >.footer_left > div > span > a {
 }
 
 .Footer>div:hover {
-    background-color: whitesmoke;
+    background-color: #F2D2BD;
     box-shadow: 1px 1px 3px #dedede, -1px -1px 3px #ffffff5e; 
     color: #003A75;
     transition: all 1s ease-in;
@@ -89,7 +90,8 @@ Footer >.footer_left > div > span > a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.705);
+    /* background-color: rgba(0, 0, 0, 0.705); */
     border-radius: 115px;
     padding: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

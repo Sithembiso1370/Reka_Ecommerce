@@ -141,22 +141,18 @@
     width: 100%;
     height: 100%;
     flex: 1.5;
-    display: grid;
+    /* display: grid;
     grid-template-rows: 20% 80%;
-    padding: 2%;
+    padding: 2%; */
 
 } 
 
 .Main>.mainSub_3_3_1>.MostLovedCarouselTop {
-    position: relative;
+    /* position: relative;
     background-color: #F2D2BD;
     width: 100%;
-    height: 100%;
+    height: 100%; */
 } 
-
-
-
-
 
 .Main>.mainSub_3_3_2 {
     position: relative;
@@ -167,7 +163,7 @@
 } 
 
 .Main>.mainSub_3_3_2>.NewArrivalsCarouselTop{
-    background-color: #F2D2BD;
+    /* background-color: #F2D2BD; */
 }
 
 
@@ -225,7 +221,7 @@
     background-color: white;
     width: 100%;
     height: 100%;
-    flex: 2;
+    flex: 0.5;
     /* margin-bottom: 2%; */
     /* margin: 1%; */
 }

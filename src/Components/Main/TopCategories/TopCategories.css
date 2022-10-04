@@ -1,0 +1,25 @@
+
+
+.TopCategoriesMain {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.TopCategoriesMain > ul  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.TopCategoriesMain > ul > li  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
