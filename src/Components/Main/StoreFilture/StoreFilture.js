@@ -204,14 +204,14 @@ function StoreFilture(props) {
                 </div>
                 </div>
               </div>
-            </div>
           </div>
-          <div className='filture_main'>
-            {
-                myproducts
-            }
-           </div>
-      </div>
+        </div>
+        <div className='filture_main'>
+          {
+              myproducts
+          }
+        </div>
+    </div>
   )
 }
 
