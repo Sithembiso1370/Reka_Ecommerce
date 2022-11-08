@@ -12,6 +12,8 @@
     border-radius: 8px 8px 0px 0px;
 }
 
+
+
 /* #FFBB2B */
 /* #ff6a14 */
 /*neon orange for texts #C70039  */
@@ -51,8 +53,8 @@
 }
 
 .bannerbar>ul>li:hover {
-    color: #003A75;
-    background-color: white;
+    color: #ff6a14;
+    background: linear-gradient(225deg, #ebe8e8, #ffffff7b);
     transition: all 1s ease-in;
 }
 
@@ -65,14 +67,20 @@
     height: 100%;
     text-align: center;
     transition: all 15s ease-out;
+    color: #ff6a14;
 }
 .bannerbar>ul>li> span:hover {
-    color: #003A75;
+    color: #ff6a14;
     /* font-size: 1rem; */
     font-weight: bolder;
     border-bottom: 2px solid #f2d9c895;
     transition: 1.9s ease-in;
 
+}
+
+.bannerbar>ul>li> .amount {
+    color: white;
+    word-wrap: break-word;
 }
 
 .bannerbar>ul>.bb_li_4 {

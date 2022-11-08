@@ -26,14 +26,14 @@ export default function TopButtonAppBar() {
               <ul>
                 <li className='li_r_1' key={1}>
                   <Link to="/Store/MessagesPage">
-                    <span className="material-symbols-outlined">
+                    <span className="material-symbols-outlined morph_up">
                     comment
                     </span>
                   </Link>
                 </li>
                 <li className='li_r_2'>
                   <Link to="/Store/OrdersPage">
-                    <span className="material-symbols-outlined">
+                    <span className="material-symbols-outlined morph_up">
                     receipt_long
                     </span>
                   </Link>
@@ -43,14 +43,14 @@ export default function TopButtonAppBar() {
                     account_circle
                   </span> */}
                   <Link to="/Store/AccountPage">
-                    <span className="material-symbols-outlined">
+                    <span className="material-symbols-outlined morph_up">
                     account_circle
                     </span>
                   </Link>
                 </li>
                 <li className='li_r_4' value={5} >
                   <Link to="/Store/CartPage">
-                    <span className="material-symbols-outlined">
+                    <span className="material-symbols-outlined morph_up">
                       shopping_cart_checkout
                     </span>
                   </Link>
@@ -60,7 +60,7 @@ export default function TopButtonAppBar() {
                 </li>
                 <li className='li_r_5'>
                 <Link to="/Store/CartPage">
-                    <span className="material-symbols-outlined">
+                    <span className="material-symbols-outlined morph_up">
                     campaign
                     </span>
                   </Link>
@@ -102,7 +102,7 @@ export default function TopButtonAppBar() {
                 Shop
 
               </a></li>
-              <li>Print on demand</li>
+              <li>Print</li>
               <li>
 
                 Services
