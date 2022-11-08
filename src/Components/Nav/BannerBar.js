@@ -38,7 +38,7 @@ function BannerBar() {
           currency_exchange
           </span>
           |
-          <span class=" ">
+          <span class="amount">
           ZAR 265.87 
           </span>
         </li>

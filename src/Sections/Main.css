@@ -89,6 +89,16 @@
     align-items: center
 }
 
+.Main>.mainSub_1> .logins>:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 245, 245, 0.79);
+    box-shadow: 5px 5px 11px gray, -5px -5px 11px  whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
 .Main>.mainSub_1> .logins>div > .Login_options {
     width: 80%;
     height: 100%;
@@ -110,13 +120,13 @@
 }
 
 .Main>.mainSub_1> .logins>div > .Login_options > .SignIn {
-    background-color:#2D2D38;
+    background-color:orangered;
     color: white;
 }
 
 .Main>.mainSub_1> .logins>div > .Login_options > .JoinUs {
-    background-color:orangered;
-    color: white;
+    background-color:whitesmoke;
+    color: orangered;
 }
 
 .Main>.mainSub_2{
@@ -148,10 +158,8 @@
 } 
 
 .Main>.mainSub_3_3_1>.MostLovedCarouselTop {
-    /* position: relative;
-    background-color: #F2D2BD;
-    width: 100%;
-    height: 100%; */
+     position: relative;
+    background-color: whitesmoke;
 } 
 
 .Main>.mainSub_3_3_2 {
@@ -163,7 +171,7 @@
 } 
 
 .Main>.mainSub_3_3_2>.NewArrivalsCarouselTop{
-    /* background-color: #F2D2BD; */
+    background-color: whitesmoke;
 }
 
 
@@ -188,7 +196,7 @@
     flex: 5;
 }
 .Main>.mainSub_6>.StoreFiltureTop{
-    background-color: #F2D2BD;
+    background-color: whitesmoke;
 }
 
 .Main>.mainSub_6_6 {

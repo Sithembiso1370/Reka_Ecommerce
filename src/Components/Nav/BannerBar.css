@@ -1,7 +1,8 @@
 
 
 .bannerbar{
-    background-color: #f2d2bdc1;
+    /* background-color: #f2d2bdc1; */
+    background-color: rgba(245, 245, 245, 0.534);
     color: orangered;
     width: 100%;
     height: 100%;
@@ -16,6 +17,13 @@
 /*neon orange for texts #C70039  */
 /* #003A75 */
 
+
+.amount {
+    background-color: orangered;
+    color: white;
+    border-radius: 25px 0;
+    font-weight: bold;
+}
 .bannerbar>ul{
     position: relative;
     display: flex;

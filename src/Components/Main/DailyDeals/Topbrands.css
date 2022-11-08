@@ -23,10 +23,10 @@
 
 .subtitle_topbrands>.leftline {
     /* transform: rotate(90deg); */
-    background-color: #003A75;
+    background-color: whitesmoke;
     border-radius: 15px;
     width:60%;
-    height: 5px;
+    height: 1px;
     flex: 1;
 }
 
@@ -37,12 +37,18 @@
 .subtitle_topbrands>span {
     /* background-color: black; */
     color: #003A75;
+    margin: 1%;
+    font-weight: bolder;
+}
+
+.subtitle_topbrands>span:hover {
+    color: #FF5F1F;
 }
 
 .subtitle_topbrands>.rightline {
-    background-color: #003A75;
+    background-color: whitesmoke;
     width:60%;
-    height: 5px;
+    height: 1px;
     flex: 1;
 }
 

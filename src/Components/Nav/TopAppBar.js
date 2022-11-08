@@ -100,24 +100,11 @@ export default function TopButtonAppBar() {
               // href='/ProductsPage'
               >
                 Shop
-                {/* Foldable megamenu */}
-              {/* <select>
-                <option><Link to="/Store/ProductsPage">Mens Clothing</Link></option>
-                <option>Womens Clothing</option>
-                <option>Furniture</option>
-                <option>Accesories</option>
-              </select> */}
+
               </a></li>
               <li>Print on demand</li>
               <li>
-                {/* <select
-                style={{
-                  
-                }}
-                >
-                  <option>Services</option>
-                  <option>Print on demand</option>
-                </select> */}
+
                 Services
               </li>
               <li>Dropshipping</li>

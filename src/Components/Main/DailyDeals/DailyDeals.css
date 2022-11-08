@@ -29,34 +29,43 @@
 
 .subtitle>.leftline {
     /* transform: rotate(90deg); */
-    background-color: #003A75;
+    background-color: rgba(245, 245, 245, 0.476);
     width:60%;
-    height: 5px;
+    height: 1px;
     flex: 1;
 }
 
 .subtitle>.leftline:hover{
-    background-color: #FF5F1F;
+    background-color: rgb(245, 245, 245);
 }
 
 .subtitle>span {
     color: #003A75;
+    font-weight: bolder;
+    margin: 1%;
+    transition: all 5s ease-out;
 }
 
+.subtitle>span:hover {
+    color: #FF5F1F;
+    transition: all 2s ease-out;
+}
+
+
 .subtitle>.rightline {
-    background-color: #003A75;
+    background-color: rgba(245, 245, 245, 0.476);
     width:60%;
-    height: 5px;
+    height: 1px;
     flex: 1;
 }
 
 .subtitle>.rightline:hover {
-    background-color: #FF5F1F;
+    background-color: rgb(245, 245, 245);
 }
 
 
 .DailyDealsFilture {
-    background-color: #F2D2BD;
+    background-color: whitesmoke;
     width: 100%;
     display: flex;
     justify-content: center;

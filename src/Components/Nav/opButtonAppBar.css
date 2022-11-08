@@ -104,7 +104,7 @@ font-family: 'Square Peg', cursive; */
 }
 
 .right_holder>ul>li {
-    color:  #2D2D38;
+    color:  #ff5f1fb4;
     transition: all 0.25s ease-in ;
     display: flex;
     align-items: center;
@@ -138,6 +138,15 @@ font-family: 'Square Peg', cursive; */
     color: #FF5F1F;
 }
 
+.material-symbols-outlined {
+    color: #003b75b5;
+    transition: all 2s ease-out;
+}
+
+.material-symbols-outlined:hover {
+    color: #FF5F1F;
+}
+
 
 li,i,span {
     cursor: pointer;
@@ -163,6 +172,7 @@ li,i,span {
 .right_holder>ul>.li_r_3>.cart_count{
     background-color: #FF5F1F;
     color: #003A75;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +188,9 @@ li,i,span {
 }
 
 
-
+div>ul>li>Link>span {
+        color: #003A75;
+}
 
 .my_div1_lower {
     position: relative;
@@ -239,9 +251,10 @@ li,i,span {
 }
  
 .my_div1_lower>.link_sect>ul>li {
-    background-color: #FF5733 ;
-    color: whitesmoke;
-    border:1px solid #FF5733;
+    background-color: rgba(245, 245, 245, 0.65) ;
+    /* color: #FF5733; */
+    color: #003b75bb;
+
     border-radius: 15px;
     width: 100%;
     height: 100%;
@@ -250,7 +263,7 @@ li,i,span {
     justify-content: center;
     margin: 2px;
     font-family: 'Fredoka One', cursive;
-    transition: all 2s ease-in ;
+    transition: all 5s ease-in ;
 }
 
 .my_div1_lower>.link_sect>ul>li>a {
@@ -258,6 +271,9 @@ li,i,span {
     width: 100%;
     height: 100%;
     text-align: center;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
 }
 
 .my_div1_lower>.link_sect>ul>li>a>select {
@@ -277,10 +293,13 @@ font-family: 'Fredoka One', cursive;
 font-family: 'Indie Flower', cursive;
 font-family: 'Square Peg', cursive; */
 .my_div1_lower>.link_sect>ul>li:hover {
-    background-color: white;
-    color: #FF5F1F;
+    background-color: rgba(255, 255, 255, 0.919);
+    /* color: #FF5F1F; */
+    color: #003b75bb;
+
+    /* border:1px solid #FF5733; */
     box-shadow: 1px 1px 3px #737373, -1px -1px 3px #ffffff;
-    transition: all 0.2s ease-in ;
+    transition: all 0.5s ease-in ;
 }
 
 .my_div1_lower>.link_sect>ul>li>select {

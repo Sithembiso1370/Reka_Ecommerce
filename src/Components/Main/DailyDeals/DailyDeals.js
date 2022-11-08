@@ -16,11 +16,11 @@ function DailyDeals() {
         <div className='DailyDealsFilture'>
             <div className='DailyDealsFilture_buttons'>
                 {/* Each department must have a representing color that will be used Gloally */}
-                <button>Dep1 Icon</button>
+                {/* <button>Dep1 Icon</button>
                 <button>Dep2 Icon</button>
                 <button>Department1</button>
                 <button>Department1</button>
-                <button>Department1</button>
+                <button>Department1</button> */}
             </div>
         </div>
         <div className='DailyDealPSlider'>
