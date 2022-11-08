@@ -58,22 +58,22 @@ function StoreFilture(props) {
 
           <ul className="ProductDetails_bottom">
             <li>
-              <span class="material-symbols-outlined">
+              <span class="material-symbols-outlined morph_up">
               thumb_up
               </span>
             </li>
             <li>
-              <span class="material-symbols-outlined">
+              <span class="material-symbols-outlined morph_up">
               share
               </span>
             </li>
             <li>
-              <span class="material-symbols-outlined">
+              <span class="material-symbols-outlined morph_up">
               favorite
               </span>
             </li>
             <li>
-              <span class="material-symbols-outlined">
+              <span class="material-symbols-outlined morph_up">
               add_shopping_cart
               </span>
             </li>
