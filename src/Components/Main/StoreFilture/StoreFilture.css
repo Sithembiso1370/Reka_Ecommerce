@@ -71,12 +71,9 @@
     position: relative;
     width: 90%;
     height: 90%;
-    /* box-shadow: 3px 3px 2px #aeacac, -3px -3px 1px whitesmoke; */
     flex: 1;
-
     cursor: pointer;
     text-align: center;
-    /* color: #003b75; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +82,167 @@
     border-bottom: 1px solid #FF5F1F;
 }
 
-.AnotherFilture>.FiltureSide>.filture_filtures>div:hover{
+
+.AnotherFilture>.FiltureSide>.filtu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+re_filtures>div:hover{
     box-shadow: 5px 5px 11px #737373, -5px -5px 11px #2d2d38b3;
     color: #2d2d38;
     background-color: whitesmoke;
@@ -172,7 +329,7 @@
     .AnotherFilture>.filture_main {
         display: grid;
         grid-template-columns: 1fr;
-        flex: 30;
+        flex: 60;
     }
 
     .AnotherFilture>.FiltureSide{
@@ -180,22 +337,10 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 400px) {
     .AnotherFilture>.filture_main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        flex: 30;
-    }
-
-    .AnotherFilture>.FiltureSide{
-        flex: 0.5;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .AnotherFilture>.filture_main {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
         flex: 30;
     }
 
@@ -204,10 +349,34 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 600px) {
     .AnotherFilture>.filture_main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex: 30;
+    }
+
+    .AnotherFilture>.FiltureSide{
+        flex: 0.5;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .AnotherFilture>.filture_main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        flex: 30;
+    }
+
+    .AnotherFilture>.FiltureSide{
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .AnotherFilture>.filture_main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr  1fr;
         flex: 30;
     }
 
@@ -216,7 +385,7 @@
     }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
     .AnotherFilture>.filture_main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;

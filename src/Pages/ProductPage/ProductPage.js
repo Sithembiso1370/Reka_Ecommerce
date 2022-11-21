@@ -15,35 +15,78 @@ function ProductPage() {
     <div className="ProductPage">
         <Navbar/>
         <div className="ProductPageMain"
-            style={{
-              background: `url(${process.img})`
-              ,backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center'
-            }}
+            // style={{
+            //   background: `url(${process.img})`
+            //   ,backgroundRepeat: 'no-repeat',
+            //   backgroundPosition: 'center'
+            // }}
         >
             <div className="ProductPageMain_Top">
                 <div className="ProductPageMain_TopLeft"
-                // style={{
-                //   background: `url(${process.img})`
-                //   ,backgroundRepeat: 'no-repeat',
-                //   backgroundPosition: 'center'
-                // }}
+                style={{
+                  background: `url(${process.img})`
+                  ,backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center'
+                }}
                 >
-                {process.country}
+                
                 </div>
                 <div className="ProductPageMain_TopRight">
-                ProductPageMain_TopRight
+                <div>
+                  <h3>{process.country}</h3>
+                  <p>{process.city}</p>
+                  <hr/>
+                  <h3><span>ZAR</span> 330.56</h3>
+                  <hr/>
+                  {/* colors */}
+                  <div>
+                    <h4>Color</h4>
+                    <select>
+                      <option>Red</option>
+                      <option>Green</option>
+                      <option>Orange</option>
+                      <option>Blue</option>
+                    </select>
+                  </div>
+                  {/* sizes */}
+                  <div>
+                    <h4>Sizes</h4>
+                    <select>
+                      <option>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                    </select>
+                  </div>
+                  <hr/>
+                  <div>
+                    <h4>Quantity</h4>
+                    <span>-</span>
+                    <p>3</p>
+                    <span>+</span>
+                    <p>176 available</p>
+                  </div>
+                  <div>
+                    <div>
+                      <button>Buy Now</button>
+                      <button>Add to Cart</button>
+                      <button class="material-symbols-outlined">favorite</button>
+                    </div>
+                  </div>
+
+
+                </div>
                 </div>
             </div>
 
             <div className="ProductPageMain_Middle">
               <div className="ProductPageMain_MiddleTabs">
                 {/* get w3 schools tabs sections tut here */}
-              <ul className="">
-                <li>Reviews Chat</li>
-                <li>Description & Specifications</li>
-                <li>Delivery & Returns</li>
-              </ul>
+                <ul className="">
+                  <li>Reviews Chat</li>
+                  <li>Description & Specifications</li>
+                  <li>Delivery & Returns</li>
+                </ul>
               </div>
               <div className="ProductPageMain_MiddleTabsBody">
               ProductPageMain_BottomTabsBody
