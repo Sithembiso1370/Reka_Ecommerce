@@ -21,6 +21,7 @@ function ProductPage() {
             //   backgroundPosition: 'center'
             // }}
         >
+          {/* NEED TO ADD A STORE BANNER SOMEWHERE HERE */}
             <div className="ProductPageMain_Top">
                 <div className="ProductPageMain_TopLeft"
                 style={{
@@ -89,8 +90,11 @@ function ProductPage() {
                 </ul>
               </div>
               <div className="ProductPageMain_MiddleTabsBody">
-              ProductPageMain_BottomTabsBody
-              {/* create a structure of how I am going to display propduct information here */}
+
+                {/* -- */}
+                
+                {/* -- */}
+
               </div>
             </div>
 
