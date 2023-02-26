@@ -2,10 +2,9 @@ import React,{useRef} from 'react'
 import './Topbrands.css'
 import { Rerousel } from 'rerousel';
 import styled from 'styled-components'
-import brands from './brands'
-import brands2 from './brands2';
 
-function Topbrands() {
+
+function Topbrands(props) {
   const ref = useRef(null);
 
   const Item = styled.div`
@@ -46,51 +45,52 @@ function Topbrands() {
             <hr className='rightline'/>
         </h2>
         <div className='TopBrandsPSlider'>
-        <Rerousel itemRef={ref}>
-          {
-            brands.map((slide)=>(
-              <Item ref={ref}
-              style={{ 
-                background: `url(${slide.img})`,
-                backgroundSize: '100%',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                margin: '1%',
-                border: 'none',
-                borderRadius: '5px'
+          <Rerousel itemRef={ref}>
+            {
+              props.brands.map((slide)=>(
+                <Item ref={ref}
+                style={{ 
+                  background: `url(${slide.img})`,
+                  backgroundSize: '100%',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                  margin: '1%',
+                  border: 'none',
+                  borderRadius: '5px'
 
-              }}
-              className="brandsItem">
-                {/* {slide.country} */}
-              </Item>
-            ))
-          }
+                }}
+                className="brandsItem">
+                  {/* {slide.country} */}
+                </Item>
+              ))
+            }
 
-        </Rerousel>
-        <Rerousel itemRef={ref} className="RerouselCont">
-          {/* <Item ref={ref}>1</Item> */}
-          {
-            brands2.map((slide)=>(
-              <Item ref={ref}
-              style={{ 
-                background: `url(${slide.img})`,
-                backgroundSize: '100%',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                margin: '1%',
-                border: 'none',
-                borderRadius: '5px'
+          </Rerousel>
 
-              } }
-              className="brandsItem">
-                {/* {slide.country} */}
-              </Item>
-            ))
-          }
-        </Rerousel>
         </div>
     </div>
   )
 }
 
 export default Topbrands
+
+
+{/* <Rerousel itemRef={ref} className="RerouselCont">
+{
+  brands2.map((slide)=>(
+    <Item ref={ref}
+    style={{ 
+      background: `url(${slide.img})`,
+      backgroundSize: '100%',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      margin: '1%',
+      border: 'none',
+      borderRadius: '5px'
+
+    } }
+    className="brandsItem">
+    </Item>
+  ))
+}
+</Rerousel> */}

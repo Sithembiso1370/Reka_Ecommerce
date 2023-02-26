@@ -57,25 +57,25 @@ export default function TemporaryDrawer() {
       <List>
         {
         [
-        'Womens Clothing', 
+        'WomensClothing', 
         'Jewelery',
-        'Watches and Accesories', 
-        'Health & Beauty',
+        'WatchesandAccesories', 
+        'Health&Beauty',
         'Shoes & Bags',
-        'Home and Deco',
-        'Garden and Deco',
+        'HomeandDeco',
+        'GardenandDeco',
         'Furniture(Office/Home)',
-        'Sports & Outdoors',
-        'Computer and Office',
-        'Automative Parts',
-        'Kids Toys and Play Equipement',
+        'SportsOutdoors',
+        'ComputerandOffice',
+        'AutomativeParts',
+        'KidsToysandPlayEquipement',
         'Consumer Electronics',
-        'Phones,Telecoms & Accessories',
+        'PhonesTelecoms&Accessories',
         'Automation(Home and Industrial)',
-        'Media Art and Entertainment',
-        'Games and Puzzles',
-        'Pets Supplies',
-        'Food and Bev'
+        'MediaArtandEntertainment',
+        'GamesandPuzzles',
+        'PetsSupplies',
+        'FoodandBev'
 
         ].map((text, index) => (
           <ListItem key={text} disablePadding>

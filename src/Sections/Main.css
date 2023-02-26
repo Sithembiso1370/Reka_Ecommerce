@@ -4,18 +4,16 @@
     position: relative;
     /* top: 3.5%; */
     background-color: white;
-    padding-top: 10%;
     width: 100%;
     height: 5000px;
     display: flex;
     align-self: center;
     justify-content: center;
-    /* flex: 30; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    overflow-y: none;  
-    /* margin-bottom: 2%; */
+    justify-content: space-around;
+    /* border: 2px solid black; */
+    margin: 10%;
 }
 
 .Main>.socials_tab{
@@ -66,7 +64,7 @@
     background-color: white;
     width: 100%;
     height: 100%;
-    flex: 2;
+    flex: 1;
     display: grid;
     grid-template-columns: 80% 20%;
     gap: 1.5%;
@@ -131,10 +129,11 @@
 
 .Main>.mainSub_2{
     position: relative;
+    /* top: -1%; */
     background-color: white;
     width: 100%;
     height: 100%;
-    flex: 2;
+    flex: 1;
     overflow: hidden;
 }
 .Main>.mainSub_3{
@@ -142,7 +141,7 @@
     background-color: white;
     width: 100%;
     height: 100%;
-    flex: 2;
+    flex: 1;
 }
 
 .Main>.mainSub_3_3_1 {
@@ -193,11 +192,14 @@
     background-color: white;
     width: 100%;
     height: 100%;
+    margin: 1%;
     flex: 5;
 }
 .Main>.mainSub_6>.StoreFiltureTop{
     background-color: whitesmoke;
 }
+
+
 
 .Main>.mainSub_6_6 {
     position: relative;
@@ -352,3 +354,18 @@
       font-variation-settings: 'wght' 100;
     }
   }
+
+
+.curved_borderTop {
+    background-color: white;
+    border: 2px solid whitesmoke;
+    border-radius: 12px ;
+    transition: all 12s ease-out;
+}
+
+.curved_borderTop:hover {
+    border: 2px solid orangered;
+    border-radius: 12px ;
+    background-color: white;
+    transition: all 0.4s ease-in;
+}

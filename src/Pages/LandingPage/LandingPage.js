@@ -11,7 +11,7 @@ import './LandingPage.css'
 
 function LandingPage() {
   return (
-    <div className='landingpage'>
+    <div className='landingpage' align='center'>
         <Navbar/>
         <Main/>
         <Footer/>

@@ -3,11 +3,11 @@ import AddBanner from '../AddBanner/AddBanner'
 import './BannerSliding.css'
 import slides from './slides'
 
-export default function BannerSliding() {
+export default function BannerSliding(props) {
   return (
     <div className='BannerSliding'>
           {            
-            slides.map((slide)=>(
+            props.slides.map((slide)=>(
               <div className='slide'
               style={{
                 background: `url(${slide.img})`,

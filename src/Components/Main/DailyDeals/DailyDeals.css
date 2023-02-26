@@ -1,92 +1,20 @@
 
 
 .DailyDeals{
-
+    margin-top: -1%;
     position: relative;
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-rows: 10% 10% 80%;
-    gap: 1%;
-}
-
-.DailyDeals>*{
-    /* width: 100%;
-    height: 100%; */
-}
-
-.subtitle {
-    position: relative; 
-    width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
 }
 
-
-
-.subtitle>.leftline {
-    /* transform: rotate(90deg); */
-    background-color: rgba(245, 245, 245, 0.476);
-    width:60%;
-    height: 1px;
-    flex: 1;
-}
-
-.subtitle>.leftline:hover{
-    background-color: rgb(245, 245, 245);
-}
-
-.subtitle>span {
-    color: #003A75;
-    font-weight: bolder;
-    margin: 1%;
-    transition: all 5s ease-out;
-}
-
-.subtitle>span:hover {
-    color: #FF5F1F;
-    transition: all 2s ease-out;
-}
-
-
-.subtitle>.rightline {
-    background-color: rgba(245, 245, 245, 0.476);
-    width:60%;
-    height: 1px;
-    flex: 1;
-}
-
-.subtitle>.rightline:hover {
-    background-color: rgb(245, 245, 245);
-}
-
-
-.DailyDealsFilture {
-    background-color: whitesmoke;
+.DailyDeals>.DailyDealPSlider {
+    position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items:center;
-    height: 100%;
-    position: relative;
+    align-items: center;
 }
-
-.DailyDealsFilture_buttons>* {
-
-    
-    border: 0px;
-    border-bottom: 2px solid #003A75;
-
-}
-
-.DailyDealsFilture_buttons>button:hover {
-    border-bottom: 2px solid #FF5F1F;
-}
-
-/*
-#003A75
-#FF5F1F 
-*/

@@ -11,6 +11,8 @@ import { useParams } from "react-router-dom";
 import MostLovedCarousel from '../Components/Main/MostLovedCarousel/MostLovedCarousel'
 import NewArrivalsCarousel from '../Components/Main/NewArrivalsCarousel/NewArrivalsCarousel'
 import TopCategories from '../Components/Main/TopCategories/TopCategories'
+import slidez from './slides'
+import brands from './brands'
 
 const slides = [
   {
@@ -88,6 +90,18 @@ const slides = [
   },
 ];
 
+/*
+Data to imprts
+- Slides array
+- DailyDeals array
+- Topbrands array
+- NewArrivalsCarousel array
+- Small Slides array
+- Products by department array
+- Top Categories Array
+
+
+*/
 
 
 const Main = () => {
@@ -146,10 +160,10 @@ const Main = () => {
       </div>
       </div>
       <div className='mainSub_2'>
-        <DailyDeals/>
+        <DailyDeals slides={slidez}/>
       </div>
       <div className='mainSub_3'>
-        <Topbrands/>
+        <Topbrands brands={brands}/>
       </div>
       <div className='mainSub_3_3_1'>
         <div className="MostLovedCarouselTop">
@@ -162,7 +176,7 @@ const Main = () => {
 
       </div>
       <div className='mainSub_3_3_2'>
-        <div className="NewArrivalsCarouselTop">
+        <div className="NewArrivalsCarouselTop curved_borderTop">
         NewArrivalsCarousel Top and more
         </div>
         <NewArrivalsCarousel/>
@@ -171,13 +185,13 @@ const Main = () => {
         <CitiesSlider slides={slides}  department={params}/>
       </div>
       <div className='mainSub_6'>
-        <div className="StoreFiltureTop">
-        StoreFilture Top and more
+        <div className="StoreFiltureTop curved_borderTop">
+        StoreFilture Top and more : {params.id}
         </div>
         <StoreFilture/>
       </div>
       <div className='mainSub_6_6'>
-        <div className="TopCategoriesTop">
+        <div className="TopCategoriesTop ">
         {/* Shop More: */}
         </div>
         <TopCategories/>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import Footer from '../../Sections/Footer';
 import Navbar from '../../Sections/Navbar';
 import DepartmentMain from './DepartmentMain';
 import './Department.css';
+import Footer from '../../Sections/Footer';
 
 const slides = [
   {
@@ -95,7 +95,6 @@ function Department() {
       {/* Department {params.departmentId} */}
       <Navbar/>
       <DepartmentMain slides={slides} department={params}/>
-      <Footer/>
       </div>
   )
 

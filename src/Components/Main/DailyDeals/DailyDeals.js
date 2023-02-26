@@ -2,29 +2,15 @@ import React from 'react'
 import BannerSliding from './BannerSliding'
 import './DailyDeals.css'
 
-function DailyDeals() {
+function DailyDeals(props) {
 
 
 
   return (
     <div className='DailyDeals'>
-        <div className="subtitle fancy">
-            <hr className='leftline'/>
-            <span>Daily Deals</span>
-            <hr className='rightline'/>
-        </div>
-        <div className='DailyDealsFilture'>
-            <div className='DailyDealsFilture_buttons'>
-                {/* Each department must have a representing color that will be used Gloally */}
-                {/* <button>Dep1 Icon</button>
-                <button>Dep2 Icon</button>
-                <button>Department1</button>
-                <button>Department1</button>
-                <button>Department1</button> */}
-            </div>
-        </div>
+
         <div className='DailyDealPSlider'>
-                <BannerSliding/>
+                <BannerSliding slides={props.slides}/>
         </div>
     </div>
   )

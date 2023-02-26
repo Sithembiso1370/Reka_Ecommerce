@@ -5,7 +5,7 @@ function Store() {
     let params = useParams();
 
   return (
-    <div>{params.storeId} : Store</div>
+    <div>params : {params.storeId} </div>
   )
   
 }

@@ -18,9 +18,9 @@ import OrdersPage from './Pages/OrdersPage/OrdersPage';
 import AccountPage from './Pages/AccountPage/AccountPage';
 import StoreDepartmentPage from './Pages/StoreDepartmentPage/StoreDepartmentPage';
 import MensClothing from './Pages/Departments/MensClothing';
-import Store from './Pages/Store/Store';
 import Department from './Pages/Department/Department';
 import Wishlist from './Pages/WishlistPage/Wishlist';
+import Store from './Pages/Sale/Store'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -29,7 +29,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter> 
       <Routes>
         {/* ALL ROUTES BEING DECLAIRED FOR ALL NAVIGATION */}
         <Route path="/" element={<LandingPage />} />
@@ -54,35 +54,11 @@ root.render(
         
 
         {/* STORE LINKS - remember to correct to stores and store page*/}
-        <Route path="/Store" element={<LandingPage />} />
-        <Route path="/Stores" element={<LandingPage />} /> 
+        <Route path="/Store" element={<Store />} />
         {/* STORE PAGE */}
-        <Route path="/Store/:storeId" element={<Store />} />
-        <Route path="/Store/Department" element={<LandingPage  />} >
-          <Route path="WomensClothing" element={<MensClothing />} />
-          <Route path="Jewelery" element={<MensClothing />} />
-          <Route path="Watches&Accesories" element={<MensClothing />} />
-          <Route path="MensClothing" element={<MensClothing />} />
-          <Route path="WomensClothing" element={<MensClothing />} />
-          <Route path="MensClothing" element={<MensClothing />} />
-          <Route path="WomensClothing" element={<MensClothing />} />
-          <Route path="MensClothing" element={<MensClothing />} />
-          <Route path="WomensClothing" element={<MensClothing />} />
-          <Route path="MensClothing" element={<MensClothing />} />
-          <Route path="WomensClothing" element={<MensClothing />} />
-          <Route path="MensClothing" element={<MensClothing />} />
-          <Route path="WomensClothing" element={<MensClothing />} />
-          <Route path="MensClothing" element={<MensClothing />} />
-          <Route path="WomensClothing" element={<MensClothing />} />
-          <Route path="MensClothing" element={<MensClothing />} />
-          <Route path="MensClothing" element={<MensClothing />} />
-          <Route path="WomensClothing" element={<MensClothing />} />
-          <Route path="MensClothing" element={<MensClothing />} />
-        </Route>
-
-
-
-        <Route path="/Store/ProductPage/:productId" element={<ProductPage />} />
+        <Route path="/Stores/:storeId" element={<Store />} />
+        <Route path="/Store/Department/:departmentId" element={<Department />} />
+        <Route path="/Store/Product/:productId" element={<ProductPage />} />
 
           {/* NEST THESE ROUTES */}
           <Route
