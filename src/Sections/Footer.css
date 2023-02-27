@@ -23,15 +23,13 @@
     height: 100%;
     width: 100%;
     display: grid;
-    border-left: 1px solid orangered;
-    border-right: 1px solid orangered;
     transition: all 10s ease-out;
 
 
 }
 #root > div > div.Footer > div:nth-child(3) > div > span:nth-child(1) > a
 Footer >.footer_left > div > span > a {
-    font-family: 'Edu QLD Beginner', cursive;
+    /* font-family: 'Edu QLD Beginner', cursive; */
 }
 
 Footer >.footer_left > div > span > a:hover {

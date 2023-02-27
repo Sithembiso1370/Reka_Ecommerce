@@ -81,6 +81,13 @@ const slides = [
   },
 ];
 
+
+// --------  Data to Pass in as props
+// Slides for the department
+// Top Brands for the department
+// Top Filture Categories for Department
+//  Stores for the department
+// All Products for the department
 function Department() {
     // Get the department name 
     // Use the params to decide which sets of data to show

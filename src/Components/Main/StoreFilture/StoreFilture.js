@@ -51,7 +51,7 @@ function StoreFilture(props) {
           <Link
             
             className='ProductImageLink'
-            to={`/Store/ProductPage/${product.id}`}
+            to={`/Store/Product/${product.id}`}
             key={product.country}
           >$ 34.87</Link>
           </a>

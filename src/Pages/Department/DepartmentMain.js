@@ -85,6 +85,13 @@ const slides = [
   },
 ];
 
+// --------  Data to Pass in as props
+// Slides for the department
+// Top Brands for the department
+// Top Filture Categories,Brands,Stores for Department
+//  Stores for the department
+// All Products for the department
+
 function DepartmentMain(props) {
   let params = useSearchParams();
   return (
@@ -94,7 +101,7 @@ function DepartmentMain(props) {
         <CitiesSlider slides={slides} department={params}/>
       </div>
       <div className='departmentTopBrands'><Topbrands brands={brands}/></div>
-      <div className='departmentsStorefilturez'><StoreFilture/></div>
+      <div className='departmentsStorefilturez'><StoreFilture Products='' filtureFiltureCategories='' filtureFiltureBrands='' filtureFiltureStores=''/></div>
       <div className='DepartmentNewsletter'><Newsletter/></div>
       <div className='departmentShippingdetails'><ShippingDetails/></div>
       <Footer/>

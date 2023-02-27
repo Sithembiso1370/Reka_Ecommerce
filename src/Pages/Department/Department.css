@@ -4,6 +4,7 @@
     position: relative;
     height: 2500px;
     width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
     transition: all 5s ease-out;
