@@ -21,6 +21,7 @@ import MensClothing from './Pages/Departments/MensClothing';
 import Department from './Pages/Department/Department';
 import Wishlist from './Pages/WishlistPage/Wishlist';
 import Store from './Pages/Sale/Store'
+import Inventory from './Pages/Inventory/Inventory';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -58,6 +59,8 @@ root.render(
         {/* STORE PAGE */}
         <Route path="/Stores/:storeId" element={<Store />} />
         <Route path="/Store/Department/:departmentId" element={<Department />} />
+        <Route path="/Store/Inventory" element={<Inventory />} />
+        <Route path="/Store/Inventory/:departmentId" element={<Department />} />
         <Route path="/Store/Product/:productId" element={<ProductPage />} />
 
           {/* NEST THESE ROUTES */}
