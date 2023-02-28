@@ -54,6 +54,14 @@ const InventorySchema = new mongoose.Schema(
       type: Number, // Assuming that likes, comments, and shares are numerical values
       default: 0,
     },
+    costPrice: {
+      type: Number, 
+      default: 0,
+    },
+    salePrice: {
+      type: Number, 
+      default: 0,
+    },
     comments: {
       type: String,
       default: 0,

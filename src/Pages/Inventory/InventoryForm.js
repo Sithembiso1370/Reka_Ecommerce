@@ -3,7 +3,7 @@ import axios from 'axios';
 import { handleFormCreate } from '../../services/crudServices';
 import qs from 'qs'
 
-
+// This was tested 28/02/2023 working delete as expected 
 const InventoryForm = ({  onSuccess }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -21,6 +21,8 @@ const InventoryForm = ({  onSuccess }) => {
     comments: '',
     likes: 0,
     shares: 0,
+    costPrice: 0,
+    salePrice: 0,
   });
 
   const handleChange = (event) => {
@@ -51,6 +53,8 @@ const InventoryForm = ({  onSuccess }) => {
     formDataToSend.append('comments', formData.comments);
     formDataToSend.append('likes', formData.likes ? formData.likes : 0);
     formDataToSend.append('shares', formData.shares ? formData.shares : 0);
+    formDataToSend.append('costPrice', formData.costPrice ? formData.costPrice : 0);
+    formDataToSend.append('salePrice', formData.salePrice ? formData.salePrice : 0);
 
     try {
       const response = await axios.post(
@@ -80,6 +84,8 @@ const InventoryForm = ({  onSuccess }) => {
         comments: '',
         likes: 0,
         shares: 0,
+        costPrice : 0,
+        salePrice: 0,
       });
 
       console.log('response:', response);
@@ -103,6 +109,22 @@ const InventoryForm = ({  onSuccess }) => {
         </div>
         <div>
             <label htmlFor="productDescription">Product Description</label>
+            <input
+            type="text"
+            name="productDescription"
+            value={formData.productDescription}
+            onChange={handleChange}
+            />
+        </div>
+        <div>
+            <label htmlFor="costPrice">Cost (R)</label>
+            <input type="text" name="costPrice"  
+            value={formData.costPrice}
+            onChange={handleChange}
+            />
+        </div>
+        <div>
+            <label htmlFor="salePrice">Sale (R)</label>
             <input
             type="text"
             name="productDescription"

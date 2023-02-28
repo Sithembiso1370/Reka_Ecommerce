@@ -18,6 +18,21 @@ import axios from 'axios';
 // ]
 
 
+//  function loopToDuplicateObject(Object2Loop,Object2Return){
+//         // Loop through the object passed in and append formdata
+//         if(Object2Loop.length > 0){
+//             Object.keys(Object2Loop).map((columnname)=>{
+//                 console.log(' columnname : ',valuesObject[columnname]);
+//                 if (valuesObject[columnname]) Object2Return.append(columnname, Object2Loop[columnname]);
+//                 return { status: 'success', data: };
+//             }); return 1;
+//         }
+//         else{
+//             return 0
+//         }
+//  }
+
+
 const handleFormCreate = async (e,port,cluster,valuesObject) => {
     e.preventDefault();
     let response = {}

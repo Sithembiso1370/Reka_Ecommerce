@@ -26,9 +26,14 @@ exports.createInventory = async (req, res) => {
       status,
       comments,
       likes,
-      shares
+      shares,
+      costPrice,
+      salePrice
     } = req.body;
     
+
+    // Check if there is a File first in the body before getting data then 
+    // decide what to do if there is no file
     // Store the file type and mime type in variables
     const {
       path,
@@ -39,10 +44,30 @@ exports.createInventory = async (req, res) => {
     const createdBy = 'Sithembiso Maphanga';
 
     // Try saving the image on Cloudinary and store the result in a variable
-    const result = await cloudinary.uploader.upload(req.file.path);
-    const public_id = result.public_id;
-    const url = result.secure_url;
-    const uploadedOnline = result ? true : false;
+    // try save to cloudinary or move to unsaved images for later update when having connection
+    let result = '';
+    let public_id = '';
+    let url = ''
+    let uploadedOnline = false
+    await cloudinary.uploader.upload(req.file.path)
+    .then((res)=>{
+      console.log("succesffuly Uploaded Cloudinary image wiht result :",res);
+      result = res;
+      public_id = result.public_id;
+      url = result.secure_url;
+      uploadedOnline = result ? true : false;
+    }
+    )
+    .catch((err)=>{
+      console.log("could not Uploaded Cloudinary image with error :",err);
+      result = '';
+      public_id = '';
+      url = ''
+      uploadedOnline = false
+      // Here need to later need to move to a folder where files can be retrieved and uploaded 
+      // once I have network
+    })
+
 
     // Create a new inventory object
     const inventory = new Inventory({
@@ -64,6 +89,8 @@ exports.createInventory = async (req, res) => {
       shares: shares || 0,
       file_path: path || '',
       file_mimetype: mimetype || '',
+      costPrice: costPrice || 0,
+      salePrice: salePrice || 0,
       uploadedOnline: uploadedOnline
     });
 
@@ -126,6 +153,9 @@ exports.updateInventory = async (req, res) => {
   }
 };
 
+
+// This was tested 28/02/2023 working delete as expected 
+// neeed to review, implement and test and modify crud service for these cruds
 exports.deleteInventory = async (req, res) => {
   try {
       const inventory = await  Inventory.findById(req.params.id);
