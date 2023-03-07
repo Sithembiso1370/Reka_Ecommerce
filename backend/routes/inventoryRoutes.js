@@ -8,7 +8,7 @@ const { createInventory, getInventories, getInventory, updateInventory, deleteIn
 const upload = multer({
     storage: multer.diskStorage({
       destination(req, file, cb) {
-        cb(null, './inventories');
+        cb(null, './uploads/inventories');
       },
       filename(req, file, cb) {
         cb(null, `${new Date().getTime()}_${file.originalname}`);

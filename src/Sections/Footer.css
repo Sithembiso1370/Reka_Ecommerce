@@ -7,11 +7,9 @@
     display: grid;
     color: orangered;
     grid-template-columns: repeat(4,1fr);
-    /* gap: 0.1%; */
     height: 100%;
     width: 100%;
     margin: 0;
-    /* flex: 4; */
     z-index: 20001;
 }
 
@@ -72,11 +70,11 @@ box-shadow:  -8px 8px 25px #e9e9e9,
 
 .Footer>div> h3 {
     background-color: white;
- display: flex;
- height: 100%;
- width: 100%;
- justify-content: center;
- align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -90,16 +88,51 @@ box-shadow:  -8px 8px 25px #e9e9e9,
     align-items: center;
 }
 
-.Footer>div> div> span {
+.footer_left1 >div> div> span {
     position: relative;
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
     align-items: center;
 }
 
-.Footer>div> div> span> a {
+/* #root > div > div.Footer > div.footer_left1 > div > span:nth-child(3) */
+
+.footer_left1 >div> div> span> a > h3 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_left1 >div> div> span> a > a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.footer_left1 > div > span > a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+
+.footer_right2 > div > span:nth-child(4) > span:nth-child(2) > img {
+    position: relative;
+    height: 20px;
+    width: 20px;
+}
+
+/* .Footer>div> div> span> a {
     position: relative;
     height: 100%;
     width: 100%;
@@ -108,7 +141,13 @@ box-shadow:  -8px 8px 25px #e9e9e9,
     justify-content: center;
     align-items: center;
     padding: 1%;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
+} */
+
+
+
+.Footer>div> div> span> a > a {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .Footer>div> div> span> a:hover {

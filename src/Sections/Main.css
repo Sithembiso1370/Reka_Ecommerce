@@ -33,8 +33,8 @@
 .Main>.socials_tab>div {    
     /* background-color: rgb(255, 255, 0); */
     border-radius: 50%;
-    width: 99%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,16 +62,31 @@
 .Main>.mainSub_1{
     position: relative;
     background-color: white;
-    width: 100%;
+    width: 90%;
+    align-self: center;
     height: 100%;
     flex: 1;
     display: grid;
     grid-template-columns: 80% 20%;
-    gap: 1.5%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1%;
+    /* padding-left: 1%;
+    padding-right: 1%; */
+    margin: 0 1% 0 1%;
+}
+
+.Main>.mainSub_1> .citisliderr {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .Main>.mainSub_1> .logins {
     box-shadow: 5px 5px 11px gray, -5px -5px 11px  whitesmoke;
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-rows: 30% 70%;
     gap: 1%;
@@ -129,18 +144,19 @@
 
 .Main>.mainSub_2{
     position: relative;
-    /* top: -1%; */
     background-color: white;
-    width: 100%;
+    width: 95%;
+    align-self: center;
     height: 100%;
     flex: 1;
-    overflow: hidden;
 }
+
 .Main>.mainSub_3{
     position: relative;
     background-color: white;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    align-self: center;
+    height: 80%;
     flex: 1;
 }
 
@@ -151,9 +167,7 @@
     height: 100%;
     flex: 1.5;
     /* display: grid;
-    grid-template-rows: 20% 80%;
-    padding: 2%; */
-
+    grid-template-rows: 1fr 4fr; */
 } 
 
 .Main>.mainSub_3_3_1>.MostLovedCarouselTop {
