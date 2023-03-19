@@ -22,6 +22,7 @@ import Department from './Pages/Department/Department';
 import Wishlist from './Pages/WishlistPage/Wishlist';
 import Store from './Pages/Sale/Store'
 import Inventory from './Pages/Inventory/Inventory';
+import Departments from './Pages/Departments/Departments';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -33,7 +34,16 @@ root.render(
     <BrowserRouter> 
       <Routes>
         {/* ALL ROUTES BEING DECLAIRED FOR ALL NAVIGATION */}
+        {/* Main Routes */}
+         {/* Super Store Landing Page */}
         <Route path="/" element={<LandingPage />} />
+        <Route path="/Stores/:storeId" element={<Store />} />
+        <Route path="/Stores" element={<Store />} />
+        <Route path="/Store/Departments" element={<Departments />} />
+        <Route path="/Store/Departments/:departmentId" element={<Department />} /> 
+        {/* Need to add department sub-routes here to enable topographic routing and abillity to
+        to pass another parameter as e.g. path="/Store/Departments/MensClothing/:ProductId"
+        */}
         {/* STANDARD LINKS  */}
 
         {/* ALL TOP NAVIGATION LINKS  */}
@@ -43,6 +53,12 @@ root.render(
         <Route path="/Store/AccountPage" element={<AccountPage />} />
         {/* <Route path="/Store/MensClothing" element={<MensClothing />} /> */}
         <Route path="/Store/Wishlist" element={<Wishlist />} />
+        {/* STORE LINKS - remember to correct to stores and store page*/}
+        {/* STORE PAGE */}
+        <Route path="/Store/Inventory" element={<Inventory />} /> 
+        <Route path="/Store/Inventory/:departmentId" element={<Department />} />
+        <Route path="/Store/Product/:productId" element={<ProductPage />} />
+        
         
         {/* ALL ROUTE LINKS FOR ALL PAGES */}
         <Route path="/about" element={<About />} />
@@ -54,14 +70,7 @@ root.render(
 
         
 
-        {/* STORE LINKS - remember to correct to stores and store page*/}
-        <Route path="/Store" element={<Store />} />
-        {/* STORE PAGE */}
-        <Route path="/Stores/:storeId" element={<Store />} />
-        <Route path="/Store/Department/:departmentId" element={<Department />} />
-        <Route path="/Store/Inventory" element={<Inventory />} />
-        <Route path="/Store/Inventory/:departmentId" element={<Department />} />
-        <Route path="/Store/Product/:productId" element={<ProductPage />} />
+
 
           {/* NEST THESE ROUTES */}
           <Route

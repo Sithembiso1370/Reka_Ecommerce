@@ -5,9 +5,11 @@
     position: relative;
     width: 100%;
     align-self: center;
-    height: 2500px;
+    height: 1600px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -19,15 +21,19 @@
     height: 100%;
     flex: 30;
     display: grid;
-    grid-template-rows: 3fr 8fr 1.5fr;
+    grid-template-rows: 5fr 5fr 2fr 1fr;
 }
 
 .ProductPageMain>div {
-    height: 100%;
-    width: 100%;
+    align-self: center;
+    height: 95%;
+    width: 95%;
 }
 
 .ProductPageMain > .ProductPageMain_Top {
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 3fr 2fr;
 }
@@ -35,25 +41,116 @@
 .ProductPageMain > .ProductPageMain_Top>.ProductPageMain_TopLeft {
     background-size: 100%;
     padding: 5%;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid black;
+    /* box-shadow: 2px 2px 5px #737373, -2px -2px 6px #585858; */
     text-align: center;
     font-size: 1.5rem;
+}
+
+.ProductPageMain > .ProductPageMain_Top>.ProductPageMain_TopLeft:hover {
+    box-shadow: 2px 2px 5px #737373, -2px -2px 6px #585858;
 }
 
 .ProductPageMain_TopRight {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.508);
+    padding: 1%;
+    color: #003b75;
+    color: orangered;
 }
+
+.ProductPageMain_TopRight:hover {
+    box-shadow: 2px 2px 5px #737373, -2px -2px 6px #585858;
+}
+
+.ProductPageMain_TopRight > div  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ProductPageMain_TopRight > div > h3  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: orange;
+}
+
+.ProductPageMain_TopRight > div > p  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: orange;
+}
+
+.ProductPageMain_TopRight > div > div  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ProductPageMain_TopRight > div > div >  select {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background-color: orangered;
+    color: orange;
+    border-radius: 30px;
+    border: none;
+
+}
+
+.ProductPageMain_TopRight > div > div >  select:hover {
+    box-shadow: 2px 2px 5px #737373, -2px -2px 6px #585858;
+}
+    
+.ProductPageMain_TopRight > div > div > div  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1%;
+    align-items: center;
+    justify-content: space-around;
+} 
+
+
+.ProductPageMain_TopRight > div > div > div > button  {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-color: orangered;
+    color: orange;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+}
+
+.ProductPageMain_TopRight > div > div > div > button:hover {
+    box-shadow: 2px 2px 5px #737373, -2px -2px 6px #585858;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+
 
 .ProductPageMain_Middle {
     position: relative;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 2% 98%;
+    grid-template-rows: 5% 95%;
+    gap: 1%;
+    align-items: center;
 }
 
 .ProductPageMain_Middle>.ProductPageMain_MiddleTabs {
@@ -65,11 +162,21 @@
     align-items: center;
 }
 
+.ProductPageMain_Middle>.ProductPageMain_MiddleTabsBody {
+    position: relative;
+    align-self: center;
+    width: 90%;
+    height: 100%;
+}
+
+/* .ProductPageMain_Middle > div.ProductPageMain_MiddleTabs > ul  */
+
 .ProductPageMain_Middle>.ProductPageMain_MiddleTabs> ul {
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
@@ -78,9 +185,39 @@
     width: 100%;
     height: 100%;
     display: flex;
-    border: 1px solid gray;
+    background-color: orangered;
+    color: orange;
     align-items: center;
     justify-content: center;
 }
 
+.ProductPageMain_Middle>.ProductPageMain_MiddleTabs> ul>li:hover {
+    box-shadow: 2px 2px 5px #737373, -2px -2px 6px #585858;
+}
+
+.ProductPageMain  > .ProductPageMain_BottomTabsBody {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 90%; 
+    align-self: center;
+}
+
+.ProductPageMain  > .ProductPageMain_BottomTabsBody > h3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: orangered;
+    color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.ProductPageMain  > .ProductPageMain_BottomTabsBody > h3:hover {
+    box-shadow: 2px 2px 5px #737373, -2px -2px 6px #585858;
+}
 /* .ProductPageMain> */

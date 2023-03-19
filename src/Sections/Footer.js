@@ -12,12 +12,12 @@ function Footer() {
           </span>
           <span>
             <a href="/">
-           <h3>Email : </h3><a href='/'>enquiries@akillikraal.com</a>
+           <a>Email : </a><a href='/'>enquiries@akillikraal.com</a>
             </a>
           </span>
           <span>
             <a href="/">
-            <h3>Text/Cell : </h3><a href=''>060 070 2552</a>
+            <h5>Text/Cell : </h5><a href=''>060 070 2552</a>
             </a>
           </span>
           <span>

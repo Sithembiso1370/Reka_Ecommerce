@@ -4,6 +4,7 @@ import Navbar from '../../Sections/Navbar';
 import DepartmentMain from './DepartmentMain';
 import './Department.css';
 import Footer from '../../Sections/Footer';
+import backgroundH from "./R.gif";
 
 const slides = [
   {
@@ -98,7 +99,14 @@ function Department() {
     // Pass the data 
 
   return (
-    <div className="DepartmentLanding">
+    <div className="DepartmentLanding"
+    style={{
+      backgroundImage: "url(" + backgroundH + ")",
+      backgroundSize: "cover",
+      height: "100%",
+      backgroundRepeat: "no-repeat"
+    }}
+    >
       {/* Department {params.departmentId} */}
       <Navbar/>
       <DepartmentMain slides={slides} department={params}/>

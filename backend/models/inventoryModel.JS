@@ -1,93 +1,114 @@
 const mongoose = require('mongoose');
 
 const InventorySchema = new mongoose.Schema(
-  {
+    {
     url: {
-      type: String,
-      trim: true,
+        type: String,
+        trim: true
     },
     public_id: {
-      type: String,
-      trim: true,
+        type: String,
+        trim: true
     },
     rekaStockId: {
-      type: String,
-      trim: true
+        type: String, // ---
+        trim: true
     },
     createdBy: {
-      type: String, // Assuming that createdBy refers to the User who created the inventory item
-      trim: true,
+        type: String,// ---
+        trim: true
+    },
+    title: {
+        type: String,// ---
+        trim: true
     },
     productDescription: {
-      type: String,
-      trim: true
+    type: String,// ---
+    trim: true
     },
     file_path: {
-      type: String,
+    type: String,
     },
     file_mimetype: {
-      type: String,
+    type: String,
     },
     supplier: {
-      type: String,
+    type: String,// ---
     },
     manufacturepn: {
-      type: String,
+        type: String,// ---
     },
     quantity: {
-      type: Number,
+    type: Number,// ---
     },
-    color: {
-      type: String,
+    deliveryCost: {
+        type: Number, // --
+    },
+    sourceCountry: {
+        type: Number, // --
+    },
+    specs: {
+        type: String, // --
     },
     department: {
-      type: String, // Assuming that department refers to a Category that the item belongs to
-      ref: 'Category',
+        type: Number, // -- These are Departments in this app, This should later be made to an array
     },
-    brands: {
-      type: String,
+    brand: {
+        type: String,// --
     },
-    store: {
-      type: String,
-    },
-    likes: {
-      type: Number, // Assuming that likes, comments, and shares are numerical values
-      default: 0,
+    color: {
+        type: String,// ---
     },
     costPrice: {
-      type: Number, 
-      default: 0,
+        type: Number,// ---
     },
     salePrice: {
-      type: Number, 
-      default: 0,
+        type: Number, // --
+    },
+    inventoryDetails: {
+        type: String,// -- This should later be made to an array
+    },
+    sourceLink: {
+        type: String, // -- This should later be made to an array
+    },
+    sourcingLeadTimes: {
+        type: String, // -- This should later be made to an array
+    },
+    store: {
+        type: String, // --  This should later be made to an array
+    },
+    likes: {
+        type: String, // This should later be made to an array
     },
     comments: {
-      type: String,
-      default: 0,
+        type: String, // This should later be made to an array
+    }
+    ,
+    inventoryAttributes: {
+        type: String, // This should later be made to an object/specs
+    }
+    ,
+    addtoCarts: {
+        type: String, // This should later be made to an array
     },
     shares: {
-      type: Number,
-      default: 0,
+        type: String, // This should later be made to an array
     },
-    status: {
-      type: String,
-      enum: ['draft', 'published'], // Assuming that the status refers to the current state of the inventory item
-      default: 'draft',
+    stars: {
+        type: Number, // This should later be made to an array
     },
     uploadedOnline: {
-      type: Boolean, // Assuming that uploadedOnline refers to whether the item has been uploaded to the ecommerce website or not
-      default: false,
+    type: String,// This should later be made to an array
     },     
-  },
-  {
-    timestamps: true
-  },
+    }
+    ,
+    {
+        timestamps: true
+    },
 );
 
-const Inventory = mongoose.model("Inventory", InventorySchema);
+const Inventory = mongoose.model("Inventory", InventorySchema );
 module.exports = Inventory;
-
 
 // Inventory model and controller fields the same
 // category
@@ -98,5 +119,3 @@ module.exports = Inventory;
 // -- Security and Cameras
 // 
 // brand
-
-// Show models,views and controllers to perform crud operations on a server including cloudinary and multer image upload  middlewares using mvc

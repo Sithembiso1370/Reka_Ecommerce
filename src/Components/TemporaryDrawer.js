@@ -57,6 +57,10 @@ export default function TemporaryDrawer() {
       <List>
         {
         [
+        'Groceries', 
+        'FoodandBev',
+        'WomensClothing', 
+        'MensClothing', 
         'WomensClothing', 
         'Jewelery',
         'WatchesandAccesories', 
@@ -64,6 +68,7 @@ export default function TemporaryDrawer() {
         'Shoes & Bags',
         'HomeandDeco',
         'GardenandDeco',
+        'DIY',
         'Furniture(Office/Home)',
         'SportsOutdoors',
         'ComputerandOffice',
@@ -83,7 +88,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
-              <Link to={"/Store/Department/"+text}>
+              <Link to={"/Store/Departments/"+text}>
               <ListItemText primary={text} />
               </Link>
               

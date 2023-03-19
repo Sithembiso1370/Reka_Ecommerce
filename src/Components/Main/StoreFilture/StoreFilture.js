@@ -36,7 +36,7 @@ function StoreFilture(props) {
                     style={{
                      backgroundImage: `url(${product.p_logo})`,
                      backgroundRepeat: 'no-repeat',
-                     backgroundSize: 'cover',
+                     backgroundSize: '100%',
                      backgroundPosition: 'center'
                     }}
                     
@@ -84,8 +84,9 @@ function StoreFilture(props) {
     );
     
   return (
-      
-    <div className='AnotherFilture'>
+    <div className='AnotherFilture'
+
+    >
         <div className='FiltureSide'>
           <div className='filture_typeSelect'>
             <button>Top Categories</button>
@@ -93,8 +94,12 @@ function StoreFilture(props) {
             <button>Top Stores</button>
           </div>
           <div className='filture_filtures'>
-             <div className='filture_filture_f1'>
-                All
+             <div className='filture_filture_f1 cta'>
+                <span>All</span>
+                <svg viewBox="0 0 13 10" height="10px" width="15px">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
               </div>
               <div className='filture_filture_f1'>
                 Clothing

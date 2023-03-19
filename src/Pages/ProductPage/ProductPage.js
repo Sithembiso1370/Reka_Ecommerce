@@ -36,9 +36,9 @@ function ProductPage() {
                 <div>
                   <h3>{process.country}</h3>
                   <p>{process.city}</p>
-                  <hr/>
+
                   <h3><span>ZAR</span> 330.56</h3>
-                  <hr/>
+
                   {/* colors */}
                   <div>
                     <h4>Color</h4>
@@ -59,7 +59,6 @@ function ProductPage() {
                       <option>L</option>
                     </select>
                   </div>
-                  <hr/>
                   <div>
                     <h4>Quantity</h4>
                     <span>-</span>
@@ -71,11 +70,9 @@ function ProductPage() {
                     <div>
                       <button>Buy Now</button>
                       <button>Add to Cart</button>
-                      <button class="material-symbols-outlined">favorite</button>
+                      <button >whishlist</button>
                     </div>
                   </div>
-
-
                 </div>
                 </div>
             </div>
@@ -90,7 +87,7 @@ function ProductPage() {
                 </ul>
               </div>
               <div className="ProductPageMain_MiddleTabsBody">
-
+              ProductPageMain_MiddleTabsBody
                 {/* -- */}
                 
                 {/* -- */}
@@ -100,11 +97,14 @@ function ProductPage() {
 
             {/* Create an Infinite slow carousel of similar products */}
             <div className="ProductPageMain_BottomTabsBody">
-                Similar products
+                <h3>Similar products</h3>
+                <div>
+                  ..... carousel
+                </div>
             </div>
-
+            <Footer/>
         </div>
-        <Footer/>
+        
     </div>
   )
 }

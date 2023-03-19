@@ -346,7 +346,7 @@ font-family: 'Square Peg', cursive; */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(225deg, #ffffff, #e1e1e1);
+    /* background: linear-gradient(225deg, #ffffff, #e1e1e1); */
     border-radius: 50%;
     transition: all 25s ease-in ;
 }
@@ -356,7 +356,7 @@ font-family: 'Square Peg', cursive; */
     background: linear-gradient(225deg, #f0ebeb, #ffffff);
     font-size: 1.5rem;
     font-weight: bolder;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     transition: all 0.25s ease-in ;
 }
 

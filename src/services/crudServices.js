@@ -34,11 +34,11 @@ import axios from 'axios';
 
 
 const handleFormCreate = async (e,port,cluster,valuesObject) => {
-    e.preventDefault();
+    // e.preventDefault();
     let response = {}
 
     const formData = new FormData();
-
+    console.log("values object passed in : ", valuesObject)
     // Loop through the object passed in and append formdata
     if(valuesObject.length > 0){
         Object.keys(valuesObject).map((columnname)=>{
@@ -51,6 +51,7 @@ const handleFormCreate = async (e,port,cluster,valuesObject) => {
 
     // Try send a post request
     try {
+        // console.log("formData to send = ",formData.getAll());
         const res = await axios.post(`http://localhost:${port}/api/${cluster}`, formData,
         {
             headers: {
@@ -59,7 +60,7 @@ const handleFormCreate = async (e,port,cluster,valuesObject) => {
         }
         );
             console.log('axios succes ', res);
-            response = { status: "success",data: res}
+            response = { status: "success",data: res.data.data}
     } catch (err) {
         console.log('axios error: ', err);
         response = { status: "failure",data: err}
@@ -94,13 +95,14 @@ const handleUpdateFromCluster = async (e,port,cluster,valuesObject) => {
        
         try {
             const res = await axios.put(`http://localhost:${port}/api/${cluster}}`, formData,
-            {
-                headers: {
-                'Content-Type': 'multipart/form-data'
+                {
+                    headers: {
+                    'Content-Type': 'multipart/form-data'
+                    }
                 }
-                });
-                console.log('axios response: ', res);
-                // await props.fetchData();
+            );
+            console.log('axios response: ', res);
+            // await props.fetchData();
         } catch (err) {
         console.log('axios error: ', err);
         }
