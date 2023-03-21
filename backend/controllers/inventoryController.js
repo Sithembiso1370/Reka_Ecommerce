@@ -15,7 +15,8 @@ cloudinary.config({
 exports.saveInventory = async (req, res) => {
   try {
     const fields = req.body;
-    console.log('fields = ',fields)
+    console.log('fields = ',fields);
+    console.log("req.file =",req.file)
     const createdBy = 'Sithembiso Maphanga';
     if(req.file){
       const file = req.file;
@@ -24,19 +25,41 @@ exports.saveInventory = async (req, res) => {
         tags: 'images',
         resource_type: "image",
       });
-      const public_id = result.public_id;
-      const url = result.secure_url;
-      const uploadedOnline = result ? 'yes' : 'no';
-      const inventory = await Inventory.create({
-        url,
-        public_id,
-        ...fields,
-        createdBy,
-        file_path: file.path,
-        file_mimetype: file.mimetype,
-        uploadedOnline
-      });
-      res.status(200).json({ status: "success", message: "success mongo and cloudinary", data: inventory});
+      console.log("result = ", result)
+
+      if(result){
+        const public_id = result.public_id;
+        const url = result.secure_url;
+        const uploadedOnline = result ? 'yes' : 'no';
+        const inventory = await Inventory.create({
+          url,
+          public_id,
+          ...fields,
+          createdBy,
+          file_path: file.path,
+          file_mimetype: file.mimetype,
+          uploadedOnline
+        });
+        console.log("result = ",result);
+        res.status(200).json({ status: "success", message: "success mongo and cloudinary", data: inventory});
+        
+      }
+      else{
+        const public_id = '';
+        const url = '';
+        const uploadedOnline = 'no';
+        const inventory = await Inventory.create({
+          url ,
+          public_id,
+          ...fields,
+          createdBy,
+          file_path: '',
+          file_mimetype: '',
+          uploadedOnline
+        });
+        console.log("result = ",result);
+        res.status(200).json({ status: "success", message: "success mongo only", data: inventory});
+      }
     }
     else{
       const public_id = '';
@@ -53,9 +76,8 @@ exports.saveInventory = async (req, res) => {
       });
       res.status(200).json({ status: "success", message: "success mongo only", data: inventory});
     }
-
   } catch (error) {
-    res.status(400).json({ status: "failure", message: "success mongo only", data: error});
+    res.status(400).json({ status: "failure", message: "Could not save data both mongodb and cloudinary", data: error});
   }
 }
 

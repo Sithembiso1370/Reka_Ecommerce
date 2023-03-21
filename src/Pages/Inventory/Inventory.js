@@ -14,7 +14,7 @@ const Inventory = () => {
       { name: "title", label: "Product Description", type: "text" },
       { name: "productDescription", label: "Product Description", type: "text" },
       { name: "costPrice", label: "Cost (R)", type: "number" },
-      { name: "salePrice", label: "Sale (R)", type: "text" },
+      { name: "salePrice", label: "Sale (R)", type: "number" },
       { name: "upload", label: "Image", type: "file" },
       { name: "supplier", label: "Supplier", type: "text" },
       { name: "manufacturepn", label: "Manufacture PN", type: "text" },
@@ -23,7 +23,7 @@ const Inventory = () => {
       { name: "department", label: "Department", type: "text" },
       { name: "brand", label: "Brands", type: "text" },
       { name: "store", label: "Store", type: "text" },
-      { name: "deliveryCost", label: "deliveryCost", type: "text" },
+      { name: "deliveryCost", label: "deliveryCost (R)", type: "number" },
       { name: "sourceCountry", label: "sourceCountry", type: "text" },
       { name: "specs", label: "specs", type: "text" },
       { name: "inventoryDetails", label: "inventoryDetails", type: "text" },
@@ -120,53 +120,81 @@ const Inventory = () => {
 
   // console.log('inventoryList.length : ', inventoryList.length)
   return (
-    <>
+    <div  className='inventoryPage'>
+      <div className='label'>
       <h1>Inventory Management</h1>
-        {crudForm}
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : (
-        <table>
-          <thead>
-            <tr>
-            <th>Created By</th>
-              <th>Image</th>
-              <th>Description</th>
-              <th>Supplier</th>
-              <th>Quantity</th>
-              <th>Department</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              
-              inventoryList ?
-            inventoryList.map((inventory) => (
-              <tr key={inventory._id}>
-                <td>
-                <td>{inventory.createdBy}</td>
-                  {inventory.url && (
-                    <img src={inventory.url} alt={inventory.productDescription} height="50" />
-                  )}
-                </td>
-                <td>{inventory.productDescription}</td>
-                <td>{inventory.supplier}</td>
-                <td>{inventory.quantity}</td>
-                <td>{inventory.department}</td>
-                <td>
-                  <button onClick={(e) => handleEdit(e,inventory)}>Edit</button>
-                  <button onClick={(e) => handleDelete(e,inventory)}>Delete</button>
-                </td>
+      </div>
+      <div className='formCrud'>
+      {crudForm}
+      </div>
+      <div className='formTable'>
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          <table>
+            <thead>
+              <tr>
+              <th>Created By</th>
+                <th>Attachement</th>
+                <th>rekaStockId</th> 
+                <th>title</th>
+                <th>manufacturepn</th>
+                <th>quantity</th>
+                <th>deliveryCost}</th>
+                <th>sourceCountry</th>
+                <th>specs</th>
+                <th>department</th>
+                <th>Description</th> 
+                <th>Supplier</th>
+                <th>Quantity</th>
+                <th>Department</th>
+                <th>Action</th>
               </tr>
-            ))
-            :
-            ''
-            }
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {
+                
+                inventoryList ?
+              inventoryList.map((inventory) => (
+                <tr key={inventory._id}>
+                  
+                  <td>{inventory.createdBy}</td>
+                  <td>
+                    {inventory.url && (
+                      <img src={inventory.url} alt={inventory.productDescription} height="50" />
+                    )}
+                  </td>
+                  <td>{inventory.rekaStockId}</td>
+
+                  <td>{inventory.title}</td>
+                  <td>{inventory.manufacturepn}</td>
+                  <td>{inventory.quantity}</td>
+                  <td>{inventory.deliveryCost}</td>
+                  <td>{inventory.sourceCountry}</td>
+                  <td>{inventory.specs}</td>
+                  <td>{inventory.department}</td>
+
+
+                  <td>{inventory.productDescription}</td>
+                  <td>{inventory.supplier}</td>
+                  <td>{inventory.quantity}</td>
+                  <td>{inventory.department}</td>
+                  <td>
+                    <button onClick={(e) => handleEdit(e,inventory)}>Edit</button>
+                    <button onClick={(e) => handleDelete(e,inventory)}>Delete</button>
+                  </td>
+                </tr>
+              ))
+              :
+              ''
+              }
+            </tbody>
+          </table>
       )}
-    </>
+      </div>
+        
+
+    </div>
   );
 };
 

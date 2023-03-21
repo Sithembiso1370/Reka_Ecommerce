@@ -45,7 +45,7 @@ const InventorySchema = new mongoose.Schema(
         type: Number, // --
     },
     sourceCountry: {
-        type: Number, // --
+        type: String, // --
     },
     specs: {
         type: String, // --

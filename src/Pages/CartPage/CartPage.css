@@ -12,6 +12,7 @@
     overflow: hidden;
     align-items: center;
     transition: all 5s ease-out;
+    display: grid;
 }
 
 .CartPageMain {
@@ -23,7 +24,6 @@
     display: grid;
     grid-template-columns: 70% 30%;
     gap: 2%;
-
 }
 
 .CartPageMain> .cartCenter {
@@ -35,7 +35,7 @@
     align-items: center;
     /* justify-content: center; */
     gap: 2%;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 .CartPageMain> .cartCenter > .CartItem {
@@ -44,7 +44,41 @@
     width: 95%;
     height: 200px;
     padding: 2%;
- 
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.CartPageMain> .cartCenter > .CartItem:hover {
+    box-shadow: 2px 2px 5px #737373, -2px -2px 6px #585858;
+}
+
+.CartPageMain> .cartCenter > img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.CartPageMain> .cartCenter > .CartItem_details {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+ .CartItem_details > .CartItem_details_top {
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+
+.CartItem_details > .CartItem_details_body {
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
 }
 
 .CartPageMain > :nth-child(2){
