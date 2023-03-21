@@ -2,12 +2,13 @@
 
 
 const departmentsArray = [
+    'Groceries',
     'Womens_clothing',
     'Mens_Clothing',
     'Accessories',
-    'Gadgets','DIY_Tools',
+    'Gadgets',
+    'DIY_Tools',
     'Health_Beauty',
-    'Groceries',
     'Industrial_Automation',
     'Home_Automation',
     'Jewelery',
@@ -15,18 +16,21 @@ const departmentsArray = [
     'Shoes_Bags_Accessories',
     'Home_Deco',
     'Garden_Deco',
-    'DIY',
     'Office_Deco',
     'SportOutdoors',
     'kids_toys',
+    'Consumer_Electronics',
     'Cellphone_Accessories',
     'Home_Automation',
     'Industrial_Automation',
     '4IR',
     'Web3',
     'Games_Puzzels',
-    'Pets_PetsSupplies',
-    'Food_Bev'
+    'Pets_Supplies',
+    'Food_Bev',
+    'Media_Art_Entertainment',
+    'Automative_Parts',
+    'Sports_Outdoors',
 ]
 
 module.exports = departmentsArray;

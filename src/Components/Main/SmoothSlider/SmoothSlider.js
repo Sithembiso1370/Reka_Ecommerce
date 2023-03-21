@@ -18,13 +18,14 @@ class CitiesSlider extends React.Component {
     }
 
     // params = useParams();
-    studentId = window.location.href.split('/')[5] ? window.location.href.split('/')[5] : ''
+    studentId = this.props.department;
     
     componentWillUnmount() {
       window.clearTimeout(this.changeTO);
     }
     
     componentDidMount() {
+      // console.log('studentId = ',this.studentId)
       this.runAutochangeTO();
       setTimeout(() => {
         this.setState({ activeSlide: 0, sliderReady: true });
@@ -65,7 +66,7 @@ class CitiesSlider extends React.Component {
                   zIndex: '20'}}
                   >{slide.country || slide.city}</h3>
                   <h2 className="slider__slide-heading">
-                    {this.studentId.split('').map(l => <span>{l}</span>)}
+                    {this.studentId.split("_").lenght > 1 ? this.studentId.split("_")[0]+this.studentId.split("_")[1] : this.studentId}
                   </h2>
                   <p className="slider__slide-readmore">read more</p>
                 </div>

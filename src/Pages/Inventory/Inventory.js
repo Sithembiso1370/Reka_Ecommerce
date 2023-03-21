@@ -9,6 +9,7 @@ const Inventory = () => {
   const [inventoryList, setInventoryList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({});
+  const [departmentCategories, setdepartmentCategories] = useState(['Upper Body','Lower Body','T-Shirts'])
   const [placeholders, setplaceholders] = useState(
     [
       { name: "rekaStockId", label: "Reka Stock ID", type: "text" },
@@ -27,6 +28,7 @@ const Inventory = () => {
       { name: "deliveryCost", label: "deliveryCost (R)", type: "number" },
       { name: "sourceCountry", label: "sourceCountry", type: "text" },
       { name: "specs", label: "specs", type: "text" },
+      { name: "category", label: "category", type: "select",  options: departmentCategories },
       { name: "inventoryDetails", label: "inventoryDetails", type: "text" },
       { name: "sourceLink", label: "sourceLink", type: "text" },
       { name: "sourcingLeadTimes", label: "sourcingLeadTimes", type: "text" }
@@ -136,7 +138,7 @@ const Inventory = () => {
           <table>
             <thead>
               <tr>
-              <th>Created By</th>
+                <th>Created By</th>
                 <th>Attachement</th>
                 <th>rekaStockId</th> 
                 <th>title</th>
@@ -145,8 +147,8 @@ const Inventory = () => {
                 <th>deliveryCost}</th>
                 <th>sourceCountry</th>
                 <th>specs</th>
-                <th>department</th>
                 <th>Description</th> 
+                <th>Category</th>
                 <th>Supplier</th>
                 <th>Quantity</th>
                 <th>Department</th>
@@ -174,10 +176,8 @@ const Inventory = () => {
                   <td>{inventory.deliveryCost}</td>
                   <td>{inventory.sourceCountry}</td>
                   <td>{inventory.specs}</td>
-                  <td>{inventory.department}</td>
-
-
                   <td>{inventory.productDescription}</td>
+                  <td>{inventory.category}</td>
                   <td>{inventory.supplier}</td>
                   <td>{inventory.quantity}</td>
                   <td>{inventory.department}</td>

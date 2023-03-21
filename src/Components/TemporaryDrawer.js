@@ -12,6 +12,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import './Nav/drawer.css'
 import { Outlet, Link } from "react-router-dom";
+import departmentsArray from '../Pages/Departments/DepartmentsArray';
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -56,33 +57,7 @@ export default function TemporaryDrawer() {
       <Divider />
       <List>
         {
-        [
-        'Groceries', 
-        'FoodandBev',
-        'WomensClothing', 
-        'MensClothing', 
-        'WomensClothing', 
-        'Jewelery',
-        'WatchesandAccesories', 
-        'Health&Beauty',
-        'Shoes & Bags',
-        'HomeandDeco',
-        'GardenandDeco',
-        'DIY',
-        'Furniture(Office/Home)',
-        'SportsOutdoors',
-        'ComputerandOffice',
-        'AutomativeParts',
-        'KidsToysandPlayEquipement',
-        'Consumer Electronics',
-        'PhonesTelecoms&Accessories',
-        'Automation(Home and Industrial)',
-        'MediaArtandEntertainment',
-        'GamesandPuzzles',
-        'PetsSupplies',
-        'FoodandBev'
-
-        ].map((text, index) => (
+          departmentsArray.map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>

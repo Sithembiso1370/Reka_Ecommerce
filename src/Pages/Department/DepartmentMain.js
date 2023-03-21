@@ -8,6 +8,8 @@ import Newsletter from '../../Components/Main/newsletter/Newsletter';
 import ShippingDetails from '../../Components/Main/ShippingDetails/ShippingDetails';
 import Footer from '../../Sections/Footer';
 import { useSearchParams } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const slides = [
   {
@@ -94,11 +96,15 @@ const slides = [
 
 function DepartmentMain(props) {
   let params = useSearchParams();
+
+  useEffect(() => {
+    // fetchInventory();
+  }, []);
   return (
     <div className="DepartmentContainer">
       {/* Department : {props.department.departmentId} */}
       <div className='departmentSlider'>
-        <CitiesSlider slides={slides} department={params}/>
+        <CitiesSlider slides={slides} department={props.department}/>
       </div>
       <div className='departmentTopBrands'><Topbrands brands={brands}/></div>
       <div className='departmentsStorefilturez'><StoreFilture Products='' filtureFiltureCategories='' filtureFiltureBrands='' filtureFiltureStores=''/></div>

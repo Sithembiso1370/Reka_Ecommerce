@@ -94,6 +94,9 @@ const InventorySchema = new mongoose.Schema(
     shares: {
         type: String, // This should later be made to an array
     },
+    category: {
+        type: String, // This should later be made to an array
+    },
     stars: {
         type: Number, // This should later be made to an array
     },

@@ -5,6 +5,8 @@ import DepartmentMain from './DepartmentMain';
 import './Department.css';
 import Footer from '../../Sections/Footer';
 import backgroundH from "./R.gif";
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const slides = [
   {
@@ -93,11 +95,14 @@ function Department() {
     // Get the department name 
     // Use the params to decide which sets of data to show
     // http://localhost:3000/Store/Department/MensClothing
-    let params = useParams();
+    const [department, setdepartment] = useState(window.location.href.split('/')[5] ? window.location.href.split('/')[5] : '')
 
     // Get the data for the department
+    useEffect(() => {
+      setdepartment(window.location.href.split('/')[5] ? window.location.href.split('/')[5] : '');
+    }, [window.location.href]);
     // Pass the data 
-
+   console.log(department)
   return (
     <div className="DepartmentLanding"
     style={{
@@ -109,7 +114,7 @@ function Department() {
     >
       {/* Department {params.departmentId} */}
       <Navbar/>
-      <DepartmentMain slides={slides} department={params}/>
+      <DepartmentMain slides={slides} department={department} />
       </div>
   )
 
