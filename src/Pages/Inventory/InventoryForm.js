@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './InventoryForm.css'
+// import { input } from '@testing-library/user-event/dist/types/utils';
 
 const InventoryForm = (props) => {
   const [formData, setFormData] = useState({});
@@ -26,12 +27,41 @@ const InventoryForm = (props) => {
     try {
       const response = await axios.post('http://localhost:5000/api/inventory', formDataToSubmit);
       console.log('Form submitted successfully:', response.data);
-      // Do something with the response data
+      alert('Form submitted successfully')
     } catch (error) {
       console.log('Error submitting form:', error.response.data);
-      // Handle the error
+      alert('Error submitting form:')
     }
   };
+
+
+  const returnInput = (field) => {
+    switch (field.type) {
+      case 'file':
+      return <input
+        type={field.type}
+        name={field.name}
+        onChange={handleInputChange}
+      />
+        // break;
+      case 'select':
+        return <select
+          type={field.type}
+          name={field.name}
+          onChange={handleInputChange}
+        > 
+        {field.options.map((option)=><option>{option}</option>)}
+        </select>
+          // break;
+      default:
+        return <input
+        type={field.type}
+        name={field.name}
+        onChange={handleInputChange}
+      />
+        // break;
+    }
+  }
   
   return (
     <form onSubmit={handleSubmit} className="createForm">
@@ -40,19 +70,25 @@ const InventoryForm = (props) => {
       {props.placeholders.map((field) => (
         <div key={field.name} className="formInputContainer">
           <label htmlFor={field.name}>{field.label}</label>
-          {field.type === "file" ? (
-            <input
-              type={field.type}
-              name={field.name}
-              onChange={handleInputChange}
-            />
-          ) : (
-            <input
-              type={field.type}
-              name={field.name}
-              onChange={handleInputChange}
-            />
-          )}
+          
+          {
+          // field.type === "file" ? (
+          //   <input
+          //     type={field.type}
+          //     name={field.name}
+          //     onChange={handleInputChange}
+          //   />
+          // ) : (
+          //   <input
+          //     type={field.type}
+          //     name={field.name}
+          //     onChange={handleInputChange}
+          //   />
+          // )
+          returnInput(field)
+
+
+          }
         </div>
       ))}
       </div>

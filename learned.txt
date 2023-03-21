@@ -1,0 +1,8 @@
+- How do you undo a git commit without losing your files?
+
+{in case you have not pushed the commit publicly yet:
+
+git reset HEAD~1 --soft }
+
+{Git reset --mixed 
+This will undo the last commit and unstage all those changes.}

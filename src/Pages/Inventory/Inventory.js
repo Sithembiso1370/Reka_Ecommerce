@@ -3,6 +3,7 @@ import axios from 'axios';
 import InventoryForm from './InventoryForm';
 import './Inventory.css'
 import { handleFormCreate } from '../../services/crudServices';
+import departmentsArray from '../Departments/DepartmentsArray';
 
 const Inventory = () => {
   const [inventoryList, setInventoryList] = useState([]);
@@ -11,7 +12,7 @@ const Inventory = () => {
   const [placeholders, setplaceholders] = useState(
     [
       { name: "rekaStockId", label: "Reka Stock ID", type: "text" },
-      { name: "title", label: "Product Description", type: "text" },
+      { name: "title", label: "Title", type: "text" },
       { name: "productDescription", label: "Product Description", type: "text" },
       { name: "costPrice", label: "Cost (R)", type: "number" },
       { name: "salePrice", label: "Sale (R)", type: "number" },
@@ -20,7 +21,7 @@ const Inventory = () => {
       { name: "manufacturepn", label: "Manufacture PN", type: "text" },
       { name: "quantity", label: "Quantity", type: "number" },
       { name: "color", label: "Color", type: "text" },
-      { name: "department", label: "Department", type: "text" },
+      { name: "department", label: "Department", type: "select", options: departmentsArray },
       { name: "brand", label: "Brands", type: "text" },
       { name: "store", label: "Store", type: "text" },
       { name: "deliveryCost", label: "deliveryCost (R)", type: "number" },
@@ -79,12 +80,13 @@ const Inventory = () => {
     setFormData({ ...formData, file: event.target.files[0] });
   };
 
-  const handleDelete = async (inventory) => {
-    const confirmed = window.confirm(`Are you sure you want to delete ${inventory.productDescription}?`);
+  const handleDelete = async (e,inventory_id) => {
+    e.preventDefault();
+    const confirmed = window.confirm(`Are you sure you want to delete ${inventory_id}?`);
     if (confirmed) {
       try {
-        await axios.delete(`http://localhost:5000/api/inventory/${inventory._id}`);
-        setInventoryList((prevInventoryList) => prevInventoryList.filter((item) => item._id !== inventory._id));
+        await axios.delete(`http://localhost:5000/api/inventory/${inventory_id}`);
+        setInventoryList((prevInventoryList) => prevInventoryList.filter((item) => item._id !== inventory_id));
       } catch (error) {
         console.error(error);
       }
@@ -181,7 +183,7 @@ const Inventory = () => {
                   <td>{inventory.department}</td>
                   <td>
                     <button onClick={(e) => handleEdit(e,inventory)}>Edit</button>
-                    <button onClick={(e) => handleDelete(e,inventory)}>Delete</button>
+                    <button onClick={(e) => handleDelete(e,inventory._id)}>Delete</button>
                   </td>
                 </tr>
               ))

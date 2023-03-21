@@ -59,6 +59,7 @@ exports.saveInventory = async (req, res) => {
         });
         console.log("result = ",result);
         res.status(200).json({ status: "success", message: "success mongo only", data: inventory});
+        console.log("success mongo only");
       }
     }
     else{
@@ -75,9 +76,11 @@ exports.saveInventory = async (req, res) => {
         uploadedOnline
       });
       res.status(200).json({ status: "success", message: "success mongo only", data: inventory});
+      console.log("success mongo only and cloudinary");
     }
   } catch (error) {
     res.status(400).json({ status: "failure", message: "Could not save data both mongodb and cloudinary", data: error});
+    console.log("Could not save  mongo and cloudinary");
   }
 }
 
