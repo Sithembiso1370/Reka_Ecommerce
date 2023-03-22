@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './StoreFilture.css'
 
 import slides from './slides'
@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 
 function StoreFilture(props) {
-
+    
     const showDetails = (e)=>{
         e.target.after("<h1>after</h1>")
     }
@@ -20,6 +20,44 @@ function StoreFilture(props) {
 
 
     let productsData = getProducts();
+    // to clear locale storage
+    // localStorage.clear()
+
+
+
+
+    const handleGetFromCart =  (e,item) => {
+      e.preventDefault()
+      const items = JSON.parse(localStorage.getItem(item));
+      if(items){
+        console.log('local storage items = ',items)
+        // return items;
+      }
+      else{
+        console.log('local storage items = ',[])
+        // return [];
+      }
+    }
+
+    
+    const handleGetFromCartNoE =  (item) => {
+      const items = JSON.parse(localStorage.getItem(item));
+      if(items){
+        // console.log('local storage items = ',items)
+        return items;
+      }
+      else{
+        // console.log('local storage items = ',[])
+        return [];
+      }
+    }
+    const [cartItems, setcartItems] = useState();
+
+    const handleAdd2Cart =  (e,productDetailsObject) => {
+      e.preventDefault()
+      const cartstatus = localStorage.setItem('Cart', JSON.stringify([...handleGetFromCartNoE('Cart'),productDetailsObject]));
+      alert(`Items added to cart `);
+    }
     
 
     const myproducts =  productsData.map((product) =>
@@ -68,20 +106,23 @@ function StoreFilture(props) {
               </span>
             </li>
             <li>
-              <span class="material-symbols-outlined morph_up">
-
+              <span class="material-symbols-outlined morph_up"
+              onClick={(e)=>handleAdd2Cart(e,product)}
+              >
               add_shopping_cart
               </span>
             </li>
             <li>
-              <span class="material-symbols-outlined morph_up">
-
+              <span class="material-symbols-outlined morph_up" onClick={(e)=>handleGetFromCart(e,'Cart')}>
               share
               </span>
             </li>
           </ul>
         </div>
     );
+
+
+
     
   return (
     <div className='AnotherFilture'

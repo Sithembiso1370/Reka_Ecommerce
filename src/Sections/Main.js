@@ -13,6 +13,7 @@ import NewArrivalsCarousel from '../Components/Main/NewArrivalsCarousel/NewArriv
 import TopCategories from '../Components/Main/TopCategories/TopCategories'
 import slidez from './slides'
 import brands from './brands'
+import { useState } from 'react'
 
 const slides = [
   {
@@ -105,7 +106,7 @@ Data to imprts
 
 
 const Main = () => {
-  let params = useParams();
+  const [department, setdepartment] = useState(window.location.href.split('/')[5] ? window.location.href.split('/')[5] : '')
   
   console.log("params = ",window.location.pathname);
   return (
@@ -145,7 +146,7 @@ const Main = () => {
       </div>
       {/* <RightSideBanner/> */}
       <div className='mainSub_1'>
-        <CitiesSlider slides={slides} department={params } className='citisliderr'/>
+        <CitiesSlider slides={slides} department={department} className='citisliderr'/>
         <div className='mainSub_1_right logins'>
           <div>
             <h3 className='Login_header'>Welcome to Akilli Kraal</h3>
@@ -178,11 +179,11 @@ const Main = () => {
         <NewArrivalsCarousel/>
       </div>
       <div className='mainSub_5'>
-        <CitiesSlider slides={slides}  department={params}/>
+        <CitiesSlider slides={slides}  department={department}/>
       </div>
       <div className='mainSub_6'>
         <div className="StoreFiltureTop curved_borderTop">
-        StoreFilture Top and more : {params.id}
+        StoreFilture Top and more : {department}
         </div>
         <StoreFilture/>
       </div>
