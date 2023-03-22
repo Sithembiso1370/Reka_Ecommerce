@@ -11,7 +11,7 @@ const TopCategories = () => {
           slides.map((slide)=>(
             <li
             style={{
-              background: `url(${slide.img})`,
+              // background: `url(${slide.img})`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',

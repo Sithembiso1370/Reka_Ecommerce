@@ -14,161 +14,126 @@
     z-index: 1000;
 }
 
-.Footer>div {
-    position: relative;
-    background: linear-gradient(225deg, #ffffff, #e1e1e1);
-    box-shadow:  -8px 8px 25px #e9e9e9,
-                 8px -8px 25px #ffffff;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    transition: all 10s ease-out;
-    padding: 1%;
-
-
-}
-#root > div > div.Footer > div:nth-child(3) > div > span:nth-child(1) > a
-Footer >.footer_left > div > span > a {
-    /* font-family: 'Edu QLD Beginner', cursive; */
-}
-
-Footer >.footer_left > div > span > a:hover {
-    background-color: white;
-}
-
-.Footer>div:hover {
-    background: linear-gradient(225deg, #ebe8e8, #ffffff);
-box-shadow:  -8px 8px 25px #e9e9e9,
-             8px -8px 25px #ffffff;
-    transition: all 1s ease-in;
-}
-
-.footer_left {
-    /* position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
-}
-
-.footer_center {
-    /* position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
-}
-
-.footer_right {
-    /* position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
-}
-
-.Footer>div> h3 {
-    background-color: white;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.Footer>div> div {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer_left1 >div> div> span {
+.footer_left1{
     position: relative;
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    grid-template-rows: 20% 80;
 }
 
-/* #root > div > div.Footer > div.footer_left1 > div > span:nth-child(3) */
-
-.footer_left1 >div> div> span> a > h3 {
+.footer_left1 > h3 {
     position: relative;
     height: 100%;
     width: 100%;
-    justify-content: center;
-    align-items: center;
 }
 
-.footer_left1 >div> div> span> a > a {
+.footer_left1 > div {
     position: relative;
     height: 100%;
     width: 100%;
-    font-family: 'Courier New', Courier, monospace;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
+.footer_left1 > div > span {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
 
 .footer_left1 > div > span > a {
     position: relative;
     height: 100%;
-    width: 100%;
-    align-self: center;
+    width: 90%;
     display: flex;
-    
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
 }
 
+.footer_left1 > div > span > a >h5 {
+    font-family: 'Courier New', Courier, monospace;
+}
+.footer_left1 > div > span > a >a {
+    font-family: 'Courier New', Courier, monospace;
+}
 
-.footer_right2 > div > span:nth-child(4) > span:nth-child(2) > img {
+.footer_left{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 20% 80;
+}
+
+.footer_right{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 20% 80;
+}
+
+.footer_right1{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 20% 80;
+}
+
+.footer_right1 >h3 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.footer_right1 >div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.footer_right1 >div  > span {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.footer_right1 >div  > span > span  {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.footer_right1 >div  > span > span > img  {
     position: relative;
     height: 20px;
-    width: 20px;
+    width: 40px;
 }
 
-
-/* .Footer>div> div> span> a {
+.socialsimgs  {
     position: relative;
     height: 100%;
     width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1%;
-    font-family: 'Courier New', Courier, monospace;
-} */
-
-.Footer > div > div > span > a {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    font-family: Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    display: flex;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    gap: 1%;
 }
 
-.Footer>div> div> span> a > a {
+.socialsimgs > li {
     position: relative;
-    width: 100%;
     height: 100%;
-        font-family: Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    width: 100%;
 }
 
-.Footer>div> div> span> a > h5 {
+.socialsimgs > li > img {
     position: relative;
-    width: 100%;
-    height: 100%;
-    font-family: Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-}
-.Footer>div> div> span> a:hover {
-    background-color: white;
-    color: orangered;
+    height: 30px;
+    width: 40px;
+    border-radius: 30px ;
 }
