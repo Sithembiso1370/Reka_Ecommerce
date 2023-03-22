@@ -4,9 +4,9 @@ import './MostLovedCarousel.css'
 
 const MostLovedCarousel = () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const chevronWidth = 100;
+  const chevronWidth = 0;
   return (
-    <div style={{ padding: `0 ${chevronWidth}px` }}>
+    <div style={{ padding: `0 ${chevronWidth}px` , height: '100%', margin: 0 }}>
       <ItemsCarousel
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
@@ -18,7 +18,7 @@ const MostLovedCarousel = () => {
         chevronWidth={chevronWidth}
       >
         <div style={{ 
-          height: 310, 
+          height: '100%', 
           background: `url(https://i0.wp.com/www.fotodiscountworld.co.za/wp-content/uploads/2022/05/JVC-JY-HM90-HD-Camcorder.jpg111.jpg?resize=500%2C500&ssl=1)` ,
           backgroundSize: "cover",
           backgroundPosition: "center",

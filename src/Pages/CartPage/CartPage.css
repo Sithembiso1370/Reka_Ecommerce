@@ -5,14 +5,14 @@
     margin-top: 12%;
     background-color: whitesmoke;
     position: relative;
-    height: 2500px;
+    height: 2300px;
     width: 100%;
     justify-content: space-between;
     overflow: hidden;
     align-items: center;
     transition: all 5s ease-out;
     display: grid;
-    grid-template-rows: 1fr 10fr  2fr ;
+    grid-template-rows: 2fr 6fr  2fr ;
 }
 
 .CheckoutProcessNavigator {

@@ -4,6 +4,8 @@ import Navbar from '../../Sections/Navbar'
 import './ProductPage.css'
 import {getProduct} from './ProductsData'
 import { useParams } from "react-router-dom";
+import Topbrands from '../../Components/Main/DailyDeals/Topbrands'
+import brands from '../../Sections/brands'
 
 function ProductPage() {
   let params = useParams();
@@ -99,7 +101,7 @@ function ProductPage() {
             <div className="ProductPageMain_BottomTabsBody">
                 <h3>Similar products</h3>
                 <div>
-                  ..... carousel
+                <Topbrands brands={brands}/>
                 </div>
             </div>
             <Footer/>

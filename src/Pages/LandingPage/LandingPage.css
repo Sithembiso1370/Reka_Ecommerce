@@ -1,17 +1,16 @@
 
 
 .landingpage {
+  padding-top: 30%;
   background-color: whitesmoke;
   position: relative;
-  height: 5500px;
+  height: 3500px;
   width: 100%;
   display: flex;
-  /* margin: 1% 3% 0% 3%; */
   flex-direction: column;
   justify-content: center;
   overflow: none;
   align-items: center;
-  padding: 1%;
   transition: all 5s ease-out;
 }
 

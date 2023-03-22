@@ -14,6 +14,8 @@ import TopCategories from '../Components/Main/TopCategories/TopCategories'
 import slidez from './slides'
 import brands from './brands'
 import { useState } from 'react'
+import FloatingSocials from '../Components/Main/FloatingSocials/FloatingSocials'
+import AuthCard from '../Components/Main/AuthCard/AuthCard'
 
 const slides = [
   {
@@ -111,60 +113,21 @@ const Main = () => {
   console.log("params = ",window.location.pathname);
   return (
     <div className='Main'>
-      <div className='socials_tab'>
-          <div className="localInbox"
-          style={{ 
-            background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png)',
-            backgroundSize: '100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
-          }}
-          >
-            {/* whats app */}
-          </div>
-          <div className="localInbox"
-          style={{ 
-            background: 'url(https://img.favpng.com/12/1/21/computer-icons-email-internet-icon-design-clip-art-png-favpng-sFFj7y8r7hD4PkXtawFnerUwG.jpg)',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
-          
-          }}
-          >
-            {/* localInbox */}
-          </div>
-          <div className="localInbox"
-          style={{ 
-            background: 'url(https://www.citypng.com/public/uploads/preview/-41601338027vkwdrvgf6d.png)',
-            backgroundSize: '100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
-          }}
-          >
-            {/* whats app */}
-          </div>     
-      </div>
+      <FloatingSocials/>
       {/* <RightSideBanner/> */}
       <div className='mainSub_1'>
         <CitiesSlider slides={slides} department={department} className='citisliderr'/>
-        <div className='mainSub_1_right logins'>
-          <div>
-            <h3 className='Login_header'>Welcome to Akilli Kraal</h3>
-            <div className='Login_options'>
-              <a href='/' className='SignIn'>Sign In</a>
-              <a href='/' className='JoinUs'>Join Us</a>
-            </div>
-          </div>
-          <div>
-            3D FLIP(ADD,SALE OR PROMO)
-          </div>
-        </div>
-      </div>
-      <div className='mainSub_2'>
-        <DailyDeals slides={slidez}/>
+        <AuthCard/>
       </div>
       <div className='mainSub_3'>
         <Topbrands brands={brands}/>
+      </div>
+
+      <div className='mainSub_4'>
+        <div className="StoreFiltureTop curved_borderTop">
+        StoreFilture Top and more : {department}
+        </div>
+        <StoreFilture/>
       </div>
       <div className='mainSub_3_3_1'>
         <div className="MostLovedCarouselTop">
