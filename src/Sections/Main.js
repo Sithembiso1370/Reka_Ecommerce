@@ -122,7 +122,14 @@ const Main = () => {
       <div className='mainSub_3'>
         <Topbrands brands={brands}/>
       </div>
-
+      <div className='mainSub_2_2'>
+        <MostLovedCarousel/>
+      </div>
+      <div className='mainSub_2'>
+        <CitiesSlider slides={slides}  department={department}/>
+        <CitiesSlider slides={slides}  department={department}/>
+        <CitiesSlider slides={slides}  department={department}/>
+      </div>
       <div className='mainSub_4'>
         <div className="StoreFiltureTop curved_borderTop">
         StoreFilture Top and more : {department}
@@ -143,6 +150,7 @@ const Main = () => {
       </div>
       <div className='mainSub_5'>
         <CitiesSlider slides={slides}  department={department}/>
+        <CitiesSlider slides={slides}  department={department}/>
       </div>
       <div className='mainSub_6'>
         <div className="StoreFiltureTop curved_borderTop">
@@ -150,6 +158,10 @@ const Main = () => {
         </div>
         <StoreFilture/>
       </div>
+      <div className='mainSub_6_5'>
+      <NewArrivalsCarousel/>
+      </div>
+
       <div className='mainSub_6_6'>
         <div className="TopCategoriesTop ">
         {/* Shop More: */}

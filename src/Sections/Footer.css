@@ -48,18 +48,14 @@
 .footer_left1 > div > span > a {
     position: relative;
     height: 100%;
-    width: 90%;
+    width: 100%;
     display: flex;
-    text-align: left;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.footer_left1 > div > span > a >h5 {
-    font-family: 'Courier New', Courier, monospace;
-}
-.footer_left1 > div > span > a >a {
-    font-family: 'Courier New', Courier, monospace;
-}
 
 .footer_left{
     position: relative;
@@ -67,6 +63,39 @@
     width: 100%;
     display: grid;
     grid-template-rows: 20% 80;
+}
+
+.footer_left > h3{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+}
+
+
+.footer_left > div{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_left > div > span {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.footer_left > div > span > a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.footer_left > div > span > a:hover {
+    text-decoration: underline;
 }
 
 .footer_right{

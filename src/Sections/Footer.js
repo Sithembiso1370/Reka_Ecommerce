@@ -8,7 +8,8 @@ function Footer() {
         <h3>Akilli Kraal - Get to Know Us</h3>
         <div>
           <span>
-            About 
+            <a>About </a>
+            
           </span>
           <span>
             <a href="/">
@@ -21,7 +22,8 @@ function Footer() {
          
           </span>
           <span>
-            Site Map
+            <a>Site Map</a>
+            
           </span>
         </div>
       </div>

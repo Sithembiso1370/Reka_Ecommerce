@@ -12,7 +12,7 @@ const TopCategories = () => {
             <li
             style={{
               // background: `url(${slide.img})`,
-              backgroundSize: 'cover',
+              backgroundSize: 'fit',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
             }}

@@ -2,9 +2,9 @@
 .DepartmentLanding {
     background-color: whitesmoke;
     position: relative;
-    height: 2500px;
+    height: 1000px;
     width: 100%;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     transition: all 5s ease-out;

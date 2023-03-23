@@ -62,30 +62,22 @@ function StoreFilture(props) {
 
     const myproducts =  productsData.map((product) =>
         <div className='Product' 
-        style={{
-          backgroundImage: `url(${product.img})`,
-          backgroundSize: '100%',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
+
         >
           <ul className="ProductDetails_top">
-            <li className="productOwner"
-                    style={{
-                     backgroundImage: `url(${product.p_logo})`,
-                     backgroundRepeat: 'no-repeat',
-                     backgroundSize: '100%',
-                     backgroundPosition: 'center'
-                    }}
-                    
-            >
-              {/* <span class="material-symbols-outlined">
-              print
-              </span>  */}
-            </li>
             <li>{product.country}</li>
+            <span class="material-symbols-outlined">
+            bookmark
+            </span>
           </ul>
-          <a className='ProductImage' id='ProductImage'>
+          <a className='ProductImage' id='ProductImage'
+                  style={{
+                    backgroundImage: `url(${product.img})`,
+                    backgroundSize: '100%',
+                    backgroundPosition: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                  }}
+          >
           <Link
             
             className='ProductImageLink'
@@ -93,7 +85,6 @@ function StoreFilture(props) {
             key={product.country}
           >$ 34.87</Link>
           </a>
-
           <ul className="ProductDetails_bottom">
             <li>
               <span class="material-symbols-outlined morph_up">

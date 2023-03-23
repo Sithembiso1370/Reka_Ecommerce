@@ -3,12 +3,12 @@
 .Main{
     position: relative;
     background-color: white;
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-self: center;
-    justify-content: center;
+    justify-content: space-around;
     overflow: none;
 }
 
@@ -139,10 +139,23 @@
 .Main>.mainSub_2{
     position: relative;
     background-color: white;
-    width: 75%;
+    width: 90%;
     align-self: center;
     height: 100%;
     flex: 0.5;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 1%;
+    padding: 1%;
+}
+
+.Main>.mainSub_2_2{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    flex: 0.5;
+    gap: 1%;
 }
 
 .Main>.mainSub_3{
@@ -188,7 +201,12 @@
     width: 100%;
     height: 100%;
     flex: 0.5;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1%;
 }
+
+
 .Main>.mainSub_6{
     position: relative;
     background-color: white;
@@ -202,18 +220,26 @@
     justify-content: center;
 }
 
+.mainSub_6_5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex:0.5;
+    align-items: center;
+    justify-content: center;
+}
+
 .Main>.mainSub_4{
     position: relative;
     background-color: white;
     width: 100%;
     height: 100%;
-    margin: 1%;
     flex: 2;
-
 }
 .Main>.mainSub_6>.StoreFiltureTop{
     background-color: whitesmoke;
 }
+
 
 
 
@@ -224,6 +250,7 @@
     height: 100%;
     align-self: center;
     flex: 0.5;
+    padding: 1%;
 } 
 
 
@@ -240,6 +267,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1%;
 }
 
 
