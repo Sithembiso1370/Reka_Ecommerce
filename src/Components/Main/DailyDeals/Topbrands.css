@@ -25,31 +25,33 @@
 
 .subtitle_topbrands>.leftline {
     /* transform: rotate(90deg); */
-    background-color: whitesmoke;
+    background-color: rgb(104, 15, 15);
     border-radius: 15px;
     width:60%;
     height: 1px;
     flex: 1;
 }
-/* color: rgb(104, 15, 15); */
+
 .subtitle_topbrands>.leftline:hover {
     background-color: #FF5F1F;
 }
 
 .subtitle_topbrands>span {
     /* background-color: black; */
-    color: #003A75;
+    color: rgb(104, 15, 15);
     margin: 1%;
-    font-weight: bolder;
+    font-style: italic;
 }
 
 .subtitle_topbrands>span:hover {
     color: #FF5F1F;
+    font-weight: bolder;
+
 }
 
 .subtitle_topbrands>.rightline {
-    background-color: whitesmoke;
-    width:60%;
+    background-color: rgb(104, 15, 15);
+    width:100%;
     height: 1px;
     flex: 1;
 }
