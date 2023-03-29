@@ -125,9 +125,6 @@ const Main = () => {
         <Topbrands brands={MostLoved} label="Most Loved"/>
       </div>
       <div className='mainSub_4'>
-        <div className="StoreFiltureTop curved_borderTop">
-        StoreFilture Top and more : {department}
-        </div>
         <StoreFilture/>
       </div>
       <div className='mainSub_3_3_1'>

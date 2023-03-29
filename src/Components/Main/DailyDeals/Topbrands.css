@@ -31,7 +31,7 @@
     height: 1px;
     flex: 1;
 }
-
+/* color: rgb(104, 15, 15); */
 .subtitle_topbrands>.leftline:hover {
     background-color: #FF5F1F;
 }

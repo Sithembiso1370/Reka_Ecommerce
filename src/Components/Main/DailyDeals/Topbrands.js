@@ -39,11 +39,11 @@ function Topbrands(props) {
 
   return (
     <div className='topbrands'>
-        <h2 className="subtitle_topbrands">
+        <div className="subtitle_topbrands">
             <hr className='leftline'/>
             <span>{props.label}</span>
             <hr className='rightline'/>
-        </h2>
+        </div>
         <div className='TopBrandsPSlider'>
           <Rerousel itemRef={ref}>
             {

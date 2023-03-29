@@ -108,7 +108,7 @@ function Department() {
     style={{
       backgroundImage: "url(" + backgroundH + ")",
       backgroundSize: "cover",
-      height: "100%",
+      // height: "100%",
       backgroundRepeat: "no-repeat"
     }}
     >
