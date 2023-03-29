@@ -41,7 +41,7 @@ function Topbrands(props) {
     <div className='topbrands'>
         <h2 className="subtitle_topbrands">
             <hr className='leftline'/>
-            <span>Top Brands</span>
+            <span>{props.label}</span>
             <hr className='rightline'/>
         </h2>
         <div className='TopBrandsPSlider'>
@@ -75,22 +75,3 @@ function Topbrands(props) {
 export default Topbrands
 
 
-{/* <Rerousel itemRef={ref} className="RerouselCont">
-{
-  brands2.map((slide)=>(
-    <Item ref={ref}
-    style={{ 
-      background: `url(${slide.img})`,
-      backgroundSize: '100%',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      margin: '1%',
-      border: 'none',
-      borderRadius: '5px'
-
-    } }
-    className="brandsItem">
-    </Item>
-  ))
-}
-</Rerousel> */}

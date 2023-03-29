@@ -71,12 +71,12 @@ function StoreFilture(props) {
             </span>
           </ul>
           <a className='ProductImage' id='ProductImage'
-                  style={{
-                    backgroundImage: `url(${product.img})`,
-                    backgroundSize: '100%',
-                    backgroundPosition: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                  }}
+            style={{
+              backgroundImage: `url(${product.img})`,
+              backgroundSize: '100%',
+              backgroundPosition: 'cover',
+              backgroundRepeat: 'no-repeat',
+            }}
           >
           <Link
             
@@ -119,7 +119,15 @@ function StoreFilture(props) {
     <div className='AnotherFilture'
 
     >
-        <div className='FiltureSide'>
+      <div className='AnotherFiltureTop'>
+        <div className='AnotherFiltureTopHeader'>Label</div>
+        <div className='AnotherFiltureTopSlider'>
+          <label >Price</label>
+          <input type="range" min="1" max="100"  class="Filtureslider" id="myRange" name='myRange'/>
+        </div>
+      </div>
+      <div className='AnotherFiltureMain'>
+      <div className='FiltureSide'>
           <div className='filture_typeSelect'>
             <button>Top Categories</button>
             <button>Top Brands</button>
@@ -179,6 +187,7 @@ function StoreFilture(props) {
               myproducts
           }
         </div>
+      </div>
     </div>
   )
 }

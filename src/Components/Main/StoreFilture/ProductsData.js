@@ -56,34 +56,7 @@ let products = [
       p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
       img: 'https://www.picknpayclothing.co.za/pub/media/catalog/product/cache/703330dce2423b988bd647d4920a16c3/image/164857bee1/plain-strappy-tiered-dress.jpg',
     },
-    {
-      id: 9,
-      city: 'Womens',
-      country: 'Mens Rillogio sweater',
-      p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
-      img: 'https://blog.bizvibe.com/wp-content/uploads/2020/03/top-clothing-retailers.jpg',
-    },
-    {
-      id: 10,
-      city: 'Moscow',
-      country: 'Russia',
-      p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
-      img: 'https://images.unsplash.com/photo-1576723417715-6b408c988c23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8amV3ZWxyeSUyMHN0b3JlfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-    },
-    {
-      id: 11,
-      city: 'Home & Deco.',
-      country: 'Furniture',
-      p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
-      img: 'https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2020/10/13/1/CI_Ilya_Zabanov-mastersandforbes-livingroom-Image1.jpg.rend.hgtvcom.966.725.suffix/1602599983799.jpeg',
-    },
-    {
-      id: 12,
-      city: 'Shop - Gadgets',
-      country: 'Tech',
-      p_logo: 'https://logos-world.net/wp-content/uploads/2020/09/Starbucks-Logo.png',
-      img: 'https://www.picknpayclothing.co.za/pub/media/catalog/product/cache/703330dce2423b988bd647d4920a16c3/image/164857bee1/plain-strappy-tiered-dress.jpg',
-    }   
+
 ];
 
   export function getProducts() {

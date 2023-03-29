@@ -16,6 +16,9 @@ import brands from './brands'
 import { useState } from 'react'
 import FloatingSocials from '../Components/Main/FloatingSocials/FloatingSocials'
 import AuthCard from '../Components/Main/AuthCard/AuthCard'
+import MostLoved from './MostLoved'
+import newArrivals from './newArrivals'
+import RecentlyViewed from './RecentlyViewed'
 
 const slides = [
   {
@@ -93,18 +96,8 @@ const slides = [
   },
 ];
 
-/*
-Data to imprts
-- mainSub_1 ==  Slides array
-- DailyDeals array
-- Topbrands array
-- NewArrivalsCarousel array
-- Small Slides array
-- Products by department array
-- Top Categories Array
 
 
-*/
 
 
 const Main = () => {
@@ -120,16 +113,16 @@ const Main = () => {
         <AuthCard/>
       </div>
       <div className='mainSub_3'>
-        <Topbrands brands={brands}/>
-      </div>
-      <div className='mainSub_2_2'>
-        {/* <MostLovedCarousel/> */}
-        <Topbrands brands={brands}/>
+        <Topbrands brands={brands} label="Top Brands"/>
       </div>
       <div className='mainSub_2'>
         <CitiesSlider slides={slides}  department={department}/>
         <CitiesSlider slides={slides}  department={department}/>
         <CitiesSlider slides={slides}  department={department}/>
+      </div>
+      <div className='mainSub_2_2'>
+        {/* <MostLovedCarousel/> */}
+        <Topbrands brands={MostLoved} label="Most Loved"/>
       </div>
       <div className='mainSub_4'>
         <div className="StoreFiltureTop curved_borderTop">
@@ -138,18 +131,11 @@ const Main = () => {
         <StoreFilture/>
       </div>
       <div className='mainSub_3_3_1'>
-        <div className="MostLovedCarouselTop">
-          MostLovedCarousel Top and more
-        </div>
-        {/* <MostLovedCarousel/> */}
-        <Topbrands brands={brands}/>
+        <Topbrands brands={newArrivals}   label="New Arrivals"/>
       </div>
       <div className='mainSub_3_3_2'>
-        <div className="NewArrivalsCarouselTop curved_borderTop">
-        NewArrivalsCarousel Top and more
-        </div>
         {/* <NewArrivalsCarousel/> */}
-        <Topbrands brands={brands}/>
+        <Topbrands brands={RecentlyViewed} label="Recently Viewed"/>
 
       </div>
       <div className='mainSub_5'>
@@ -164,13 +150,10 @@ const Main = () => {
       </div>
       <div className='mainSub_6_5'>
       {/* <NewArrivalsCarousel/> */}
-      <Topbrands brands={brands}/>
+      <Topbrands brands={newArrivals} label="Shop Clothing" />
       </div>
 
       <div className='mainSub_6_6'>
-        <div className="TopCategoriesTop ">
-        {/* Shop More: */}
-        </div>
         <TopCategories/>
       </div>
       <div className='mainSub_7'>
