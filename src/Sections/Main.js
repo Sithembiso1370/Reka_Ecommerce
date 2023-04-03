@@ -1,24 +1,19 @@
 import React from 'react'
 import './Main.css'
-import DailyDeals from '../Components/Main/DailyDeals/DailyDeals'
 import Topbrands from '../Components/Main/DailyDeals/Topbrands'
 import CitiesSlider from '../Components/Main/SmoothSlider/SmoothSlider'
-import SinglerRowCarousel from '../Components/Main/SinglerRowCarousel/SinglerRowCarousel'
 import StoreFilture from '../Components/Main/StoreFilture/StoreFilture'
 import Newsletter from '../Components/Main/newsletter/Newsletter'
 import ShippingDetails from '../Components/Main/ShippingDetails/ShippingDetails'
-import { useParams } from "react-router-dom";
-import MostLovedCarousel from '../Components/Main/MostLovedCarousel/MostLovedCarousel'
-import NewArrivalsCarousel from '../Components/Main/NewArrivalsCarousel/NewArrivalsCarousel'
 import TopCategories from '../Components/Main/TopCategories/TopCategories'
-import slidez from './slides'
 import brands from './brands'
 import { useState } from 'react'
 import FloatingSocials from '../Components/Main/FloatingSocials/FloatingSocials'
 import AuthCard from '../Components/Main/AuthCard/AuthCard'
 import MostLoved from './MostLoved'
 import newArrivals from './newArrivals'
-import RecentlyViewed from './RecentlyViewed'
+import MostLovedCarousel from '../Components/Main/DailyDeals/MostLovedCarousel/MostLovedCarousel'
+import RecentlyViewed from '../Components/Main/DailyDeals/RecentlyViewed/RecentlyViewed'
 
 const slides = [
   {
@@ -113,17 +108,17 @@ const Main = () => {
         <AuthCard/>
       </div>
       <div className='mainSub_3'>
-        <Topbrands brands={brands} label="Top Brands"/>
-      </div>
-      <div className='mainSub_2'>
-        <CitiesSlider slides={slides}  department={department}/>
-        <CitiesSlider slides={slides}  department={department}/>
-        <CitiesSlider slides={slides}  department={department}/>
+        <Topbrands brands={brands} label="Top Brands" />
       </div>
       <div className='mainSub_2_2'>
-        {/* <MostLovedCarousel/> */}
-        <Topbrands brands={MostLoved} label="Most Loved"/>
+        <MostLovedCarousel/>
       </div>
+      <div className='mainSub_2'>
+        <CitiesSlider slides={slides} className='hoverable'  department={department}/>
+        <CitiesSlider slides={slides} className='hoverable'  department={department}/>
+        <CitiesSlider slides={slides} className='hoverable'  department={department}/>
+      </div>
+
       <div className='mainSub_4'>
         <StoreFilture/>
       </div>
@@ -131,9 +126,7 @@ const Main = () => {
         <Topbrands brands={newArrivals}   label="New Arrivals"/>
       </div>
       <div className='mainSub_3_3_2'>
-        {/* <NewArrivalsCarousel/> */}
-        <Topbrands brands={RecentlyViewed} label="Recently Viewed"/>
-
+        <RecentlyViewed/>
       </div>
       <div className='mainSub_5'>
         <CitiesSlider slides={slides}  department={department}/>

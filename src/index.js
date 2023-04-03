@@ -39,7 +39,9 @@ root.render(
         <Route path="/" element={<LandingPage />} />
         <Route path="/Stores/:storeId" element={<Store />} />
         <Route path="/Stores" element={<Store />} />
-        <Route path="/Store/Departments" element={<Departments />} />
+        <Route path="/Store/Departments" element={<Departments />} >
+          <Route path="Groceries" element={<Department />} />
+        </Route>
         <Route path="/Store/Departments/:departmentId" element={<Department />} /> 
         {/* Need to add department sub-routes here to enable topographic routing and abillity to
         to pass another parameter as e.g. path="/Store/Departments/MensClothing/:ProductId"

@@ -17,6 +17,7 @@ function Topbrands(props) {
   font-weight: bold;
   font-size: 1.5em;
   border: solid 1px black;
+  border-radius: 30px;
   overflow: active;
   
   @media(max-width: 1150px) {
@@ -56,7 +57,7 @@ function Topbrands(props) {
                   backgroundPosition: 'center',
                   margin: '1%',
                   border: 'none',
-                  borderRadius: '5px'
+                  borderRadius: '50%'
 
                 }}
                 className="brandsItem">

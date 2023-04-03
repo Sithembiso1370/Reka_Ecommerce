@@ -213,8 +213,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(4,25%);
-    overflow-y: scroll;
-    overflow-x: none;
+    overflow: none;
     align-items: center;
     justify-content: space-around;
     transition: all 6s ease-in-out;

@@ -52,9 +52,9 @@ class CitiesSlider extends React.Component {
     render() {
       const { activeSlide, prevSlide, sliderReady } = this.state;
       return (
-        <div className={classNames('slider', { 's--ready': sliderReady })}>
+        <div className={classNames('hoverable slider', { 's--ready': sliderReady })}>
           {/* <p className="slider__top-heading">AkilliKraal</p> */}
-          <div className="slider__slides">
+          <div className="slider__slides hoverable">
             {this.props.slides.map((slide, index) => (
               <div
                 className={classNames('slider__slide', { 's--active': activeSlide === index, 's--prev': prevSlide === index  })}

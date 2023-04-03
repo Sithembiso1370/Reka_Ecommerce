@@ -1,0 +1,44 @@
+
+
+.productTop{
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.productTop > li {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+.productTop > li > span {
+    height: 100%;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+.productCenter{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.productBottom {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1%;
+}
+
+.productBottom > li {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
