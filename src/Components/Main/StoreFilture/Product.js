@@ -20,6 +20,10 @@ function Product(props) {
           backgroundRepeat: 'no-repeat',
         }}
       >
+        <div className='ProductImageBody'>
+          {/* empty */}
+          
+        </div>
       <Link
         
         className='ProductImageLink'

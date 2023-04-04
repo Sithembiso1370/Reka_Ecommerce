@@ -301,7 +301,7 @@
     /* border: 1px solid black; */
     background-color: rgba(255, 255, 255, 0.273);
     border: none;
-    height: 350px;
+    height: 300px;
     width: 95%;
     display: grid;
     grid-template-rows: 13% 70% 15%;
@@ -355,9 +355,12 @@
     position: relative;
     height: 100%;
     width: 100%;
-    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-decoration: underline; */
     font-weight: bold;
-    color: rgba(104, 15, 15, 0.552);
+    color: rgba(255, 68, 0, 0.499);
 }
 
 .AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductDetails_top>:nth-child(2) {
@@ -367,7 +370,7 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    color: rgb(104, 15, 15);
+    color: rgba(255, 68, 0, 0.646);
 }
 
 
@@ -381,7 +384,8 @@
     text-align: center;
     display: flex;
     word-wrap: break-word;
-    color: rgba(104, 15, 15, 0.469);
+    /* color: rgba(104, 15, 15, 0.469); */
+    color: orangered;
 }
 
 .AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductDetails_top> span:hover {
@@ -409,41 +413,52 @@
     width: 100%;
     height: 100%;
     flex: 5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
     border: none;
     font-weight: bold;
-    font-size: 3rem;
+    /* font-size: 3rem; */
     color: rgba(245, 245, 245, 0.553);
+    /* background-color: #58585878; */
     cursor: pointer;
     transition: all 5s ease-in;
 }
 
 .AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductImage>.ProductImageLink{
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: 60%;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: 'center';
+    text-align: center;
+    background-color:  maroon;
+    color:  rgba(255, 68, 0, 0.691);
     /* background-color: #2d2d3825; */
     transition: all 5s ease-out;
+    border-radius: 0 15px 15px 0;
+    text-decoration: none;
+}
+
+.AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductImage>.ProductImageLink:hover {
+    color:orangered;
+    transition: all 1s ease;
+    text-decoration: double;
+}
+
+.AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductImage>.ProductImageBody {
+    position: relative;
+    width: 100%;
+    height: 100%;
 
 }
 
 .AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductImage:hover {
-    background-color: #2d2d3887;
     color: rgba(245, 245, 245, 0.897);
     color:  orangered;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: 'center';
+    /* border-radius: 5%; */
     transition: all 1.5s ease-out;
 }
 
@@ -490,12 +505,13 @@
 .filture_main>.Product>.ProductDetails_bottom>li > span {
     width: 100%;
     height: 100%;
-    color: rgb(104, 15, 15);
+    color:  rgba(255, 68, 0, 0.221);
+    transition: all 20s ease-out;
 }
 
 .filture_main>.Product>.ProductDetails_bottom>li > span:hover {
     color:  orangered;
     text-decoration: underline;
     font-weight: bold;
-    transition: all 2s ease-out;
+    transition: all 1s ease-in;
 }

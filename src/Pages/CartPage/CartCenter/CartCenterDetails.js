@@ -2,7 +2,11 @@ import React from 'react'
 
 function CartCenterDetails() {
   return (
-    <div>CartCenterDetails</div>
+    <div>
+      {/* If shipping address stored retriew currentShipping details */}
+      <div>Payment Details</div>
+      <div>Shipping Addresses</div>
+    </div>
   )
 }
 
