@@ -94,7 +94,6 @@ const slides = [
 
 
 
-
 const Main = () => {
   const [department, setdepartment] = useState(window.location.href.split('/')[5] ? window.location.href.split('/')[5] : '')
   
