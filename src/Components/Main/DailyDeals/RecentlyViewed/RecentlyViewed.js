@@ -17,25 +17,34 @@ function RecentlyViewed() {
     background-color: rgba(255, 255, 255, 0.273);
     border: none;
     height: 100%;
-    width: 100%;
+    width: 19%;
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
     border-radius: 15px;
     gap: 1%;
     
-    @media(max-width: 1150px) {
-        width: 20%;
-        heigh:98%;
-    
-    }
-    
-    @media(max-width: 700px) {
-      width: 50%;
+    @media(min-width: 300px) {
+      width: 100%;
       heigh:98%;
     }
-    
-    @media(max-width: 400px) {
-      width: 100%;
+  
+    @media(min-width: 600px) {
+      width: 49%;
+      heigh:98%;
+    }
+  
+    @media(min-width: 900px) {
+      width: 29%;
+      heigh:98%;
+    }
+  
+    @media(min-width: 1200px) {
+      width: 24%;
+      heigh:98%;
+    }
+  
+    @media(min-width: 1500px) {
+      width: 19%;
       heigh:98%;
     }
   `;

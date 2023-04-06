@@ -63,7 +63,7 @@
     width: 100%;
     align-self: center;
     height: 100%;
-    flex: 0.5;
+    flex: 0.75;
     display: grid;
     grid-template-columns: 75% 20%;
     align-items: center;

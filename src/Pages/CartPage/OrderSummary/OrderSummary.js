@@ -1,8 +1,10 @@
 import React from 'react'
+import './OrderSummary.css'
+
 
 function OrderSummary() {
   return (
-    <div className='cartRight morph_el'>
+    <div className='OrderSummery cartRight morph_el'>
     <div>
       <h4>Order Summary</h4>
       <div >
@@ -24,13 +26,21 @@ function OrderSummary() {
       </div>
     </div>
     <div>
-      Shipping information
+      <input type='text' placeholder='Voucher'/>
+      <button align='center'>Apply Voucher</button>
+    </div>
+    <div>
+      <label>Additional order Notes/Comments</label>
+      <input type='textarea' placeholder='Voucher'/>
     </div>
     <div>
       Payments Type 
     </div>
     <div>
-      extra div 
+      Shipping information
+    </div>
+    <div>
+      extra div2
     </div>
   </div>
   )

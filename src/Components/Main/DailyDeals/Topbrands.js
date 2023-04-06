@@ -11,7 +11,7 @@ function Topbrands(props) {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15%;
+  width: 25%;
   height: 90%;
   font-family: Signika;
   font-weight: bold;
@@ -19,22 +19,34 @@ function Topbrands(props) {
   border: solid 1px black;
   border-radius: 30px;
   overflow: active;
-  
-  @media(max-width: 1150px) {
-      width: 20%;
-      heigh:98%;
 
+  @media(min-width: 300px) {
+    width: 100%;
+    heigh:98%;
   }
 
-  @media(max-width: 700px) {
+  @media(min-width: 600px) {
     width: 50%;
     heigh:98%;
   }
 
-  @media(max-width: 400px) {
-    width: 100%;
+  @media(min-width: 900px) {
+    width: 30%;
     heigh:98%;
   }
+
+  @media(min-width: 1200px) {
+    width: 25%;
+    heigh:98%;
+  }
+
+  @media(min-width: 1500px) {
+    width: 20%;
+    heigh:98%;
+  }
+  
+
+
 `;
 
 

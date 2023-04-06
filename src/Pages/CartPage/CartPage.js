@@ -14,7 +14,7 @@ function CartPage() {
 
   const setCheckoutStage = (e) => {
     e.preventDefault();
-    alert(` ${e.target.name} clicked!!!`)
+    // alert(` ${e.target.name} clicked!!!`)
 
     switch (e.target.name.toLowerCase()) {
       case 'cart':

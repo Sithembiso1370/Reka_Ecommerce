@@ -24,27 +24,31 @@ function MostLovedCarousel() {
     border-radius: 15px;
     gap: 1%;
 
-    @media(max-width: 2 150px) {
-    width: 20%;
-    height:98%;
-    
-    }
-    
-    @media(max-width: 1150px) {
-        width: 25%;
-        height:98%;
-    
-    }
-    
-    @media(max-width: 700px) {
-      width: 50%;
-      height:98%;
-    
-    
-    @media(max-width: 400px) {
+    @media(min-width: 300px) {
       width: 100%;
-      height:98%;
+      heigh:98%;
     }
+  
+    @media(min-width: 600px) {
+      width: 50%;
+      heigh:98%;
+    }
+  
+    @media(min-width: 900px) {
+      width: 30%;
+      heigh:98%;
+    }
+  
+    @media(min-width: 1200px) {
+      width: 25%;
+      heigh:98%;
+    }
+  
+    @media(min-width: 1500px) {
+      width: 20%;
+      heigh:98%;
+    }
+    
   `;
 
   let productsData = getProducts();
