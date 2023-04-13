@@ -26,8 +26,9 @@ const InventoryForm = (props) => {
     // Make a POST request to the server with the form data
     try {
       const response = await axios.post('http://localhost:5000/api/inventory', formDataToSubmit);
-      console.log('Form submitted successfully:', response.data);
-      alert('Form submitted successfully')
+      console.log('Product saved successfully!!!!', response.data);
+      alert('Product saved successfully!!!!');
+      setFormData({})
     } catch (error) {
       console.log('Error submitting form:', error.response.data);
       alert('Error submitting form:')

@@ -1,6 +1,6 @@
 import React from 'react'
 import Topbrands from '../../Components/Main/DailyDeals/Topbrands';
-import CitiesSlider from '../../Components/Main/SmoothSlider/SmoothSlider'
+import CitiesSlider from '../../Components/Main/Sliders/SmoothSlider/SmoothSlider'
 import './DepartmentMain.css'
 import brands from './brands'
 import StoreFilture from '../../Components/Main/StoreFilture/StoreFilture';

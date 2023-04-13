@@ -7,6 +7,8 @@ const departmentsArray = [
     'Mens_Clothing',
     'Accessories',
     'Gadgets',
+    'Computers,Office & Security',
+    "Education & Stationary",
     'DIY_Tools',
     'Health_Beauty',
     'Industrial_Automation',

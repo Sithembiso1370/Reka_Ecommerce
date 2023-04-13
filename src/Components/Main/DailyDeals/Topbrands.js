@@ -58,7 +58,9 @@ function Topbrands(props) {
             <hr className='rightline'/>
         </div>
         <div className='TopBrandsPSlider'>
-          <Rerousel itemRef={ref}>
+          <Rerousel itemRef={ref}
+          interval={props.interval}
+          >
             {
               props.brands.map((slide)=>(
                 <Item ref={ref}

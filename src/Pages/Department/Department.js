@@ -121,3 +121,12 @@ function Department() {
 }
 
 export default Department
+
+
+// TODO 
+// 1. Customize department for each departments styles and configure on router
+// 2. remove white background on all items that should not have it
+// 3. Populate stock data and retrieve for every segment of Landing Page
+// 4. Footer - Add styles for footer text and color and style social icons
+// 5. Newsletter make newsletter frontend and backend and allow to subscribe to different deparments,brands,Products
+// 6. Wire all landing Page Links 

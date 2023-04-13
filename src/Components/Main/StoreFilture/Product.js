@@ -7,14 +7,14 @@ function Product(props) {
 
     >
       <ul className="ProductDetails_top">
-        <li>{props.product.country}</li>
+        <li>{props.product.title}</li>
         <span class="material-symbols-outlined">
         bookmark
         </span>
       </ul>
       <a className='ProductImage' id='ProductImage'
         style={{
-          backgroundImage: `url(${props.product.img})`,
+          backgroundImage: `url(${props.product.url})`,
           backgroundSize: '100%',
           backgroundPosition: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -28,8 +28,8 @@ function Product(props) {
         
         className='ProductImageLink'
         to={`/Store/Product/${props.product.id}`}
-        key={props.country}
-      >$ 34.87</Link>
+        key={props.product.title}
+      >ZAR {props.product.salePrice}</Link>
       </a>
       <ul className="ProductDetails_bottom">
         <li>

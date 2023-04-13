@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 
 
-function RecentlyViewed() {
+function RecentlyViewed(props) {
     const ref = useRef(null);
 
     const Product = styled.div`
@@ -141,8 +141,15 @@ function RecentlyViewed() {
       );
   
     return (
-
-    <Rerousel itemRef={ref}>
+<>
+<div className="subtitle_topbrands">
+            <hr className='leftline'/>
+            <span>{props.label}</span>
+            <hr className='rightline'/>
+  </div>
+<Rerousel itemRef={ref}
+    interval={props.interval}
+    >
         {
 
           productsData.map((product) =>
@@ -201,6 +208,8 @@ function RecentlyViewed() {
         }
 
     </Rerousel>
+</>
+
     )
 }
 

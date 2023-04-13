@@ -1,7 +1,7 @@
 import React from 'react'
 import './Main.css'
 import Topbrands from '../Components/Main/DailyDeals/Topbrands'
-import CitiesSlider from '../Components/Main/SmoothSlider/SmoothSlider'
+import CitiesSlider from '../Components/Main/Sliders/SmoothSlider/SmoothSlider'
 import StoreFilture from '../Components/Main/StoreFilture/StoreFilture'
 import Newsletter from '../Components/Main/newsletter/Newsletter'
 import ShippingDetails from '../Components/Main/ShippingDetails/ShippingDetails'
@@ -14,6 +14,7 @@ import MostLoved from './MostLoved'
 import newArrivals from './newArrivals'
 import MostLovedCarousel from '../Components/Main/DailyDeals/MostLovedCarousel/MostLovedCarousel'
 import RecentlyViewed from '../Components/Main/DailyDeals/RecentlyViewed/RecentlyViewed'
+import ProductSlider from '../Components/Main/Sliders/ProductSlider/ProductSlider'
 
 const slides = [
   {
@@ -101,49 +102,48 @@ const Main = () => {
   return (
     <div className='Main'>
       <FloatingSocials/>
-      {/* <RightSideBanner/> */}
       <div className='mainSub_1'>
         <CitiesSlider slides={slides} department={department} className='citisliderr'/>
         <AuthCard/>
       </div>
       <div className='mainSub_3'>
-        <Topbrands brands={brands} label="Top Brands" />
+        <Topbrands brands={brands} label="Top Brands" interval={1500} />
       </div>
       <div className='mainSub_2_2'>
-        <MostLovedCarousel/>
+        <MostLovedCarousel  interval={4500}/>
       </div>
       <div className='mainSub_2'>
         <CitiesSlider slides={slides} className='hoverable'  department={department}/>
-        <CitiesSlider slides={slides} className='hoverable'  department={department}/>
-        <CitiesSlider slides={slides} className='hoverable'  department={department}/>
+        <ProductSlider slides={slides} className='hoverable'  department={department}/>
+        <ProductSlider slides={slides} className='hoverable'  department={department}/>
       </div>
 
       <div className='mainSub_4'>
         <StoreFilture/>
       </div>
       <div className='mainSub_3_3_1'>
-        <Topbrands brands={newArrivals}   label="New Arrivals"/>
+        <Topbrands brands={newArrivals} interval={4000}   label="New Arrivals"/>
       </div>
       <div className='mainSub_3_3_2'>
-        <RecentlyViewed/>
+        <RecentlyViewed interval={6000}/>
       </div>
       <div className='mainSub_5'>
-        <CitiesSlider slides={slides}  department={department}/>
-        <CitiesSlider slides={slides}  department={department}/>
+        <CitiesSlider slides={slides} className='hoverable'  department={department}/>
+        <ProductSlider slides={slides} className='hoverable'  department={department}/>
       </div>
       <div className='mainSub_6'>
-        <div className="StoreFiltureTop curved_borderTop">
+        {/* <div className="StoreFiltureTop curved_borderTop">
         StoreFilture Top and more : {department}
-        </div>
+        </div> */}
         <StoreFilture/>
       </div>
       <div className='mainSub_6_5'>
       {/* <NewArrivalsCarousel/> */}
-      <Topbrands brands={newArrivals} label="Shop Clothing" />
+      <Topbrands brands={newArrivals} interval={5000} label="Shop Clothing" />
       </div>
 
       <div className='mainSub_6_6'>
-        <TopCategories/>
+        <TopCategories />
       </div>
       <div className='mainSub_7'>
         <Newsletter/>

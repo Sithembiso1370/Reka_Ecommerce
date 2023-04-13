@@ -6,6 +6,26 @@ import {getProduct} from './ProductsData'
 import { useParams } from "react-router-dom";
 import Topbrands from '../../Components/Main/DailyDeals/Topbrands'
 import brands from '../../Sections/brands'
+import ImageGallery from 'react-image-gallery';
+
+
+
+
+const images = [
+  {
+    original: 'https://picsum.photos/id/1018/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+  },
+  {
+    original: 'https://picsum.photos/id/1015/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1015/250/150/',
+  },
+  {
+    original: 'https://picsum.photos/id/1019/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+  },
+];
+
 
 function ProductPage() {
   let params = useParams();
@@ -32,8 +52,9 @@ function ProductPage() {
                   backgroundPosition: 'center'
                 }}
                 >
-                
+
                 </div>
+                {/* <ImageGallery items={images}  /> */}
                 <div className="ProductPageMain_TopRight">
                 <div>
                   <h3>{process.country}</h3>

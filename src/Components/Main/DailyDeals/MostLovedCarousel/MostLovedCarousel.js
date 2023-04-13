@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 
 
-function MostLovedCarousel() {
+function MostLovedCarousel(props) {
     const ref = useRef(null);
 
     const Product = styled.div`
@@ -146,7 +146,9 @@ function MostLovedCarousel() {
   
     return (
 
-    <Rerousel itemRef={ref}>
+    <Rerousel itemRef={ref}
+    interval={props.interval}
+    >
         {
 
           productsData.map((product) =>

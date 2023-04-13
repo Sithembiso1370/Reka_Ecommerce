@@ -8,6 +8,8 @@ import CartCenterOrdeReview from './CartCenter/CartCenterOrdeReview'
 import './CartPage.css'
 import CheckoutProcessNavigator from './CheckoutProcessNavigator/CheckoutProcessNavigator'
 import OrderSummary from './OrderSummary/OrderSummary'
+import axios from 'axios';
+
 
 function CartPage() {
   const [body, setbody] = useState(<CartCenter/>);

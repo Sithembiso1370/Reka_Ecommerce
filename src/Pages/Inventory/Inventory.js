@@ -159,7 +159,7 @@ const Inventory = () => {
               {
                 
                 inventoryList ?
-              inventoryList.map((inventory) => (
+              inventoryList.slice(0, 5).map((inventory) => (
                 <tr key={inventory._id}>
                   
                   <td>{inventory.createdBy}</td>
