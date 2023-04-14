@@ -33,18 +33,7 @@ function StoreFilture(props) {
 
 
 
-    const handleGetFromCart =  (e,item) => {
-      e.preventDefault()
-      const items = JSON.parse(localStorage.getItem(item));
-      if(items){
-        console.log('local storage items = ',items)
-        return items;
-      }
-      else{
-        console.log('local storage items = ',[])
-        return [];
-      }
-    }
+
 
     
     const handleGetFromCartNoE =  (item) => {
@@ -65,6 +54,18 @@ function StoreFilture(props) {
       alert(`Items added to cart `);
     }
     
+    const handleGetFromCart =  (e,item) => {
+      e.preventDefault()
+      const items = JSON.parse(localStorage.getItem(item));
+      if(items){
+        console.log('local storage items = ',items)
+        return items;
+      }
+      else{
+        console.log('local storage items = ',[])
+        return [];
+      }
+    }
 
                   
                   

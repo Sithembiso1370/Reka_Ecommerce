@@ -1,10 +1,16 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import './Product.css'
 
 function Product(props) {
   return (
     <div className='Product' 
-
+      style={{
+        background: `url(${props.product.url})`,
+        backgroundSize: '100%',
+        backgroundPosition: 'cover',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
       <ul className="ProductDetails_top">
         <li>{props.product.title}</li>
@@ -14,10 +20,11 @@ function Product(props) {
       </ul>
       <a className='ProductImage' id='ProductImage'
         style={{
-          backgroundImage: `url(${props.product.url})`,
-          backgroundSize: '100%',
-          backgroundPosition: 'cover',
-          backgroundRepeat: 'no-repeat',
+          opacity: 0.5,
+          // backgroundImage: `url(${props.product.url})`,
+          // backgroundSize: '100%',
+          // backgroundPosition: 'cover',
+          // backgroundRepeat: 'no-repeat',
         }}
       >
         <div className='ProductImageBody'>

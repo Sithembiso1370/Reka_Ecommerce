@@ -6,6 +6,8 @@ import Product from '../../StoreFilture/Product';
 import { getProducts } from '../../StoreFilture/ProductsData';
 import './MostLovedCarousel.css'
 import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 
@@ -20,9 +22,8 @@ function MostLovedCarousel(props) {
     width: 100%;
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
-    gap: 1%;
+    gap: 2%;
     border-radius: 15px;
-    gap: 1%;
 
     @media(min-width: 300px) {
       width: 100%;
@@ -51,9 +52,21 @@ function MostLovedCarousel(props) {
     
   `;
 
-  let productsData = getProducts();
-  // to clear locale storage
-  // localStorage.clear()
+  const [data, setData] = useState([]);
+    let productsData = getProducts();
+
+
+    const fetchData = async () =>{
+      const response = await fetch('http://localhost:5000/api/inventory');
+      const jsonData = await response.json();
+      setData(jsonData);
+      console.log("jsonData = ",jsonData)
+    }
+
+    useEffect(() => {
+      fetchData();
+    }, []);
+
 
 
 
@@ -92,57 +105,6 @@ function MostLovedCarousel(props) {
   
 
 
-      const myproducts =  productsData.map((product) =>
-          <Product ref={ref} className="Product">
-                      <ul className="ProductDetails_top">
-        <li>{product.country}</li>
-        <span class="material-symbols-outlined">
-        bookmark
-        </span>
-      </ul>
-      <a className='ProductImage' id='ProductImage'
-        style={{
-          backgroundImage: `url(${product.img})`,
-          backgroundSize: '100%',
-          backgroundPosition: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-      <Link
-        
-        className='ProductImageLink'
-        to={`/Store/Product/${product.id}`}
-        key={product.country}
-      >
-        {/* $ 34.87 */}
-      </Link>
-      </a>
-      <ul className="ProductDetails_bottom">
-        <li>
-          <span class="material-symbols-outlined morph_up">
-          thumb_up
-          </span>
-        </li>
-        <li>
-          <span class="material-symbols-outlined morph_up">
-          add_comment
-          </span>
-        </li>
-        <li>
-          <span class="material-symbols-outlined morph_up"
-          onClick={(e)=>handleAdd2Cart(e,product)}
-          >
-          add_shopping_cart
-          </span>
-        </li>
-        <li>
-          <span class="material-symbols-outlined morph_up" onClick={(e)=>handleGetFromCart(e,'Cart')}>
-          share
-          </span>
-        </li>
-      </ul>
-          </Product>
-      );
   
     return (
 
@@ -151,20 +113,22 @@ function MostLovedCarousel(props) {
     >
         {
 
-          productsData.map((product) =>
-          <Product ref={ref}>
+          data.map((product) =>
+          <Product ref={ref}
+          style={{
+            backgroundImage: `url(${product.url})`,
+            backgroundSize: '100%',
+            backgroundPosition: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+          >
             <ul className="productTop">
-              <li >{product.country}</li>
+              <li >{product.title}</li>
               <li className="material-symbols-outlined">bookmark</li>
             </ul>
             <a href='' className="productCenter"
             
-            style={{
-              backgroundImage: `url(${product.img})`,
-              backgroundSize: '100%',
-              backgroundPosition: 'cover',
-              backgroundRepeat: 'no-repeat',
-            }}
+
 
 
             
@@ -174,8 +138,8 @@ function MostLovedCarousel(props) {
         
         className='ProductImageLink'
         to={`/Store/Product/${product.id}`}
-        key={product.country}
-      >$ 34.87</Link>
+        key={product.title}
+      >ZAR {product.salePrice}</Link>
             </a>
             <ul className="productBottom">
             <li>

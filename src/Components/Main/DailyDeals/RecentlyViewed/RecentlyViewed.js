@@ -20,7 +20,7 @@ function RecentlyViewed(props) {
     width: 19%;
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
-    border-radius: 15px;
+    
     gap: 1%;
     
     @media(min-width: 300px) {
@@ -91,7 +91,14 @@ function RecentlyViewed(props) {
 
 
       const myproducts =  productsData.map((product) =>
-          <Product ref={ref}>
+          <Product ref={ref} product={product}
+          // style={{
+          //   backgroundImage: `url(${product.img})`,
+          //   backgroundSize: '100%',
+          //   backgroundPosition: 'cover',
+          //   backgroundRepeat: 'no-repeat',
+          // }}
+          >
                       <ul className="ProductDetails_top">
         <li>{product.country}</li>
         <span class="material-symbols-outlined">
@@ -99,12 +106,7 @@ function RecentlyViewed(props) {
         </span>
       </ul>
       <a className='ProductImage' id='ProductImage'
-        style={{
-          backgroundImage: `url(${product.img})`,
-          backgroundSize: '100%',
-          backgroundPosition: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}
+
       >
       <Link
         
@@ -141,12 +143,7 @@ function RecentlyViewed(props) {
       );
   
     return (
-<>
-<div className="subtitle_topbrands">
-            <hr className='leftline'/>
-            <span>{props.label}</span>
-            <hr className='rightline'/>
-  </div>
+
 <Rerousel itemRef={ref}
     interval={props.interval}
     >
@@ -208,7 +205,7 @@ function RecentlyViewed(props) {
         }
 
     </Rerousel>
-</>
+
 
     )
 }
