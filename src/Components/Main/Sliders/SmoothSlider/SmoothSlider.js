@@ -12,7 +12,7 @@ class CitiesSlider extends React.Component {
       this.IMAGE_PARTS = 4;
       
       this.changeTO = null;
-      this.AUTOCHANGE_TIME = 5000;
+      this.AUTOCHANGE_TIME = this.props.interval;
       
       this.state = { activeSlide: -1, prevSlide: -1, sliderReady: false };
     }
@@ -84,8 +84,8 @@ class CitiesSlider extends React.Component {
               </div>
             ))}
           </div>
-          <div className="slider__control" onClick={() => this.changeSlides(-1)} />
-          <div className="slider__control slider__control--right" onClick={() => this.changeSlides(1)} />
+          {/* <div className="slider__control" onClick={() => this.changeSlides(-1)} />
+          <div className="slider__control slider__control--right" onClick={() => this.changeSlides(1)} /> */}
         </div>
       );
     }

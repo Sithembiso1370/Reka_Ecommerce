@@ -10,6 +10,20 @@ const Inventory = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({});
   const [departmentCategories, setdepartmentCategories] = useState(['Upper Body','Lower Body','T-Shirts'])
+
+  const handleAddNewSupplier = () => {
+    console.log("I need to work on this pop up feature to be able to add a supplier asyncronously")
+    alert("I need to work on this pop up feature to be able to add a supplier asyncronously")
+  }
+  // Need to Create a Backend Table for Creating Data for Eact Supplier and track relationship Timeline 'Alie Express'
+  const [suppliers, setsuppliers] = useState(['Alie Express',<button
+  // type={field.type}
+  name='suppliers'
+  onClick={handleAddNewSupplier}
+> 
+Add New Supplier
+</button>])
+  const [colors, setcolors] = useState([''])
   const [placeholders, setplaceholders] = useState(
     [
       { name: "rekaStockId", label: "Reka Stock ID", type: "text" },
@@ -18,10 +32,10 @@ const Inventory = () => {
       { name: "costPrice", label: "Cost (R)", type: "number" },
       { name: "salePrice", label: "Sale (R)", type: "number" },
       { name: "upload", label: "Image", type: "file" },
-      { name: "supplier", label: "Supplier", type: "text" },
+      { name: "supplier", label: "Supplier", type: "select" , options: suppliers},
       { name: "manufacturepn", label: "Manufacture PN", type: "text" },
       { name: "quantity", label: "Quantity", type: "number" },
-      { name: "color", label: "Color", type: "text" },
+      { name: "color", label: "Color", type: "select",  options: colors },
       { name: "department", label: "Department", type: "select", options: departmentsArray },
       { name: "brand", label: "Brands", type: "text" },
       { name: "store", label: "Store", type: "text" },
@@ -119,7 +133,7 @@ const Inventory = () => {
     const confirmed = window.confirm(`Are you sure you want to Edit ${inventory.productDescription}?`);
     setcrudForm(<InventoryForm btnLabel='Update' label="edit" isLoading={isLoading} formData={formData} onSuccess={handleSuccess} handleSubmit={handleSubmit} handleChange={handleChange} handleFileChang={handleFileChange} placeholders={placeholders}/>)
   }
-  const [crudForm, setcrudForm] = useState(<InventoryForm btnLabel='Save' label="create" isLoading={isLoading} formData={formData} onSuccess={handleSuccess} handleSubmit={handleSubmit} handleChange={handleInputChange} handleFileChang={handleFileChange} placeholders={placeholders}/>)
+  const [crudForm, setcrudForm] = useState(<InventoryForm fetchInventory={fetchInventory} btnLabel='Save' label="create" isLoading={isLoading} formData={formData} onSuccess={handleSuccess} handleSubmit={handleSubmit} handleChange={handleInputChange} handleFileChang={handleFileChange} placeholders={placeholders}/>)
 
 
   // console.log('inventoryList.length : ', inventoryList.length)
@@ -159,7 +173,7 @@ const Inventory = () => {
               {
                 
                 inventoryList ?
-              inventoryList.slice(0, 5).map((inventory) => (
+              inventoryList.slice(0, 10).map((inventory) => (
                 <tr key={inventory._id}>
                   
                   <td>{inventory.createdBy}</td>

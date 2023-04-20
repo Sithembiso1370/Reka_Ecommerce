@@ -9,7 +9,45 @@ import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { useEffect } from 'react';
 
+const departments = [
+  {
+    id: '001',
+    title: "Womens Clothing",
+    departmentLink: "Womens_clothing",
+    url: 'https://i.pinimg.com/736x/39/c3/14/39c31444e5e61a6c2dd5058b0d343535.jpg'
+  },
+  {
+    id: '002',
+    title: "Groceries",
+    departmentLink: "Groceries",
+    url: 'https://dornsife.usc.edu/assets/img/news/story/3047.jpg'
+  },
+  {
+    id: '003',
+    title: "Accessories",
+    departmentLink: "Womens_clothing",
+    url: 'https://www.superprof.co.za/blog/wp-content/uploads/2018/07/photography-accessories.jpg'
+  },
+  {
+    id: '004',
+    title: "Mens Clothing",
+    departmentLink: "MensClothing",
+    url: 'https://as1.ftcdn.net/v2/jpg/02/10/29/96/1000_F_210299681_oEguSaxRJuXcwxntdvmFjQzIQ7nyuqSY.jpg'
+  },
+  {
+    id: '005',
+    title: "Accessories",
+    departmentLink: "Womens_clothing",
+    url: 'https://www.superprof.co.za/blog/wp-content/uploads/2018/07/photography-accessories.jpg'
+  },
+  {
+    id: '006',
+    title: "Mens Clothing",
+    departmentLink: "Groceries",
+    url: 'https://daman.co.id/daman.co.id/wp-content/uploads/2018/04/Cover.jpgg'
+  }
 
+]
 
 function MostLovedCarousel(props) {
     const ref = useRef(null);
@@ -68,6 +106,29 @@ function MostLovedCarousel(props) {
     }, []);
 
 
+    const filterDataBydepartment = (department) =>{
+      let filteredDataBydepartment = [];
+      for (let i= 0; i<data.length; i++) {
+        if (data[i].department  === department ) {
+          filteredDataBydepartment = [...filteredDataBydepartment, data[i]];
+        }
+      }
+
+      return filteredDataBydepartment
+    }
+
+    const filterDataBySubdepartment = (department) =>{
+      let filteredDataBySubdepartment = [];
+      for (let i= 0; i<data.length; i++) {
+        if (data[i].subdepartment  === department ) {
+          filteredDataBySubdepartment = [...filteredDataBySubdepartment, data[i]];
+        }
+      }
+
+      return filteredDataBySubdepartment;
+    }
+
+
 
 
 
@@ -113,36 +174,37 @@ function MostLovedCarousel(props) {
     >
         {
 
-          data.map((product) =>
+          departments.map((product) =>
           <Product ref={ref}
           style={{
             backgroundImage: `url(${product.url})`,
-            backgroundSize: '100%',
-            backgroundPosition: 'cover',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
           }}
           >
             <ul className="productTop">
-              <li >{product.title}</li>
-              <li className="material-symbols-outlined">bookmark</li>
+              <li >
+                {/* {product.title} */}
+              </li>
+              <li className="material-symbols-outlined">
+                {/* bookmark */}
+                visibility
+                </li>
             </ul>
-            <a href='' className="productCenter"
-            
-
-
-
-            
-            >
+            <a href='' className="productCenter">
 
 <Link
         
         className='ProductImageLink'
-        to={`/Store/Product/${product.id}`}
-        key={product.title}
-      >ZAR {product.salePrice}</Link>
+        to={`/Store/Departments/${product.departmentLink}`}
+        key={product.id}
+      >
+        {product.title}
+      </Link>
             </a>
             <ul className="productBottom">
-            <li>
+            {/* <li>
           <span class="material-symbols-outlined morph_up">
           thumb_up
           </span>
@@ -163,7 +225,7 @@ function MostLovedCarousel(props) {
           <span class="material-symbols-outlined morph_up" onClick={(e)=>handleGetFromCart(e,'Cart')}>
           share
           </span>
-        </li>
+        </li> */}
             </ul>
           </Product>
       )

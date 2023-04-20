@@ -14,8 +14,7 @@ import { useEffect } from 'react';
 
 
 function StoreFilture(props) {
-  const [data, setData] = useState([]);
-    let productsData = getProducts();
+  const [data, setData] = useState(props.inventoryList);
     // to clear locale storage
     // localStorage.clear()
 
@@ -29,6 +28,8 @@ function StoreFilture(props) {
     useEffect(() => {
       fetchData();
     }, []);
+
+    
 
 
 
@@ -58,11 +59,11 @@ function StoreFilture(props) {
       e.preventDefault()
       const items = JSON.parse(localStorage.getItem(item));
       if(items){
-        console.log('local storage items = ',items)
+        // console.log('local storage items = ',items)
         return items;
       }
       else{
-        console.log('local storage items = ',[])
+        // console.log('local storage items = ',[])
         return [];
       }
     }

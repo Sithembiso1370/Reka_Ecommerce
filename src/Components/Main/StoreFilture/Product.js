@@ -14,6 +14,7 @@ function Product(props) {
     >
       <ul className="ProductDetails_top">
         <li>{props.product.title}</li>
+        
         <span class="material-symbols-outlined">
         bookmark
         </span>
@@ -34,7 +35,7 @@ function Product(props) {
       <Link
         
         className='ProductImageLink'
-        to={`/Store/Product/${props.product.id}`}
+        to={`/Store/Product/${props.product._id}`}
         key={props.product.title}
       >ZAR {props.product.salePrice}</Link>
       </a>

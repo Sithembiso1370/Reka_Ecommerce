@@ -7,6 +7,8 @@ import { useParams } from "react-router-dom";
 import Topbrands from '../../Components/Main/DailyDeals/Topbrands'
 import brands from '../../Sections/brands'
 import ImageGallery from 'react-image-gallery';
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 
 
@@ -29,10 +31,39 @@ const images = [
 
 function ProductPage() {
   let params = useParams();
-  let process = getProduct(parseInt(params.productId, 10));
+  // let process =   getmyproduct();
+  const [product, setproduct] = useState({})
 
 
-  console.log("paramz p_page ",process);
+  
+
+
+ const  getmyproduct = async (number) => {
+    // return products;
+    const response = await fetch(`http://localhost:5000/api/inventory/${number}`);
+    const jsonData = await response.json();
+    // setData(jsonData);
+    // console.log("jsonData = ",jsonData);
+    if(jsonData){
+      // return jsonData.find(
+      //   (product) => product._id === number
+      // );
+      setproduct(jsonData)
+    }
+    else{
+      setproduct({});
+    }
+
+  }
+
+  useEffect(() => {
+    getmyproduct(params.productId)
+  }, [])
+
+  console.log("params.productId = ",params.productId)
+
+
+  console.log("product+ = ",product);
   return (
     <div className="ProductPage">
         <Navbar/>
@@ -47,7 +78,7 @@ function ProductPage() {
             <div className="ProductPageMain_Top">
                 <div className="ProductPageMain_TopLeft"
                 style={{
-                  background: `url(${process.img})`
+                  background: `url(${product.url})`
                   ,backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center'
                 }}
@@ -57,10 +88,11 @@ function ProductPage() {
                 {/* <ImageGallery items={images}  /> */}
                 <div className="ProductPageMain_TopRight">
                 <div>
-                  <h3>{process.country}</h3>
-                  <p>{process.city}</p>
+                  <h3>{product.title}</h3>
+                  <p>{product.productDescription
+                  }</p>
 
-                  <h3><span>ZAR</span> 330.56</h3>
+                  <h3><span>ZAR</span> {product.salePrice}.00</h3>
 
                   {/* colors */}
                   <div>
@@ -87,7 +119,7 @@ function ProductPage() {
                     <span>-</span>
                     <p>3</p>
                     <span>+</span>
-                    <p>176 available</p>
+                    <p>{product.quantity} available</p>
                   </div>
                   <div>
                     <div>

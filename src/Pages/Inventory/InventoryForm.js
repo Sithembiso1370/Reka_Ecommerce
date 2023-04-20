@@ -28,12 +28,16 @@ const InventoryForm = (props) => {
       const response = await axios.post('http://localhost:5000/api/inventory', formDataToSubmit);
       console.log('Product saved successfully!!!!', response.data);
       alert('Product saved successfully!!!!');
+      props.fetchInventory()
       setFormData({})
     } catch (error) {
       console.log('Error submitting form:', error.response.data);
       alert('Error submitting form:')
     }
   };
+
+
+
 
 
   const returnInput = (field) => {
@@ -53,7 +57,6 @@ const InventoryForm = (props) => {
         > 
         {field.options.map((option)=><option>{option}</option>)}
         </select>
-          // break;
       default:
         return <input
         type={field.type}

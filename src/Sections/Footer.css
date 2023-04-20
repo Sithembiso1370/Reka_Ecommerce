@@ -45,7 +45,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: left;
 }
 
 .footer_left1 > div > span > a {
@@ -53,11 +53,18 @@
     height: 100%;
     width: 100%;
     display: flex;
-    text-align: center;
+    text-align: left;
     align-items: center;
     justify-content: center;
+    color: maroon;
+    font-weight: bold;
+    text-decoration: none;
 }
 
+.footer_left1 > div > span > a:hover {
+    text-decoration: underline;
+    color: orangered;
+}
 
 .footer_left{
     position: relative;
@@ -94,13 +101,19 @@
 }
 
 .footer_left > div > span > a {
+    display: flex;
     position: relative;
     height: 100%;
     width: 100%;
+    color: maroon;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
 }
 
 .footer_left > div > span > a:hover {
     text-decoration: underline;
+    color: orangered;
 }
 
 .footer_right{
@@ -126,6 +139,32 @@
     width: 100%;
     display: grid ;
 }
+
+.footer_right > div > span {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.footer_right > div > span a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: maroon;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.footer_right > div > span a:hover {
+    text-decoration: underline;
+    color: orangered;
+}
+
+
 
 .footer_right1{
     position: relative;
@@ -166,10 +205,36 @@
     width: 100%;
 }
 
+.footer_right1 >div  > span > span >img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.footer_right1 >div  > span > span >img:hover {
+    box-shadow: 2px 2px 5px #737373, -2px -2px 6px #585858;
+}
+
+.footer_right1 >div  > span > a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: maroon;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer_right1 >div  > span > a:hover {
+    text-decoration: underline;
+    color: orangered;
+}
+
 .footer_right1 >div  > span > span > img  {
     position: relative;
     height: 20px;
     width: 40px;
+    color: white;
 }
 
 .socialsimgs  {

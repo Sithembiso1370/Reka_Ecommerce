@@ -21,7 +21,7 @@ function LandingPage() {
     >
         <Navbar/>
         <Main/>
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }

@@ -10,6 +10,7 @@ import Footer from '../../Sections/Footer';
 import { useSearchParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import axios from 'axios';
 
 const slides = [
   {
@@ -96,6 +97,28 @@ const slides = [
 
 function DepartmentMain(props) {
   let params = useSearchParams();
+  const [inventoryList, setInventoryList] = useState([]);
+  useEffect(() => {
+    fetchInventory();
+  }, []);
+
+
+
+  const fetchInventory = async () => {
+    // setIsLoading(true);
+    try {
+      const response = await axios.get('http://localhost:5000/api/inventory');
+      // setInventoryList(response.data);
+      console.log(response)
+      
+      
+    } catch (err) {
+      console.log(err);
+    }
+    console.log("Inventory in backend = ",inventoryList);
+    // console.log("Inventory length = ",inventoryList.length());
+    // setIsLoading(false);
+  };
 
   useEffect(() => {
     // fetchInventory();
@@ -107,7 +130,7 @@ function DepartmentMain(props) {
         <CitiesSlider slides={slides} department={props.department}/>
       </div>
       <div className='departmentTopBrands'><Topbrands brands={brands}/></div>
-      <div className='departmentsStorefilturez'><StoreFilture Products='' filtureFiltureCategories='' filtureFiltureBrands='' filtureFiltureStores=''/></div>
+      <div className='departmentsStorefilturez'><StoreFilture inventoryList={inventoryList} /></div>
       <div className='DepartmentNewsletter'><Newsletter/></div>
       <div className='departmentShippingdetails'><ShippingDetails/></div>
       <Footer/>

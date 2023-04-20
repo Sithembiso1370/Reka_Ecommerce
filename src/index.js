@@ -38,7 +38,7 @@ root.render(
           <Route path="Groceries" element={<Department />} />
           <Route path="MensClothing" element={<Department />} />
         </Route>
-        <Route path="/Store/Departments/:departmentId" element={<Department />} /> 
+        {/* <Route path="/Store/Departments/:departmentId" element={<Department />} />  */}
         {/* Need to add department sub-routes here to enable topographic routing and abillity to
         to pass another parameter as e.g. path="/Store/Departments/MensClothing/:ProductId"
         */}

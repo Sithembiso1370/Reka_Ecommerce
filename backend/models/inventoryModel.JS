@@ -53,6 +53,9 @@ const InventorySchema = new mongoose.Schema(
     department: {
         type: String, // -- These are Departments in this app, This should later be made to an array
     },
+    subdepartment: {
+        type: String, // -- These are Departments in this app, This should later be made to an array
+    },
     brand: {
         type: String,// --
     },

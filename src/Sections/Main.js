@@ -15,6 +15,9 @@ import newArrivals from './newArrivals'
 import MostLovedCarousel from '../Components/Main/DailyDeals/MostLovedCarousel/MostLovedCarousel'
 import RecentlyViewed from '../Components/Main/DailyDeals/RecentlyViewed/RecentlyViewed'
 import ProductSlider from '../Components/Main/Sliders/ProductSlider/ProductSlider'
+import Footer from './Footer'
+import axios from 'axios';
+import { useEffect } from 'react'
 
 const slides = [
   {
@@ -96,50 +99,80 @@ const slides = [
 
 
 const Main = () => {
-  const [department, setdepartment] = useState(window.location.href.split('/')[5] ? window.location.href.split('/')[5] : '')
+  const [inventoryList, setInventoryList] = useState([]);
+  const [department, setdepartment] = useState(window.location.href.split('/')[5] ? window.location.href.split('/')[5] : '');
+
+  useEffect(() => {
+    fetchInventory();
+  }, []);
+
+
+
+  const fetchInventory = async () => {
+    // setIsLoading(true);
+    try {
+      const response = await axios.get('http://localhost:5000/api/inventory');
+      // setInventoryList(response.data);
+      console.log(response)
+      
+      
+    } catch (err) {
+      console.log(err);
+    }
+    console.log("Inventory in backend = ",inventoryList);
+    // console.log("Inventory length = ",inventoryList.length());
+    // setIsLoading(false);
+  };
   
   console.log("params = ",window.location.pathname);
   return (
     <div className='Main'>
       <FloatingSocials/>
       <div className='mainSub_1'>
-        <CitiesSlider slides={slides} department={department} className='citisliderr'/>
+        {/* Banner Slide 1  */}
+        <CitiesSlider slides={slides} department={department} className='citisliderr' interval={9000}/>
         <AuthCard/>
       </div>
       <div className='mainSub_3'>
         <Topbrands brands={brands} label="Top Brands" interval={1500} />
       </div>
       <div className='mainSub_2_2'>
+        {/* Each Tile in the carousel to contain Links to all subdepartments */}
         <MostLovedCarousel  interval={4500}/>
       </div>
       <div className='mainSub_2'>
-        <CitiesSlider slides={slides} className='hoverable'  department={department}/>
+        {/* Pass in filtured department banner Object */}
+        <CitiesSlider slides={slides} className='hoverable'  department={department} interval={8000}/>
+        {/* Pass in filtured products by department */}
         <ProductSlider slides={slides} className='hoverable'  department={department}/>
+        {/* Pass in filtured products by department */}
         <ProductSlider slides={slides} className='hoverable'  department={department}/>
       </div>
 
       <div className='mainSub_4'>
-        <StoreFilture/>
+        {/* Pass in filtured products by department */}
+        <StoreFilture inventoryList={inventoryList}/>
       </div>
       <div className='mainSub_3_3_1'>
+        {/* backend data filtured by date */}
         <Topbrands brands={newArrivals} interval={4000}   label="New Arrivals"/>
       </div>
       <div className='mainSub_3_3_2'>
         <RecentlyViewed interval={6000}/>
       </div>
       <div className='mainSub_5'>
-        <CitiesSlider slides={slides} className='hoverable'  department={department}/>
+        {/* Pass in filtured department banner Object */}
+        <CitiesSlider slides={slides} className='hoverable'  department={department} interval={65000}/>
+        {/* Pass in filtured products by department */}
         <ProductSlider slides={slides} className='hoverable'  department={department}/>
       </div>
       <div className='mainSub_6'>
-        {/* <div className="StoreFiltureTop curved_borderTop">
-        StoreFilture Top and more : {department}
-        </div> */}
-        <StoreFilture/>
+        {/* Pass in filtured products by department */}
+        <StoreFilture inventoryList={inventoryList} />
       </div>
       <div className='mainSub_6_5'>
-      {/* <NewArrivalsCarousel/> */}
-      <Topbrands brands={newArrivals} interval={5000} label="Shop Clothing" />
+        {/* filture by products with the most likes  */}
+      <Topbrands brands={MostLoved} interval={5000} label="More Shopping..." />
       </div>
 
       <div className='mainSub_6_6'>
@@ -151,6 +184,7 @@ const Main = () => {
       <div className='mainSub_8'>
           <ShippingDetails/>
       </div>
+      <Footer/>
     </div>
   )
 }

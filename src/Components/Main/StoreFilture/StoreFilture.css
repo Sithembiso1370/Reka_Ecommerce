@@ -329,7 +329,7 @@
     height: 100%;
     flex: 1;
     display: grid;
-    grid-template-columns: 3fr 1fr ;
+    grid-template-columns: 4fr 2fr ;
     align-items: center;
     justify-content:center;
     border-radius: 15px;
@@ -338,16 +338,17 @@
 }
 
 .AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductDetails_top>li{
-    border-radius: 30px;
-    height: 100%;
+    border-radius: 0px;
+    height: 90%;
     width: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     padding: 1%;
+    margin: 1%;
     /* color: orangered */
     color: white;
 }
@@ -361,8 +362,18 @@
     justify-content: center;
     /* text-decoration: underline; */
     font-weight: bold;
-    color: rgba(255, 68, 0, 0.499);
+    color: whitesmoke;
+    background-color: rgba(128, 0, 0, 0.685);
+    border-radius:  20px 0;
+    transition: all 5s ease-in;
 }
+
+.AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductDetails_top>:nth-child(1):hover {
+    border-radius: 0 30px;
+    background-color: rgba(255, 68, 0, 0.847);
+    transition: all 2s ease-in;
+}
+
 
 .AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductDetails_top>:nth-child(2) {
     position: relative;
@@ -370,7 +381,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     color: rgba(255, 68, 0, 0.646);
 }
 
@@ -385,20 +396,21 @@
     text-align: center;
     display: flex;
     word-wrap: break-word;
-    /* color: rgba(104, 15, 15, 0.469); */
     color: orangered;
 }
 
 .AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductDetails_top> span:hover {
     /* background-color:rgb(104, 15, 15) ; */
     color: orangered;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
 
 }
 
 
 .AnotherFilture>.AnotherFiltureMain>.filture_main>.Product>.ProductDetails_top>li:hover{
-    background-color:rgba(14, 13, 13, 0.828);
-    color: orangered;
+    color: white;
+    background-color: maroon;
     text-decoration: dotted;
 }
 
@@ -432,15 +444,18 @@
     height: 60%;
     padding: 0;
     margin: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color:  maroon;
-    color:  rgba(255, 68, 0, 0.691);
-    /* background-color: #2d2d3825; */
+    background-color:  whitesmoke;
+    color:  rgba(255, 68, 0, 0.796);
+
     transition: all 5s ease-out;
     border-radius: 0 15px 15px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
     text-decoration: none;
 }
 

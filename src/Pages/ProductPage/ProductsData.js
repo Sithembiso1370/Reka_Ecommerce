@@ -95,12 +95,34 @@ let products = [
 
   ];
 
-  export function getProducts() {
-    return products;
+  export async function getProducts() {
+    // return products;
+    const response = await fetch('http://localhost:5000/api/inventory');
+    const jsonData = await response.json();
+    // setData(jsonData);
+    // console.log("jsonData = ",jsonData);
+    if(jsonData){
+      return jsonData;
+    }
+    else{
+      return {};
+    }
+
   }
 
-  export function getProduct(number) {
-    return products.find(
-      (product) => product.id === number
-    );
+  export async  function getProduct(number) {
+        // return products;
+        const response = await fetch('http://localhost:5000/api/inventory');
+        const jsonData = await response.json();
+        // setData(jsonData);
+        // console.log("jsonData = ",jsonData);
+        if(jsonData){
+          return jsonData.find(
+            (product) => product._id === number
+          );
+        }
+        else{
+          return {};
+        }
+
   }
