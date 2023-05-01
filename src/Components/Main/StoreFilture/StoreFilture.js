@@ -10,6 +10,7 @@ import Product from './Product';
 import AnotherFiltureTop from './FilterTopHeader/AnotherFiltureTop';
 import AnotherFiltureMain from './FiltureMain/AnotherFiltureMain';
 import { useEffect } from 'react';
+import axios from 'axios';
 
 
 
@@ -18,18 +19,34 @@ function StoreFilture(props) {
     // to clear locale storage
     // localStorage.clear()
 
-    const fetchData = async () =>{
-      const response = await fetch('http://localhost:5000/api/inventory');
-      const jsonData = await response.json();
-      setData(jsonData);
-      console.log("jsonData = ",jsonData)
-    }
+
+
+
+
+    const fetchInventory = async () => {
+      // ASYNC START
+      axios.get('http://localhost:5000/api/inventory')
+      .then((res)=>{
+        // ASYNC
+        setData(res.data)
+        console.log("res.data = ",res.data);
+        console.log("inventoryList = ",res.data);
+        return res.data;
+  
+      })
+      .catch((err)=>{
+        console.log("axios error : ",err)
+      });
+      return [];
+      
+  
+    };
 
     useEffect(() => {
-      fetchData();
-    }, []);
+      fetchInventory();
 
-    
+      // console.log("backend inventory = ",inventoryList)
+    }, []);
 
 
 
@@ -80,7 +97,7 @@ function StoreFilture(props) {
   return (
     <div className='AnotherFilture'>
       <AnotherFiltureTop/>
-      <AnotherFiltureMain myproducts={myproducts}/>
+      <AnotherFiltureMain products={data}/>
     </div>
   )
 }

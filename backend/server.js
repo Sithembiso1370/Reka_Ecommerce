@@ -40,7 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-
+mongoose.set('strictQuery', true);
 mongoose
     .connect('mongodb://127.0.0.1:27017/reka_ecommerce',)
     .then(() => console.log("MongoDB Connected"))

@@ -53,9 +53,18 @@ Add New Supplier
   const fetchInventory = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get('http://localhost:5000/api/inventory');
-      setInventoryList(response.data);
-      console.log(response)
+      // const response = await axios.get('http://localhost:5000/api/inventory')
+      // const data = await response.data;
+      // await setInventoryList(data);
+      // console.log(response)
+      axios.get('http://localhost:5000/api/inventory')
+      .then((res)=>{
+        console.log("axios res = ",res);
+        setInventoryList(res.data)
+      })
+      .catch((err)=>{
+        console.log("axios error : ",err)
+      });
       
       
     } catch (err) {

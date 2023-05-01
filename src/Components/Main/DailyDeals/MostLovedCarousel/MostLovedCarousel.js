@@ -98,18 +98,24 @@ function MostLovedCarousel(props) {
       const response = await fetch('http://localhost:5000/api/inventory');
       const jsonData = await response.json();
       setData(jsonData);
-      console.log("jsonData = ",jsonData)
+      setData(data)
+  
     }
 
     useEffect(() => {
-      fetchData();
+
     }, []);
+
+    async function logData(){
+      await fetchData();
+      console.log("jsonData = ",data)
+    }
 
 
     const filterDataBydepartment = (department) =>{
       let filteredDataBydepartment = [];
       for (let i= 0; i<data.length; i++) {
-        if (data[i].department  === department ) {
+        if (data[i].department.toUpperCase().includes(department.toUpperCase())) {
           filteredDataBydepartment = [...filteredDataBydepartment, data[i]];
         }
       }

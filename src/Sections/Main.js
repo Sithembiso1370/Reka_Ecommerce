@@ -96,48 +96,124 @@ const slides = [
 ];
 
 
-
-
 const Main = () => {
+  // State variable to hold all inventory
   const [inventoryList, setInventoryList] = useState([]);
+    // State variable to hold all department name from url
   const [department, setdepartment] = useState(window.location.href.split('/')[5] ? window.location.href.split('/')[5] : '');
+    // State variable to hold all Main Banner Department Slides
+  const [departmentSlides, setdepartmentSlides] = useState([])
+    // State variable to hold all mens Clothing apparel
+    const [department1, setdepartment1] = useState('Mens_Clothing');
+    const [department2, setdepartment2] = useState('Accessories');
+  const [mensClothing, setmensClothing] = useState([]);
+  const [accessories, setaccessories] = useState([])
+  // State variable to hold all Top Brands
+  const [topBrandsSlides, settopBrandsSlides] = useState([])
 
-  useEffect(() => {
-    fetchInventory();
-  }, []);
+    // 👇️ filter with 1 condition
+    const filteredArrayOfObjects = (ArrayOfObjects,ObjectKey,valueComparedTo) => ArrayOfObjects.filter(Object => {
+      return Object[ObjectKey] === valueComparedTo;
+    });
+
+  // Function to filture data by department
+  const filterDataBydepartment = (department) =>{
+    let filturedDepartments = []
+    for (let i= 0; i<inventoryList.length; i++) {
+      if (inventoryList[i].department.toLowerCase() === department.toLowerCase()) {
+        filturedDepartments = [...filturedDepartments,inventoryList[i]];
+      }
+      else{
+        console.log("Not filtuing according to : ",inventoryList[i].department.toLowerCase())
+      }
+    }
+    return filturedDepartments
+  }
+
+  const filterBydepartment = (department) => {
+    // Avoid filter for empty string
+    // if (!selectedBrand) {
+    //   return filteredData;
+    // }
+
+    // const filtereddepartments = inventoryList.filter(
+    //   (inventory) => inventory.department.split(" ").indexOf(department) !== -1
+    // );
+    // return filtereddepartments;
+    inventoryList.forEach(element => {
+        console.log("inventory list = ",element);
+        if(element.department === department){
+          console.log('in mens clothing = ',element)
+        }
+        else{
+          console.log('Not in mens clothing = ')
+        }
+    });
+  };
+
 
 
 
   const fetchInventory = async () => {
-    // setIsLoading(true);
-    try {
-      const response = await axios.get('http://localhost:5000/api/inventory');
-      // setInventoryList(response.data);
-      console.log(response)
-      
-      
-    } catch (err) {
-      console.log(err);
-    }
-    console.log("Inventory in backend = ",inventoryList);
-    // console.log("Inventory length = ",inventoryList.length());
-    // setIsLoading(false);
+    // ASYNC START
+    axios.get('http://localhost:5000/api/inventory')
+    .then((res)=>{
+      // ASYNC
+      setInventoryList(res.data);
+      setInventoryList(inventoryList);
+      console.log("res.data = ",res.data);
+      console.log("inventoryList = ",res.data);
+      return res.data;
+
+    })
+    .catch((err)=>{
+      console.log("axios error : ",err)
+    });
+    return [];
+    
+
   };
+
+  const  setData = async ()=>{
+    const myinventory = await fetchInventory();
+    await setInventoryList(myinventory);
+  }
+
+
+  useEffect(() => {
+    fetchInventory();
+    // setData();
+    console.log("backend inventory = ",inventoryList)
+  }, []);
+
+  const filterDataBySubdepartment = (department) =>{
+    let filteredDataBySubdepartment = [];
+    for (let i= 0; i<inventoryList.length; i++) {
+      if (inventoryList[i].subdepartment  === department ) {
+        filteredDataBySubdepartment = [...filteredDataBySubdepartment, inventoryList[i]];
+      }
+    }
+
+    return filteredDataBySubdepartment;
+  }
   
-  console.log("params = ",window.location.pathname);
+  // console.log("params = ",window.location.pathname);
+  // console.log("MensClothing = ",filterDataBydepartment('Mens_Clothing'))
   return (
     <div className='Main'>
       <FloatingSocials/>
       <div className='mainSub_1'>
-        {/* Banner Slide 1  */}
+        {/* Need to pass in department Slides */}
         <CitiesSlider slides={slides} department={department} className='citisliderr' interval={9000}/>
+        {/* Need to add authentication functionality */}
         <AuthCard/>
       </div>
       <div className='mainSub_3'>
+        {/* Need to wire links to all brands */}
         <Topbrands brands={brands} label="Top Brands" interval={1500} />
       </div>
       <div className='mainSub_2_2'>
-        {/* Each Tile in the carousel to contain Links to all subdepartments */}
+        {/* Need to wire links to all subdepartments */}
         <MostLovedCarousel  interval={4500}/>
       </div>
       <div className='mainSub_2'>
@@ -151,13 +227,14 @@ const Main = () => {
 
       <div className='mainSub_4'>
         {/* Pass in filtured products by department */}
-        <StoreFilture inventoryList={inventoryList}/>
+        <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} />
       </div>
       <div className='mainSub_3_3_1'>
         {/* backend data filtured by date */}
         <Topbrands brands={newArrivals} interval={4000}   label="New Arrivals"/>
       </div>
       <div className='mainSub_3_3_2'>
+        {/* Need to pass in data filtured by date mix departments */}
         <RecentlyViewed interval={6000}/>
       </div>
       <div className='mainSub_5'>
@@ -168,7 +245,7 @@ const Main = () => {
       </div>
       <div className='mainSub_6'>
         {/* Pass in filtured products by department */}
-        <StoreFilture inventoryList={inventoryList} />
+        <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} />
       </div>
       <div className='mainSub_6_5'>
         {/* filture by products with the most likes  */}
@@ -179,9 +256,11 @@ const Main = () => {
         <TopCategories />
       </div>
       <div className='mainSub_7'>
+         {/* Need to wire functionality to user mailing list per department */}
         <Newsletter/>
       </div>
       <div className='mainSub_8'>
+          {/* Need to add descriptive text like other stores */}
           <ShippingDetails/>
       </div>
       <Footer/>

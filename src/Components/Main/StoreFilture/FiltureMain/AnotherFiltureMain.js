@@ -1,6 +1,41 @@
 import React from 'react'
+import Product from '../Product'
 
 function AnotherFiltureMain(props) {
+  const handleGetFromCartNoE =  (item) => {
+    const items = JSON.parse(localStorage.getItem(item));
+    if(items){
+      console.log('local storage items = ',items)
+      return items;
+    }
+    else{
+      console.log('local storage items = ',[])
+      return [];
+    }
+  }
+
+  const handleAdd2Cart =  (e,productDetailsObject) => {
+    e.preventDefault()
+    const cartstatus = localStorage.setItem('Cart', JSON.stringify([...handleGetFromCartNoE('Cart'),productDetailsObject]));
+    alert(`Items added to cart `);
+  }
+  
+  const handleGetFromCart =  (e,item) => {
+    e.preventDefault()
+    const items = JSON.parse(localStorage.getItem(item));
+    if(items){
+      // console.log('local storage items = ',items)
+      return items;
+    }
+    else{
+      // console.log('local storage items = ',[])
+      return [];
+    }
+  }
+
+  const myproducts =  props.products.slice(0, 12).map((product) =>
+  <Product handleAdd2Cart={handleAdd2Cart} handleGetFromCart={handleGetFromCart}   product={product}/>
+  )
   return (
     <div className='AnotherFiltureMain'>
     <div className='FiltureSide'>
@@ -60,7 +95,7 @@ function AnotherFiltureMain(props) {
       </div>
       <div className='filture_main'>
         {
-            props.myproducts
+          myproducts
         }
       </div>
     </div>
