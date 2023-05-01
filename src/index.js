@@ -18,6 +18,7 @@ import Department from './Pages/Department/Department';
 import Wishlist from './Pages/WishlistPage/Wishlist';
 import Store from './Pages/Sale/Store'
 import Inventory from './Pages/Inventory/Inventory';
+import SalePage from './Pages/Sale/SalePage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -56,6 +57,7 @@ root.render(
         <Route path="/Store/Inventory" element={<Inventory />} /> 
         <Route path="/Store/Inventory/:departmentId" element={<Department />} />
         <Route path="/Store/Product/:productId" element={<ProductPage />} />
+        <Route path="/Store/SalePage" element={<SalePage />} />
         
         
         {/* ALL ROUTE LINKS FOR ALL PAGES */}
