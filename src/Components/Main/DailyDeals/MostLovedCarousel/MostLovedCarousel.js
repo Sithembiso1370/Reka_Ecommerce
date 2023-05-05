@@ -9,7 +9,9 @@ import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const departments = [
+// Need to turn this into a function that retrieves backend data 
+// and filtures it by department
+const mostLoved = [
   {
     id: '001',
     title: "Womens Clothing",
@@ -180,7 +182,7 @@ function MostLovedCarousel(props) {
     >
         {
 
-          departments.map((product) =>
+          mostLoved.map((product) =>
           <Product ref={ref}
           style={{
             backgroundImage: `url(${product.url})`,
@@ -210,7 +212,7 @@ function MostLovedCarousel(props) {
       </Link>
             </a>
             <ul className="productBottom">
-            {/* <li>
+            <li>
           <span class="material-symbols-outlined morph_up">
           thumb_up
           </span>
@@ -231,7 +233,7 @@ function MostLovedCarousel(props) {
           <span class="material-symbols-outlined morph_up" onClick={(e)=>handleGetFromCart(e,'Cart')}>
           share
           </span>
-        </li> */}
+        </li>
             </ul>
           </Product>
       )

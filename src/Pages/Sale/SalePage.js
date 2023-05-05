@@ -33,6 +33,11 @@ function SalePage() {
         const myinventory = await fetchInventory();
         await setInventoryList(myinventory);
       }
+
+    // 👇️ filter with 1 condition
+    const filteredArrayOfObjects = (ArrayOfObjects,ObjectKey,valueComparedTo) => ArrayOfObjects.filter(Object => {
+        return Object[ObjectKey] === valueComparedTo;
+      });
     
   return (
     <div>
@@ -43,7 +48,7 @@ function SalePage() {
             salebodyHeader
             </div>
             <div className="salebodyBody">
-            <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} />
+            <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} filteredArrayOfObjects={filteredArrayOfObjects}/>
             <Footer/>
             </div>
         </div>

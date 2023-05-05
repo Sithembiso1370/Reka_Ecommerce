@@ -108,7 +108,7 @@ function DepartmentMain(props) {
     // setIsLoading(true);
     try {
       const response = await axios.get('http://localhost:5000/api/inventory');
-      // setInventoryList(response.data);
+      setInventoryList(response.data);
       console.log(response)
       
       
@@ -121,8 +121,21 @@ function DepartmentMain(props) {
   };
 
   useEffect(() => {
-    // fetchInventory();
+    fetchInventory();
   }, []);
+
+  const  setData = async ()=>{
+    const myinventory = await fetchInventory();
+    await setInventoryList(myinventory);
+  }
+
+  const filteredArrayOfObjects = (ArrayOfObjects,ObjectKey,valueComparedTo) => ArrayOfObjects.filter(Object => {
+    return Object[ObjectKey] === valueComparedTo;
+  });
+
+  const [departmentInventoryList, setdepartmentInventoryList] = useState(filteredArrayOfObjects(inventoryList,'department',props.department))
+
+  
   return (
     <div className="DepartmentContainer">
       {/* Department : {props.department.departmentId} */}
@@ -130,7 +143,10 @@ function DepartmentMain(props) {
         <CitiesSlider slides={slides} department={props.department}/>
       </div>
       <div className='departmentTopBrands'><Topbrands brands={brands}/></div>
-      <div className='departmentsStorefilturez'><StoreFilture inventoryList={inventoryList} /></div>
+      <div className='departmentsStorefilturez'>
+        {/* <StoreFilture inventoryList={inventoryList} /> */}
+        <StoreFilture inventoryList={departmentInventoryList} setData={setData} fetchInventory={fetchInventory} filteredArrayOfObjects={filteredArrayOfObjects} department="Womens_clothing"/>
+      </div>
       <div className='DepartmentNewsletter'><Newsletter/></div>
       <div className='departmentShippingdetails'><ShippingDetails/></div>
       <Footer/>

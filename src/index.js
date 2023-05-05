@@ -36,8 +36,8 @@ root.render(
         <Route path="/Stores/:storeId" element={<Store />} />
         <Route path="/Stores" element={<Store />} />
         <Route path="/Store/Departments"  >
-          <Route path="Groceries" element={<Department />} />
-          <Route path="MensClothing" element={<Department />} />
+          {/* <Route path="Groceries" element={<Department />} /> */}
+          <Route path="Mens_Clothing" element={<Department />} />
         </Route>
         {/* <Route path="/Store/Departments/:departmentId" element={<Department />} />  */}
         {/* Need to add department sub-routes here to enable topographic routing and abillity to

@@ -15,45 +15,57 @@ import axios from 'axios';
 
 
 function StoreFilture(props) {
-  const [data, setData] = useState(props.inventoryList);
+  const [data, setData] = useState([]);
     // to clear locale storage
     // localStorage.clear()
 
+    // 👇️ filter with 1 condition
+    const filteredArrayOfObjects =  (ArrayOfObjects,ObjectKey,valueComparedTo) => {
+      let filturedArray = []
+
+      // // Loop through each Object in the array and check if the key being searched for exists
+      // ArrayOfObjects.forEach(element => {
+      //   // console.log("element = ",element);
+      //   if(element[ObjectKey].toLowerCase() === valueComparedTo.toLowerCase()){
+      //     filturedArray = [...filturedArray,element];
+      //   }
+      //   else{
+      //     // console.log("Not filturing according to : ",element[ObjectKey].toLowerCase())
+      //   }
+      // });
 
 
-
+      // console.log(`filturedArray = `,filturedArray)
+      return ArrayOfObjects.filter((el) => el[ObjectKey].toLowerCase() === valueComparedTo.toLowerCase());
+    };
 
     const fetchInventory = async () => {
       // ASYNC START
+      let filturedArray = []
       axios.get('http://localhost:5000/api/inventory')
       .then((res)=>{
         // ASYNC
-        setData(res.data)
+        filturedArray =  () =>{
+          if(props.department === ''){
+            return res.data;
+          }
+          else{
+            return filteredArrayOfObjects(res.data,'department',props.department);
+          } 
+        }
+        
+        setData(filturedArray)
         console.log("res.data = ",res.data);
-        console.log("inventoryList = ",res.data);
-        return res.data;
+        console.log(`filturedArray for = `,filturedArray);
+        return filturedArray;
   
       })
       .catch((err)=>{
         console.log("axios error : ",err)
       });
-      return [];
-      
-  
+      return filturedArray;
     };
 
-    useEffect(() => {
-      fetchInventory();
-
-      // console.log("backend inventory = ",inventoryList)
-    }, []);
-
-
-
-
-
-
-    
     const handleGetFromCartNoE =  (item) => {
       const items = JSON.parse(localStorage.getItem(item));
       if(items){
@@ -84,14 +96,17 @@ function StoreFilture(props) {
         return [];
       }
     }
-
-                  
-                  
+           
     const myproducts =  data.slice(0, 12).map((product) =>
         <Product handleAdd2Cart={handleAdd2Cart} handleGetFromCart={handleGetFromCart}   product={product}/>
     );
+    
 
 
+
+    useEffect(() => {
+      fetchInventory();
+    }, []);
 
     
   return (

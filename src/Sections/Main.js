@@ -101,15 +101,6 @@ const Main = () => {
   const [inventoryList, setInventoryList] = useState([]);
     // State variable to hold all department name from url
   const [department, setdepartment] = useState(window.location.href.split('/')[5] ? window.location.href.split('/')[5] : '');
-    // State variable to hold all Main Banner Department Slides
-  const [departmentSlides, setdepartmentSlides] = useState([])
-    // State variable to hold all mens Clothing apparel
-    const [department1, setdepartment1] = useState('Mens_Clothing');
-    const [department2, setdepartment2] = useState('Accessories');
-  const [mensClothing, setmensClothing] = useState([]);
-  const [accessories, setaccessories] = useState([])
-  // State variable to hold all Top Brands
-  const [topBrandsSlides, settopBrandsSlides] = useState([])
 
     // 👇️ filter with 1 condition
     const filteredArrayOfObjects = (ArrayOfObjects,ObjectKey,valueComparedTo) => ArrayOfObjects.filter(Object => {
@@ -183,7 +174,7 @@ const Main = () => {
   useEffect(() => {
     fetchInventory();
     // setData();
-    console.log("backend inventory = ",inventoryList)
+    // console.log("backend inventory = ",inventoryList)
   }, []);
 
   const filterDataBySubdepartment = (department) =>{
@@ -201,19 +192,23 @@ const Main = () => {
   // console.log("MensClothing = ",filterDataBydepartment('Mens_Clothing'))
   return (
     <div className='Main'>
+      {/* Floating social icons */}
       <FloatingSocials/>
       <div className='mainSub_1'>
-        {/* Need to pass in department Slides */}
+        {/* 1. Need to pass in department Slides */}
+        {/* 2. Need to create a department slides schema in the backend */}
         <CitiesSlider slides={slides} department={department} className='citisliderr' interval={9000}/>
         {/* Need to add authentication functionality */}
         <AuthCard/>
       </div>
       <div className='mainSub_3'>
         {/* Need to wire links to all brands */}
+        {/* Need to create a brands schema to pull this data from */}
         <Topbrands brands={brands} label="Top Brands" interval={1500} />
       </div>
       <div className='mainSub_2_2'>
         {/* Need to wire links to all subdepartments */}
+        {/* Need to use backend data filtured by likes/& views */}
         <MostLovedCarousel  interval={4500}/>
       </div>
       <div className='mainSub_2'>
@@ -227,7 +222,7 @@ const Main = () => {
 
       <div className='mainSub_4'>
         {/* Pass in filtured products by department */}
-        <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} />
+        <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} filteredArrayOfObjects={filteredArrayOfObjects} department="Accessories"/>
       </div>
       <div className='mainSub_3_3_1'>
         {/* backend data filtured by date */}
@@ -245,10 +240,11 @@ const Main = () => {
       </div>
       <div className='mainSub_6'>
         {/* Pass in filtured products by department */}
-        <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} />
+        <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} filteredArrayOfObjects={filteredArrayOfObjects} department=""/>
       </div>
       <div className='mainSub_6_5'>
         {/* filture by products with the most likes  */}
+        {/* Need to pass in backend data by most bought brands */}
       <Topbrands brands={MostLoved} interval={5000} label="More Shopping..." />
       </div>
 
