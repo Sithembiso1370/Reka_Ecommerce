@@ -222,7 +222,9 @@ const Main = () => {
 
       <div className='mainSub_4'>
         {/* Pass in filtured products by department */}
-        <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} filteredArrayOfObjects={filteredArrayOfObjects} department="Accessories"/>
+        {/* Need to filturable by price functionality */}
+        {/* Need to filturabe by price,department,brand and store functionality */}
+        <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} filteredArrayOfObjects={filteredArrayOfObjects} department="Mens_Clothing"/>
       </div>
       <div className='mainSub_3_3_1'>
         {/* backend data filtured by date */}
@@ -240,7 +242,7 @@ const Main = () => {
       </div>
       <div className='mainSub_6'>
         {/* Pass in filtured products by department */}
-        <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} filteredArrayOfObjects={filteredArrayOfObjects} department=""/>
+        <StoreFilture inventoryList={inventoryList} setData={setData} fetchInventory={fetchInventory} filteredArrayOfObjects={filteredArrayOfObjects} department="Womens_clothing"/>
       </div>
       <div className='mainSub_6_5'>
         {/* filture by products with the most likes  */}

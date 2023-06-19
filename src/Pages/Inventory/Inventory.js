@@ -182,7 +182,7 @@ Add New Supplier
               {
                 
                 inventoryList ?
-              inventoryList.slice(0, 10).map((inventory) => (
+              inventoryList.slice(0, 100).map((inventory) => (
                 <tr key={inventory._id}>
                   
                   <td>{inventory.createdBy}</td>

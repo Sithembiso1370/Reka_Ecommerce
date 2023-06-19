@@ -22,21 +22,7 @@ function StoreFilture(props) {
     // 👇️ filter with 1 condition
     const filteredArrayOfObjects =  (ArrayOfObjects,ObjectKey,valueComparedTo) => {
       let filturedArray = []
-
-      // // Loop through each Object in the array and check if the key being searched for exists
-      // ArrayOfObjects.forEach(element => {
-      //   // console.log("element = ",element);
-      //   if(element[ObjectKey].toLowerCase() === valueComparedTo.toLowerCase()){
-      //     filturedArray = [...filturedArray,element];
-      //   }
-      //   else{
-      //     // console.log("Not filturing according to : ",element[ObjectKey].toLowerCase())
-      //   }
-      // });
-
-
-      // console.log(`filturedArray = `,filturedArray)
-      return ArrayOfObjects.filter((el) => el[ObjectKey].toLowerCase() === valueComparedTo.toLowerCase());
+      return ArrayOfObjects.filter((el) => el[ObjectKey] === valueComparedTo);
     };
 
     const fetchInventory = async () => {

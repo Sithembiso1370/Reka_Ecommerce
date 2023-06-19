@@ -3,7 +3,41 @@
 
 TODO :
 
-Landing Page
+Frontend:
+    ---------------------------------------------------------------------------------------------------------------------------------------
+    - Create UI friendly Landing Page
+        -- Add SignIn and login feater to top banner
+        -- Add fancy flipping sale / promotion div
+        -- Add Brands List with images and polish ui
+        -- Polish 1st carousel and make as minimal as possible
+        -- Ensure first Storfilture Banner shows only data relating to below storefilture department
+        -- Make storefiltur filturable by price and sub-category
+        -- Make storefiltur filturable by sub-category,brand,store
+        -- Make 2nd carousel exactly like first but differet data
+        -- 2nd Storefilture banner same as above 1st with different data
+        -- 3rd carousel same as 3 above different data
+        -- Bottom categories sect make dynamic 
+        -- Shipping section also polish 
+        -- Polish Footer UI and make responsive
+    - Create Sign In
+    - Create Sign Out
+    - Create Complete department sale page
+        --
+        --
+        --
+        --
+        --
+        --
+        --
+    - Create About Page Complete
+    - Create account page
+    - Create Careers Page
+    - Complete Messages Page UI
+    - Complete Orders Page UI
+    - Complete Account Page UI
+    - Complete Cart UI and functionality
+    -----------------------------------------------------------------------------------------------------------------------------------
+Backend:
 
 
 
